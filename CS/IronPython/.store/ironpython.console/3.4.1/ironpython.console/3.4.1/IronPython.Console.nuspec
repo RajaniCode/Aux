@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>IronPython.Console</id>
+    <version>3.4.1</version>
+    <title>IronPython Command-line Interpreter</title>
+    <authors>IronPython Contributors, Microsoft</authors>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <icon>logo.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://ironpython.net/</projectUrl>
+    <description>IronPython is an open-source implementation of the Python programming language that is tightly integrated with the .NET Framework. IronPython can use the .NET Framework and Python libraries, and other .NET languages can use Python code just as easily.
+
+This package contains a standalone Python interpreter, invokable from the command line as ipy. It also includes the Python Standard Library released by the Python project, but slightly modified to work better with IronPython and .NET.</description>
+    <copyright>© IronPython Contributors</copyright>
+    <tags>ironpython python dynamic dlr</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" url="https://github.com/IronLanguages/ironpython3.git" />
+  </metadata>
+</package>

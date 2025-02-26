@@ -1,0 +1,33 @@
+$ cat msys64-mingw64-gcc.c
+#include <stdio.h>
+
+// int
+void
+c_code(void) {
+  printf("C!\n");
+}
+
+/*
+int main() {
+  c_code();
+}
+*/
+
+
+// "main"
+$ gcc msys64-mingw64-gcc.c -o msys64-mingw64-gcc
+$ ./msys64-mingw64-gcc
+
+// "main"
+% gcc msys64-mingw64-gcc.c -o msys64-mingw64-gcc
+% ./msys64-mingw64-gcc
+
+
+// msys64-mingw64-gcc.dll
+$ gcc -c msys64-mingw64-gcc.c
+$ gcc -shared -o msys64-mingw64-gcc.dll msys64-mingw64-gcc.o
+
+
+// sys64-mingw64-gcc.so
+% gcc -c -fPIC msys64-mingw64-gcc.c
+% gcc -shared -o msys64-mingw64-gcc.so msys64-mingw64-gcc.o

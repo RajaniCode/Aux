@@ -1,0 +1,292 @@
+Last login: Fri Jan  3 12:11:14 on ttys000
+rajaniapple@Rajanis-MacBook-Pro ~ % sw_vers
+ProductName:		macOS
+ProductVersion:		15.1
+BuildVersion:		24B83
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro ~ % cd $HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java22/macOSAArch64/Jextract
+rajaniapple@Rajanis-MacBook-Pro Jextract % wget https://download.java.net/java/early_access/jextract/22/6/openjdk-22-jextract+6-47_macos-aarch64_bin.tar.gz
+--2025-01-03 12:21:36--  https://download.java.net/java/early_access/jextract/22/6/openjdk-22-jextract+6-47_macos-aarch64_bin.tar.gz
+Resolving download.java.net (download.java.net)... 23.206.204.126
+Connecting to download.java.net (download.java.net)|23.206.204.126|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33035529 (32M) [application/x-gzip]
+Saving to: ‘openjdk-22-jextract+6-47_macos-aarch64_bin.tar.gz’
+
+openjdk-22-jextract+6-47_macos-aar 100%[================================================================>]  31.50M  9.60MB/s    in 4.5s    
+
+2025-01-03 12:21:41 (7.05 MB/s) - ‘openjdk-22-jextract+6-47_macos-aarch64_bin.tar.gz’ saved [33035529/33035529]
+
+rajaniapple@Rajanis-MacBook-Pro Jextract % sudo tar -xvzf openjdk-22-jextract+6-47_macos-aarch64_bin.tar.gz
+Password:
+x jextract-22/
+x jextract-22/bin/
+x jextract-22/runtime/
+x jextract-22/runtime/bin/
+x jextract-22/runtime/include/
+x jextract-22/runtime/release
+x jextract-22/runtime/lib/
+x jextract-22/runtime/legal/
+x jextract-22/runtime/conf/
+x jextract-22/runtime/conf/security/
+x jextract-22/runtime/conf/net.properties
+x jextract-22/runtime/conf/jextract/
+x jextract-22/runtime/conf/jextract/__clang_cuda_complex_builtins.h
+x jextract-22/runtime/conf/jextract/fmaintrin.h
+x jextract-22/runtime/conf/jextract/stdalign.h
+x jextract-22/runtime/conf/jextract/clflushoptintrin.h
+x jextract-22/runtime/conf/jextract/avx512erintrin.h
+x jextract-22/runtime/conf/jextract/__clang_hip_runtime_wrapper.h
+x jextract-22/runtime/conf/jextract/avx512vlbf16intrin.h
+x jextract-22/runtime/conf/jextract/inttypes.h
+x jextract-22/runtime/conf/jextract/avx512pfintrin.h
+x jextract-22/runtime/conf/jextract/avx512vpopcntdqvlintrin.h
+x jextract-22/runtime/conf/jextract/arm64intr.h
+x jextract-22/runtime/conf/jextract/cldemoteintrin.h
+x jextract-22/runtime/conf/jextract/nmmintrin.h
+x jextract-22/runtime/conf/jextract/movdirintrin.h
+x jextract-22/runtime/conf/jextract/unwind.h
+x jextract-22/runtime/conf/jextract/avx512ifmaintrin.h
+x jextract-22/runtime/conf/jextract/mm_malloc.h
+x jextract-22/runtime/conf/jextract/msa.h
+x jextract-22/runtime/conf/jextract/gfniintrin.h
+x jextract-22/runtime/conf/jextract/avx512vbmivlintrin.h
+x jextract-22/runtime/conf/jextract/emmintrin.h
+x jextract-22/runtime/conf/jextract/adxintrin.h
+x jextract-22/runtime/conf/jextract/stdnoreturn.h
+x jextract-22/runtime/conf/jextract/arm_sve.h
+x jextract-22/runtime/conf/jextract/pmmintrin.h
+x jextract-22/runtime/conf/jextract/float.h
+x jextract-22/runtime/conf/jextract/hexagon_circ_brev_intrinsics.h
+x jextract-22/runtime/conf/jextract/vecintrin.h
+x jextract-22/runtime/conf/jextract/arm_acle.h
+x jextract-22/runtime/conf/jextract/__clang_hip_math.h
+x jextract-22/runtime/conf/jextract/avx512vlintrin.h
+x jextract-22/runtime/conf/jextract/serializeintrin.h
+x jextract-22/runtime/conf/jextract/bmi2intrin.h
+x jextract-22/runtime/conf/jextract/avx512vbmiintrin.h
+x jextract-22/runtime/conf/jextract/htmxlintrin.h
+x jextract-22/runtime/conf/jextract/avx512vlvnniintrin.h
+x jextract-22/runtime/conf/jextract/cpuid.h
+x jextract-22/runtime/conf/jextract/avx512cdintrin.h
+x jextract-22/runtime/conf/jextract/limits.h
+x jextract-22/runtime/conf/jextract/__clang_hip_libdevice_declares.h
+x jextract-22/runtime/conf/jextract/arm_cde.h
+x jextract-22/runtime/conf/jextract/arm_fp16.h
+x jextract-22/runtime/conf/jextract/cetintrin.h
+x jextract-22/runtime/conf/jextract/prfchwintrin.h
+x jextract-22/runtime/conf/jextract/wmmintrin.h
+x jextract-22/runtime/conf/jextract/stddef.h
+x jextract-22/runtime/conf/jextract/xopintrin.h
+x jextract-22/runtime/conf/jextract/tbmintrin.h
+x jextract-22/runtime/conf/jextract/avx512ifmavlintrin.h
+x jextract-22/runtime/conf/jextract/vpclmulqdqintrin.h
+x jextract-22/runtime/conf/jextract/riscv_vector.h
+x jextract-22/runtime/conf/jextract/xsavecintrin.h
+x jextract-22/runtime/conf/jextract/lwpintrin.h
+x jextract-22/runtime/conf/jextract/s390intrin.h
+x jextract-22/runtime/conf/jextract/avx512vp2intersectintrin.h
+x jextract-22/runtime/conf/jextract/avx512dqintrin.h
+x jextract-22/runtime/conf/jextract/avx512vlbwintrin.h
+x jextract-22/runtime/conf/jextract/xtestintrin.h
+x jextract-22/runtime/conf/jextract/xsaveoptintrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_intrinsics.h
+x jextract-22/runtime/conf/jextract/__stddef_max_align_t.h
+x jextract-22/runtime/conf/jextract/__wmmintrin_aes.h
+x jextract-22/runtime/conf/jextract/ia32intrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_runtime_wrapper.h
+x jextract-22/runtime/conf/jextract/hexagon_types.h
+x jextract-22/runtime/conf/jextract/htmintrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_cmath.h
+x jextract-22/runtime/conf/jextract/avxintrin.h
+x jextract-22/runtime/conf/jextract/__clang_hip_cmath.h
+x jextract-22/runtime/conf/jextract/hresetintrin.h
+x jextract-22/runtime/conf/jextract/immintrin.h
+x jextract-22/runtime/conf/jextract/tgmath.h
+x jextract-22/runtime/conf/jextract/mmintrin.h
+x jextract-22/runtime/conf/jextract/ammintrin.h
+x jextract-22/runtime/conf/jextract/pconfigintrin.h
+x jextract-22/runtime/conf/jextract/amxintrin.h
+x jextract-22/runtime/conf/jextract/avx512vlbitalgintrin.h
+x jextract-22/runtime/conf/jextract/bmiintrin.h
+x jextract-22/runtime/conf/jextract/tmmintrin.h
+x jextract-22/runtime/conf/jextract/intrin.h
+x jextract-22/runtime/conf/jextract/builtins.h
+x jextract-22/runtime/conf/jextract/rdseedintrin.h
+x jextract-22/runtime/conf/jextract/f16cintrin.h
+x jextract-22/runtime/conf/jextract/pkuintrin.h
+x jextract-22/runtime/conf/jextract/popcntintrin.h
+x jextract-22/runtime/conf/jextract/avx512vldqintrin.h
+x jextract-22/runtime/conf/jextract/avx512bwintrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_libdevice_declares.h
+x jextract-22/runtime/conf/jextract/avxvnniintrin.h
+x jextract-22/runtime/conf/jextract/xsaveintrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_builtin_vars.h
+x jextract-22/runtime/conf/jextract/altivec.h
+x jextract-22/runtime/conf/jextract/hexagon_protos.h
+x jextract-22/runtime/conf/jextract/avx512vlvbmi2intrin.h
+x jextract-22/runtime/conf/jextract/avx512fintrin.h
+x jextract-22/runtime/conf/jextract/x86intrin.h
+x jextract-22/runtime/conf/jextract/mm3dnow.h
+x jextract-22/runtime/conf/jextract/xsavesintrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_math_forward_declares.h
+x jextract-22/runtime/conf/jextract/fma4intrin.h
+x jextract-22/runtime/conf/jextract/hvx_hexagon_protos.h
+x jextract-22/runtime/conf/jextract/enqcmdintrin.h
+x jextract-22/runtime/conf/jextract/avx512bitalgintrin.h
+x jextract-22/runtime/conf/jextract/invpcidintrin.h
+x jextract-22/runtime/conf/jextract/stdbool.h
+x jextract-22/runtime/conf/jextract/fxsrintrin.h
+x jextract-22/runtime/conf/jextract/mwaitxintrin.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_math.h
+x jextract-22/runtime/conf/jextract/tsxldtrkintrin.h
+x jextract-22/runtime/conf/jextract/vaesintrin.h
+x jextract-22/runtime/conf/jextract/iso646.h
+x jextract-22/runtime/conf/jextract/wasm_simd128.h
+x jextract-22/runtime/conf/jextract/x86gprintrin.h
+x jextract-22/runtime/conf/jextract/opencl-c-base.h
+x jextract-22/runtime/conf/jextract/varargs.h
+x jextract-22/runtime/conf/jextract/__clang_cuda_device_functions.h
+x jextract-22/runtime/conf/jextract/armintr.h
+x jextract-22/runtime/conf/jextract/ptwriteintrin.h
+x jextract-22/runtime/conf/jextract/avx512vpopcntdqintrin.h
+x jextract-22/runtime/conf/jextract/vadefs.h
+x jextract-22/runtime/conf/jextract/opencl-c.h
+x jextract-22/runtime/conf/jextract/arm_neon.h
+x jextract-22/runtime/conf/jextract/stdarg.h
+x jextract-22/runtime/conf/jextract/arm_bf16.h
+x jextract-22/runtime/conf/jextract/cet.h
+x jextract-22/runtime/conf/jextract/uintrintrin.h
+x jextract-22/runtime/conf/jextract/avx512vnniintrin.h
+x jextract-22/runtime/conf/jextract/stdatomic.h
+x jextract-22/runtime/conf/jextract/shaintrin.h
+x jextract-22/runtime/conf/jextract/wbnoinvdintrin.h
+x jextract-22/runtime/conf/jextract/lzcntintrin.h
+x jextract-22/runtime/conf/jextract/xmmintrin.h
+x jextract-22/runtime/conf/jextract/smmintrin.h
+x jextract-22/runtime/conf/jextract/clwbintrin.h
+x jextract-22/runtime/conf/jextract/__wmmintrin_pclmul.h
+x jextract-22/runtime/conf/jextract/avx512vlvp2intersectintrin.h
+x jextract-22/runtime/conf/jextract/arm_mve.h
+x jextract-22/runtime/conf/jextract/avx512bf16intrin.h
+x jextract-22/runtime/conf/jextract/clzerointrin.h
+x jextract-22/runtime/conf/jextract/stdint.h
+x jextract-22/runtime/conf/jextract/arm_cmse.h
+x jextract-22/runtime/conf/jextract/keylockerintrin.h
+x jextract-22/runtime/conf/jextract/avx512vlcdintrin.h
+x jextract-22/runtime/conf/jextract/avx2intrin.h
+x jextract-22/runtime/conf/jextract/sgxintrin.h
+x jextract-22/runtime/conf/jextract/avx512vbmi2intrin.h
+x jextract-22/runtime/conf/jextract/rtmintrin.h
+x jextract-22/runtime/conf/jextract/waitpkgintrin.h
+x jextract-22/runtime/conf/security/java.security
+x jextract-22/runtime/conf/security/java.policy
+x jextract-22/runtime/conf/security/policy/
+x jextract-22/runtime/conf/security/policy/unlimited/
+x jextract-22/runtime/conf/security/policy/README.txt
+x jextract-22/runtime/conf/security/policy/limited/
+x jextract-22/runtime/conf/security/policy/limited/default_US_export.policy
+x jextract-22/runtime/conf/security/policy/limited/exempt_local.policy
+x jextract-22/runtime/conf/security/policy/limited/default_local.policy
+x jextract-22/runtime/conf/security/policy/unlimited/default_US_export.policy
+x jextract-22/runtime/conf/security/policy/unlimited/default_local.policy
+x jextract-22/runtime/legal/java.compiler/
+x jextract-22/runtime/legal/java.base/
+x jextract-22/runtime/legal/java.base/asm.md
+x jextract-22/runtime/legal/java.base/zlib.md
+x jextract-22/runtime/legal/java.base/LICENSE
+x jextract-22/runtime/legal/java.base/public_suffix.md
+x jextract-22/runtime/legal/java.base/ADDITIONAL_LICENSE_INFO
+x jextract-22/runtime/legal/java.base/ASSEMBLY_EXCEPTION
+x jextract-22/runtime/legal/java.base/cldr.md
+x jextract-22/runtime/legal/java.base/icu.md
+x jextract-22/runtime/legal/java.base/unicode.md
+x jextract-22/runtime/legal/java.base/c-libutl.md
+x jextract-22/runtime/legal/java.base/aes.md
+x jextract-22/runtime/legal/java.compiler/LICENSE
+x jextract-22/runtime/legal/java.compiler/ADDITIONAL_LICENSE_INFO
+x jextract-22/runtime/legal/java.compiler/ASSEMBLY_EXCEPTION
+x jextract-22/runtime/lib/libnet.dylib
+x jextract-22/runtime/lib/libnio.dylib
+x jextract-22/runtime/lib/libzip.dylib
+x jextract-22/runtime/lib/libjli.dylib
+x jextract-22/runtime/lib/jvm.cfg
+x jextract-22/runtime/lib/libjimage.dylib
+x jextract-22/runtime/lib/security/
+x jextract-22/runtime/lib/tzdb.dat
+x jextract-22/runtime/lib/server/
+x jextract-22/runtime/lib/libclang.dylib
+x jextract-22/runtime/lib/libjsig.dylib
+x jextract-22/runtime/lib/libsyslookup.dylib
+x jextract-22/runtime/lib/jrt-fs.jar
+x jextract-22/runtime/lib/jspawnhelper
+x jextract-22/runtime/lib/libosxsecurity.dylib
+x jextract-22/runtime/lib/libverify.dylib
+x jextract-22/runtime/lib/modules
+x jextract-22/runtime/lib/classlist
+x jextract-22/runtime/lib/libjava.dylib
+x jextract-22/runtime/lib/server/libjvm.dylib
+x jextract-22/runtime/lib/server/libjsig.dylib
+x jextract-22/runtime/lib/security/public_suffix_list.dat
+x jextract-22/runtime/lib/security/default.policy
+x jextract-22/runtime/lib/security/cacerts
+x jextract-22/runtime/lib/security/blocked.certs
+x jextract-22/runtime/include/classfile_constants.h
+x jextract-22/runtime/include/jvmti.h
+x jextract-22/runtime/include/jni.h
+x jextract-22/runtime/include/jvmticmlr.h
+x jextract-22/runtime/include/darwin/
+x jextract-22/runtime/include/darwin/jni_md.h
+x jextract-22/runtime/bin/java
+x jextract-22/runtime/bin/keytool
+x jextract-22/bin/jextract.ps1
+x jextract-22/bin/jextract.bat
+x jextract-22/bin/jextract
+rajaniapple@Rajanis-MacBook-Pro Jextract % export PATH="$HOME/Downloads/Software/OpenJDK/JDK22.0.2/jdk-22.0.2.jdk/Contents/Home/bin/":$PATH
+rajaniapple@Rajanis-MacBook-Pro Jextract % java --version
+openjdk 22.0.2 2024-07-16
+OpenJDK Runtime Environment (build 22.0.2+9-70)
+OpenJDK 64-Bit Server VM (build 22.0.2+9-70, mixed mode, sharing)
+rajaniapple@Rajanis-MacBook-Pro Jextract % nano jext.h
+rajaniapple@Rajanis-MacBook-Pro Jextract % cat jext.h
+#ifndef jext_h
+#define jext_h
+
+extern void printc(void);
+
+#endif 
+rajaniapple@Rajanis-MacBook-Pro Jextract % nano jext.c
+rajaniapple@Rajanis-MacBook-Pro Jextract % cat jext.c
+#include <stdio.h>
+
+#include "jext.h"
+
+void printc(void) {
+    printf("C Code!\n");
+}
+rajaniapple@Rajanis-MacBook-Pro Jextract % ls $HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java22/macOSAArch64/Jextract/jextract-22/bin
+jextract	jextract.bat	jextract.ps1
+rajaniapple@Rajanis-MacBook-Pro Jextract % export PATH="$HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java22/macOSAArch64/Jextract/jextract-22/bin/":$PATH
+rajaniapple@Rajanis-MacBook-Pro Jextract % jextract --version
+jextract 22
+JDK version 22+35-2369
+LibClang version clang version 13.0.0
+rajaniapple@Rajanis-MacBook-Pro Jextract % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro Jextract % cc -shared -o libjext.dylib jext.c
+rajaniapple@Rajanis-MacBook-Pro Jextract % jextract -t com.commons.project -ljext jext.h
+rajaniapple@Rajanis-MacBook-Pro Jextract % javac --enable-preview --source=22 com/commons/project/*.java
+rajaniapple@Rajanis-MacBook-Pro Jextract % nano JextractC.java
+rajaniapple@Rajanis-MacBook-Pro Jextract % cat JextractC.java
+import static com.commons.project.jext_h.*;
+
+class JextractC {
+    public static void main(String[] args) {
+        printc();
+    }
+}
+rajaniapple@Rajanis-MacBook-Pro Jextract % java --enable-native-access=ALL-UNNAMED --enable-preview --source=22 JextractC.java
+C Code!
+rajaniapple@Rajanis-MacBook-Pro Jextract % find . -depth -size +50M -print
+rajaniapple@Rajanis-MacBook-Pro Jextract % 

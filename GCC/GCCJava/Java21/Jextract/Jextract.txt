@@ -1,0 +1,91 @@
+// % cd $HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java21/macOSAArch64/Jextract
+
+// % wget https://download.java.net/java/early_access/jextract/21/1/openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+// % sudo tar -xvzf openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+
+
+// Java 21
+// OpenJDK 21
+// % export PATH="$HOME/Downloads/Software/OpenJDK/JDK21.0.2/jdk-21.0.2.jdk/Contents/Home/bin/":$PATH
+// % java --version
+
+
+// % nano jext.h
+/*
+#ifndef jext_h
+#define jext_h
+
+extern void printc(void);
+
+#endif 
+*/
+// % cat jext.h
+
+// % nano jext.c
+/*
+#include <stdio.h>
+
+#include "jext.h"
+
+void printc(void) {
+    printf("C Code!\n");
+}
+*/
+// % cat jext.c
+
+
+// Mac Gatekeeper # Allow Anyway
+/*
+% ls $HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java21/macOSAArch64/Jextract/jextract-21/bin
+
+% export PATH="$HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java21/macOSAArch64/Jextract/jextract-21/bin/":$PATH 
+
+// Mac Gatekeeper # Allow Anyway
+% jextract --version
+*/
+
+
+// % arch
+// % arch -x86_64 zsh
+// [
+// % arch -arm64 zsh 
+// ]
+// % arch
+
+// % cc -shared -o libjext.dylib jext.c
+// % jextract --source -t com.commons.project -ljext jext.h
+
+
+// % javac --enable-preview --source=21 com/commons/project/*.java
+
+// % nano JextractC.java
+/*
+import static com.commons.project.jext_h.*;
+
+class JextractC {
+    public static void main(String[] args) {
+        printc();
+    }
+}
+*/
+// % cat JextractC.java
+
+// % java --enable-native-access=ALL-UNNAMED --enable-preview --source=21 JextractC.java
+
+
+// % find . -depth -size +50M -print
+
+// % sudo rm -rf jextract-21
+
+// % zip "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip" "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz"
+
+// % zip "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip" --out "Split openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip" -s 45m
+
+// % find . -depth -size +50M -print
+
+// % find . -depth -size +50M -delete
+
+// [
+// % 7z x "Split openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip"
+// % rm -rf "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz"
+// ]

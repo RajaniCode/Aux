@@ -1,0 +1,34 @@
+Last login: Thu Oct 31 02:28:14 on ttys000
+rajaniapple@Rajanis-MacBook-Pro ~ % sw_vers
+ProductName:		macOS
+ProductVersion:		15.0.1
+BuildVersion:		24A348
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro ~ % arch -x86_64 zsh
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+i386
+rajaniapple@Rajanis-MacBook-Pro ~ % gcc --version
+Apple clang version 16.0.0 (clang-1600.0.26.3)
+Target: x86_64-apple-darwin24.0.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+rajaniapple@Rajanis-MacBook-Pro ~ % cd $HOME/Desktop/GitHub/CS-Add/CS-1/CS/CS/CS/CS9/CS9GCC/GCC/C_x86_64
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % nano apple-clang.c
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % cat apple-clang.c
+#include <stdio.h>
+int
+c_code(int number) {
+  return number * 10;
+}
+
+int
+main() {
+  printf("%i\n", c_code(5));
+}
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % gcc -c -fPIC apple-clang.c
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % gcc -shared -o apple-clang.so apple-clang.o
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % gcc apple-clang.c -o apple-clang
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % ./apple-clang
+50
+rajaniapple@Rajanis-MacBook-Pro C_x86_64 % 

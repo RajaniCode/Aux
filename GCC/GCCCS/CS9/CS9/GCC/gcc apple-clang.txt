@@ -1,0 +1,25 @@
+% sw_vers
+% arch
+% arch -x86_64 zsh
+[
+% arch -arm64 zsh 
+]
+% arch
+% gcc --version
+% nano apple-clang.c
+#include <stdio.h>
+int
+c_code(int number) {
+  return number * 10;
+}
+
+int
+main() {
+  printf("%i\n", c_code(5));
+}
+% cat apple-clang.c
+% gcc -c -fPIC apple-clang.c
+% gcc -shared -o apple-clang.so apple-clang.o
+
+% gcc apple-clang.c -o apple-clang
+% ./apple-clang

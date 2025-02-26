@@ -1,0 +1,31 @@
+Last login: Wed Sep 25 04:18:22 on ttys001
+rajaniapple@Rajanis-MacBook-Pro ~ % sw_vers
+ProductName:		macOS
+ProductVersion:		14.4.1
+BuildVersion:		23E224
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro ~ % arch -x86_64 zsh
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+i386
+rajaniapple@Rajanis-MacBook-Pro ~ % g++ --version
+Apple clang version 15.0.0 (clang-1500.3.9.4)
+Target: x86_64-apple-darwin23.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+rajaniapple@Rajanis-MacBook-Pro ~ % cd $HOME/Desktop/GitHub/CS-Add/CS-1/CS/CS/CS/CS9/CS9CdeclStdcallmacOS
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ cdecl-main.cpp -o cdecl-main
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % ./cdecl-main
+Hello, cdecl!
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ -c cdecl.cpp
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ -shared -o cdecl.so cdecl.o
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ io-main.cpp -o io-main
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % ./io-main
+Hello, io!
+
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ io-main.cpp -o io-main
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % ./io-main
+Hello, io!
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ -c io.cpp
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % g++ -shared -o io.so io.o
+rajaniapple@Rajanis-MacBook-Pro CS9CdeclStdcallmacOS % 

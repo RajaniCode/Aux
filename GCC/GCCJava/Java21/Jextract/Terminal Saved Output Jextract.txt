@@ -1,0 +1,355 @@
+Last login: Fri Jan  3 12:07:52 on ttys000
+rajaniapple@Rajanis-MacBook-Pro ~ % sw_vers
+ProductName:		macOS
+ProductVersion:		15.1
+BuildVersion:		24B83
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro ~ % cd $HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java21/macOSAArch64/Jextract
+rajaniapple@Rajanis-MacBook-Pro Jextract % wget https://download.java.net/java/early_access/jextract/21/1/openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+--2025-01-03 12:12:04--  https://download.java.net/java/early_access/jextract/21/1/openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+Resolving download.java.net (download.java.net)... 23.206.204.126
+Connecting to download.java.net (download.java.net)|23.206.204.126|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 57165780 (55M) [application/x-gzip]
+Saving to: ‘openjdk-21-jextract+1-2_macos-x64_bin.tar.gz’
+
+openjdk-21-jextract+1-2_macos-x64_ 100%[================================================================>]  54.52M  16.7MB/s    in 3.3s    
+
+2025-01-03 12:12:09 (16.7 MB/s) - ‘openjdk-21-jextract+1-2_macos-x64_bin.tar.gz’ saved [57165780/57165780]
+
+rajaniapple@Rajanis-MacBook-Pro Jextract % sudo tar -xvzf openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+Password:
+x jextract-21/
+x jextract-21/man/
+x jextract-21/bin/
+x jextract-21/include/
+x jextract-21/release
+x jextract-21/lib/
+x jextract-21/legal/
+x jextract-21/conf/
+x jextract-21/conf/security/
+x jextract-21/conf/net.properties
+x jextract-21/conf/jextract/
+x jextract-21/conf/jextract/__clang_cuda_complex_builtins.h
+x jextract-21/conf/jextract/fmaintrin.h
+x jextract-21/conf/jextract/stdalign.h
+x jextract-21/conf/jextract/clflushoptintrin.h
+x jextract-21/conf/jextract/avx512erintrin.h
+x jextract-21/conf/jextract/__clang_hip_runtime_wrapper.h
+x jextract-21/conf/jextract/avx512vlbf16intrin.h
+x jextract-21/conf/jextract/inttypes.h
+x jextract-21/conf/jextract/avx512pfintrin.h
+x jextract-21/conf/jextract/avx512vpopcntdqvlintrin.h
+x jextract-21/conf/jextract/arm64intr.h
+x jextract-21/conf/jextract/cldemoteintrin.h
+x jextract-21/conf/jextract/nmmintrin.h
+x jextract-21/conf/jextract/movdirintrin.h
+x jextract-21/conf/jextract/unwind.h
+x jextract-21/conf/jextract/avx512ifmaintrin.h
+x jextract-21/conf/jextract/mm_malloc.h
+x jextract-21/conf/jextract/msa.h
+x jextract-21/conf/jextract/gfniintrin.h
+x jextract-21/conf/jextract/avx512vbmivlintrin.h
+x jextract-21/conf/jextract/emmintrin.h
+x jextract-21/conf/jextract/adxintrin.h
+x jextract-21/conf/jextract/stdnoreturn.h
+x jextract-21/conf/jextract/arm_sve.h
+x jextract-21/conf/jextract/pmmintrin.h
+x jextract-21/conf/jextract/float.h
+x jextract-21/conf/jextract/hexagon_circ_brev_intrinsics.h
+x jextract-21/conf/jextract/vecintrin.h
+x jextract-21/conf/jextract/arm_acle.h
+x jextract-21/conf/jextract/__clang_hip_math.h
+x jextract-21/conf/jextract/avx512vlintrin.h
+x jextract-21/conf/jextract/serializeintrin.h
+x jextract-21/conf/jextract/bmi2intrin.h
+x jextract-21/conf/jextract/avx512vbmiintrin.h
+x jextract-21/conf/jextract/htmxlintrin.h
+x jextract-21/conf/jextract/avx512vlvnniintrin.h
+x jextract-21/conf/jextract/cpuid.h
+x jextract-21/conf/jextract/avx512cdintrin.h
+x jextract-21/conf/jextract/limits.h
+x jextract-21/conf/jextract/__clang_hip_libdevice_declares.h
+x jextract-21/conf/jextract/arm_cde.h
+x jextract-21/conf/jextract/arm_fp16.h
+x jextract-21/conf/jextract/cetintrin.h
+x jextract-21/conf/jextract/prfchwintrin.h
+x jextract-21/conf/jextract/wmmintrin.h
+x jextract-21/conf/jextract/stddef.h
+x jextract-21/conf/jextract/xopintrin.h
+x jextract-21/conf/jextract/tbmintrin.h
+x jextract-21/conf/jextract/avx512ifmavlintrin.h
+x jextract-21/conf/jextract/vpclmulqdqintrin.h
+x jextract-21/conf/jextract/riscv_vector.h
+x jextract-21/conf/jextract/xsavecintrin.h
+x jextract-21/conf/jextract/lwpintrin.h
+x jextract-21/conf/jextract/s390intrin.h
+x jextract-21/conf/jextract/avx512vp2intersectintrin.h
+x jextract-21/conf/jextract/avx512dqintrin.h
+x jextract-21/conf/jextract/avx512vlbwintrin.h
+x jextract-21/conf/jextract/xtestintrin.h
+x jextract-21/conf/jextract/xsaveoptintrin.h
+x jextract-21/conf/jextract/__clang_cuda_intrinsics.h
+x jextract-21/conf/jextract/__stddef_max_align_t.h
+x jextract-21/conf/jextract/__wmmintrin_aes.h
+x jextract-21/conf/jextract/ia32intrin.h
+x jextract-21/conf/jextract/__clang_cuda_runtime_wrapper.h
+x jextract-21/conf/jextract/hexagon_types.h
+x jextract-21/conf/jextract/htmintrin.h
+x jextract-21/conf/jextract/__clang_cuda_cmath.h
+x jextract-21/conf/jextract/avxintrin.h
+x jextract-21/conf/jextract/__clang_hip_cmath.h
+x jextract-21/conf/jextract/hresetintrin.h
+x jextract-21/conf/jextract/immintrin.h
+x jextract-21/conf/jextract/tgmath.h
+x jextract-21/conf/jextract/mmintrin.h
+x jextract-21/conf/jextract/ammintrin.h
+x jextract-21/conf/jextract/pconfigintrin.h
+x jextract-21/conf/jextract/amxintrin.h
+x jextract-21/conf/jextract/avx512vlbitalgintrin.h
+x jextract-21/conf/jextract/bmiintrin.h
+x jextract-21/conf/jextract/tmmintrin.h
+x jextract-21/conf/jextract/intrin.h
+x jextract-21/conf/jextract/builtins.h
+x jextract-21/conf/jextract/rdseedintrin.h
+x jextract-21/conf/jextract/f16cintrin.h
+x jextract-21/conf/jextract/pkuintrin.h
+x jextract-21/conf/jextract/popcntintrin.h
+x jextract-21/conf/jextract/avx512vldqintrin.h
+x jextract-21/conf/jextract/avx512bwintrin.h
+x jextract-21/conf/jextract/__clang_cuda_libdevice_declares.h
+x jextract-21/conf/jextract/avxvnniintrin.h
+x jextract-21/conf/jextract/xsaveintrin.h
+x jextract-21/conf/jextract/__clang_cuda_builtin_vars.h
+x jextract-21/conf/jextract/altivec.h
+x jextract-21/conf/jextract/hexagon_protos.h
+x jextract-21/conf/jextract/avx512vlvbmi2intrin.h
+x jextract-21/conf/jextract/ompt.h
+x jextract-21/conf/jextract/avx512fintrin.h
+x jextract-21/conf/jextract/x86intrin.h
+x jextract-21/conf/jextract/mm3dnow.h
+x jextract-21/conf/jextract/xsavesintrin.h
+x jextract-21/conf/jextract/__clang_cuda_math_forward_declares.h
+x jextract-21/conf/jextract/fma4intrin.h
+x jextract-21/conf/jextract/hvx_hexagon_protos.h
+x jextract-21/conf/jextract/enqcmdintrin.h
+x jextract-21/conf/jextract/avx512bitalgintrin.h
+x jextract-21/conf/jextract/omp.h
+x jextract-21/conf/jextract/invpcidintrin.h
+x jextract-21/conf/jextract/stdbool.h
+x jextract-21/conf/jextract/fxsrintrin.h
+x jextract-21/conf/jextract/mwaitxintrin.h
+x jextract-21/conf/jextract/__clang_cuda_math.h
+x jextract-21/conf/jextract/tsxldtrkintrin.h
+x jextract-21/conf/jextract/vaesintrin.h
+x jextract-21/conf/jextract/iso646.h
+x jextract-21/conf/jextract/wasm_simd128.h
+x jextract-21/conf/jextract/x86gprintrin.h
+x jextract-21/conf/jextract/opencl-c-base.h
+x jextract-21/conf/jextract/varargs.h
+x jextract-21/conf/jextract/__clang_cuda_device_functions.h
+x jextract-21/conf/jextract/armintr.h
+x jextract-21/conf/jextract/ptwriteintrin.h
+x jextract-21/conf/jextract/avx512vpopcntdqintrin.h
+x jextract-21/conf/jextract/vadefs.h
+x jextract-21/conf/jextract/opencl-c.h
+x jextract-21/conf/jextract/arm_neon.h
+x jextract-21/conf/jextract/stdarg.h
+x jextract-21/conf/jextract/arm_bf16.h
+x jextract-21/conf/jextract/cet.h
+x jextract-21/conf/jextract/uintrintrin.h
+x jextract-21/conf/jextract/avx512vnniintrin.h
+x jextract-21/conf/jextract/stdatomic.h
+x jextract-21/conf/jextract/shaintrin.h
+x jextract-21/conf/jextract/omp-tools.h
+x jextract-21/conf/jextract/wbnoinvdintrin.h
+x jextract-21/conf/jextract/lzcntintrin.h
+x jextract-21/conf/jextract/xmmintrin.h
+x jextract-21/conf/jextract/smmintrin.h
+x jextract-21/conf/jextract/clwbintrin.h
+x jextract-21/conf/jextract/__wmmintrin_pclmul.h
+x jextract-21/conf/jextract/avx512vlvp2intersectintrin.h
+x jextract-21/conf/jextract/arm_mve.h
+x jextract-21/conf/jextract/avx512bf16intrin.h
+x jextract-21/conf/jextract/clzerointrin.h
+x jextract-21/conf/jextract/stdint.h
+x jextract-21/conf/jextract/arm_cmse.h
+x jextract-21/conf/jextract/keylockerintrin.h
+x jextract-21/conf/jextract/avx512vlcdintrin.h
+x jextract-21/conf/jextract/avx2intrin.h
+x jextract-21/conf/jextract/sgxintrin.h
+x jextract-21/conf/jextract/avx512vbmi2intrin.h
+x jextract-21/conf/jextract/rtmintrin.h
+x jextract-21/conf/jextract/waitpkgintrin.h
+x jextract-21/conf/security/java.security
+x jextract-21/conf/security/java.policy
+x jextract-21/conf/security/policy/
+x jextract-21/conf/security/policy/unlimited/
+x jextract-21/conf/security/policy/README.txt
+x jextract-21/conf/security/policy/limited/
+x jextract-21/conf/security/policy/limited/default_US_export.policy
+x jextract-21/conf/security/policy/limited/exempt_local.policy
+x jextract-21/conf/security/policy/limited/default_local.policy
+x jextract-21/conf/security/policy/unlimited/default_US_export.policy
+x jextract-21/conf/security/policy/unlimited/default_local.policy
+x jextract-21/legal/jdk.zipfs/
+x jextract-21/legal/java.compiler/
+x jextract-21/legal/jdk.compiler/
+x jextract-21/legal/java.base/
+x jextract-21/legal/jdk.internal.opt/
+x jextract-21/legal/jdk.internal.opt/LICENSE
+x jextract-21/legal/jdk.internal.opt/jopt-simple.md
+x jextract-21/legal/jdk.internal.opt/COPYRIGHT
+x jextract-21/legal/java.base/asm.md
+x jextract-21/legal/java.base/LICENSE
+x jextract-21/legal/java.base/public_suffix.md
+x jextract-21/legal/java.base/cldr.md
+x jextract-21/legal/java.base/icu.md
+x jextract-21/legal/java.base/unicode.md
+x jextract-21/legal/java.base/COPYRIGHT
+x jextract-21/legal/java.base/c-libutl.md
+x jextract-21/legal/java.base/aes.md
+x jextract-21/legal/jdk.compiler/LICENSE
+x jextract-21/legal/jdk.compiler/COPYRIGHT
+x jextract-21/legal/java.compiler/LICENSE
+x jextract-21/legal/java.compiler/COPYRIGHT
+x jextract-21/legal/jdk.zipfs/LICENSE
+x jextract-21/legal/jdk.zipfs/COPYRIGHT
+x jextract-21/lib/libnet.dylib
+x jextract-21/lib/libnio.dylib
+x jextract-21/lib/libzip.dylib
+x jextract-21/lib/libjli.dylib
+x jextract-21/lib/jvm.cfg
+x jextract-21/lib/libjimage.dylib
+x jextract-21/lib/security/
+x jextract-21/lib/tzdb.dat
+x jextract-21/lib/server/
+x jextract-21/lib/ct.sym
+x jextract-21/lib/libclang.dylib
+x jextract-21/lib/libjsig.dylib
+x jextract-21/lib/libsyslookup.dylib
+x jextract-21/lib/jrt-fs.jar
+x jextract-21/lib/jspawnhelper
+x jextract-21/lib/libosxsecurity.dylib
+x jextract-21/lib/libverify.dylib
+x jextract-21/lib/modules
+x jextract-21/lib/classlist
+x jextract-21/lib/libjava.dylib
+x jextract-21/lib/server/libjvm.dylib
+x jextract-21/lib/server/libjsig.dylib
+x jextract-21/lib/security/public_suffix_list.dat
+x jextract-21/lib/security/default.policy
+x jextract-21/lib/security/cacerts
+x jextract-21/lib/security/blocked.certs
+x jextract-21/include/classfile_constants.h
+x jextract-21/include/jvmti.h
+x jextract-21/include/jni.h
+x jextract-21/include/jvmticmlr.h
+x jextract-21/include/darwin/
+x jextract-21/include/darwin/jni_md.h
+x jextract-21/bin/java
+x jextract-21/bin/javac
+x jextract-21/bin/keytool
+x jextract-21/bin/jextract
+x jextract-21/bin/serialver
+x jextract-21/man/man1/
+x jextract-21/man/man1/serialver.1
+x jextract-21/man/man1/java.1
+x jextract-21/man/man1/keytool.1
+x jextract-21/man/man1/javac.1
+rajaniapple@Rajanis-MacBook-Pro Jextract % export PATH="$HOME/Downloads/Software/OpenJDK/JDK21.0.2/jdk-21.0.2.jdk/Contents/Home/bin/":$PATH
+rajaniapple@Rajanis-MacBook-Pro Jextract % java --version
+openjdk 21.0.2 2024-01-16
+OpenJDK Runtime Environment (build 21.0.2+13-58)
+OpenJDK 64-Bit Server VM (build 21.0.2+13-58, mixed mode, sharing)
+rajaniapple@Rajanis-MacBook-Pro Jextract % nano jext.h
+rajaniapple@Rajanis-MacBook-Pro Jextract % cat jext.h
+#ifndef jext_h
+#define jext_h
+
+extern void printc(void);
+
+#endif 
+rajaniapple@Rajanis-MacBook-Pro Jextract % nano jext.c
+rajaniapple@Rajanis-MacBook-Pro Jextract % cat jext.c
+#include <stdio.h>
+
+#include "jext.h"
+
+void printc(void) {
+    printf("C Code!\n");
+}
+rajaniapple@Rajanis-MacBook-Pro Jextract % ls $HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java21/macOSAArch64/Jextract/jextract-21/bin
+java		javac		jextract	keytool		serialver
+rajaniapple@Rajanis-MacBook-Pro Jextract % export PATH="$HOME/Desktop/GitHub/Java-Add/Java-1/Java/Java21/macOSAArch64/Jextract/jextract-21/bin/":$PATH
+rajaniapple@Rajanis-MacBook-Pro Jextract % jextract --version
+jextract 21
+JDK version 21+35-LTS-2513
+WARNING: A restricted method in java.lang.foreign.AddressLayout has been called
+WARNING: java.lang.foreign.AddressLayout::withTargetLayout has been called by module org.openjdk.jextract
+WARNING: Use --enable-native-access=org.openjdk.jextract to avoid a warning for this module
+
+clang version 13.0.0
+rajaniapple@Rajanis-MacBook-Pro Jextract % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro Jextract % arch -x86_64 zsh
+rajaniapple@Rajanis-MacBook-Pro Jextract % arch
+i386
+rajaniapple@Rajanis-MacBook-Pro Jextract % cc -shared -o libjext.dylib jext.c
+rajaniapple@Rajanis-MacBook-Pro Jextract % jextract --source -t com.commons.project -ljext jext.h
+WARNING: A restricted method in java.lang.foreign.AddressLayout has been called
+WARNING: java.lang.foreign.AddressLayout::withTargetLayout has been called by module org.openjdk.jextract
+WARNING: Use --enable-native-access=org.openjdk.jextract to avoid a warning for this module
+
+rajaniapple@Rajanis-MacBook-Pro Jextract % javac --enable-preview --source=21 com/commons/project/*.java
+Note: Some input files use preview features of Java SE 21.
+Note: Recompile with -Xlint:preview for details.
+rajaniapple@Rajanis-MacBook-Pro Jextract % nano JextractC.java
+rajaniapple@Rajanis-MacBook-Pro Jextract % cat JextractC.java
+import static com.commons.project.jext_h.*;
+
+class JextractC {
+    public static void main(String[] args) {
+        printc();
+    }
+}
+rajaniapple@Rajanis-MacBook-Pro Jextract % java --enable-native-access=ALL-UNNAMED --enable-preview --source=21 JextractC.java
+C Code!
+rajaniapple@Rajanis-MacBook-Pro Jextract % find . -depth -size +50M -print
+./jextract-21/lib/libclang.dylib
+./openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+rajaniapple@Rajanis-MacBook-Pro Jextract % sudo rm -rf jextract-21
+rajaniapple@Rajanis-MacBook-Pro Jextract % zip "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip" "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz"
+  adding: openjdk-21-jextract+1-2_macos-x64_bin.tar.gz (deflated 1%)
+rajaniapple@Rajanis-MacBook-Pro Jextract % zip "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip" --out "Split openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip" -s 45m
+ copying: openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+rajaniapple@Rajanis-MacBook-Pro Jextract % find . -depth -size +50M -print
+./openjdk-21-jextract+1-2_macos-x64_bin.tar.gz
+./openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip
+rajaniapple@Rajanis-MacBook-Pro Jextract % find . -depth -size +50M -delete
+rajaniapple@Rajanis-MacBook-Pro Jextract % 7z x "Split openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip"
+
+7-Zip [64] 17.05 : Copyright (c) 1999-2021 Igor Pavlov : 2017-08-28
+p7zip Version 17.05 (locale=utf8,Utf16=on,HugeFiles=on,64 bits,8 CPUs LE)
+
+Scanning the drive for archives:
+1 file, 9536726 bytes (9314 KiB)
+
+Extracting archive: Split openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip
+--
+Path = Split openjdk-21-jextract+1-2_macos-x64_bin.tar.gz.zip
+Type = zip
+Physical Size = 9536726
+Embedded Stub Size = 4
+Total Physical Size = 56722646
+Multivolume = +
+Volume Index = 1
+Volumes = 2
+
+Everything is Ok                                   
+
+Size:       57165780
+Compressed: 56722646
+rajaniapple@Rajanis-MacBook-Pro Jextract % rm -rf "openjdk-21-jextract+1-2_macos-x64_bin.tar.gz"
+rajaniapple@Rajanis-MacBook-Pro Jextract % 

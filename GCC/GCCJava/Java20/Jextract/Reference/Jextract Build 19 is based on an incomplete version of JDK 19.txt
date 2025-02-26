@@ -1,0 +1,13 @@
+Build 19-jextract+2-3 (2022/7/19)
+These early-access, open-source builds are provided under the GNU General Public
+License, version 2, with the Classpath Exception.
+Linux / x64 tar.gz (sha256) 153788298 bytes
+macOS / x64 tar.gz (sha256) 54791519
+Windows / x64 tar.gz (sha256) 52666772
+
+Notes
+These builds are based on an incomplete version of JDK 19.
+If you are using macOS Catalina or later you may need to remove the
+quarantine attribute from the bits before you can use the jextract binaries.
+T o do this, run the following:
+$ sudo xattr -r -d com.apple.quarantine path/to/jextract/folder/

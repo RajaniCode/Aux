@@ -1,0 +1,5663 @@
+###########################################################################################################################
+
+# Google Cloud
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Google Cloud CLI # gcloud
+
+***************************************************************************************************************************
+
+% python3 --version
+% ./google-cloud-sdk/install.sh
+# Terminal New Window
+% gcloud --version 
+% whereis gcloud
+% type gcloud 
+# Update gcloud to the latest version
+% gcloud components update
+
+***************************************************************************************************************************
+
+# Google Cloud Debian GNU/Linux
+
+***************************************************************************************************************************
+===========================================================================================================================
+
+# Debian GNU/Linux
+
+===========================================================================================================================
+
+$ sudo cat /etc/os-release
+$ sudo cat /etc/*release
+$ sudo cat /etc/*version
+
+$ sudo cat /etc/issue
+$ sudo more /etc/issue
+$ sudo less /etc/issue
+
+$ sudo cat /proc/version
+
+$ sudo lsb_release --all
+$ sudo lsb_release --description
+$ sudo man lsb_release
+
+[
+$ sudo hostnamectl
+]
+$ sudo man hostnamectl
+
+$ sudo uname
+$ sudo uname -r
+$ sudo uname --release
+$ sudo uname -srm
+$ sudo uname --kernel-name --kernel-release --kernel-version
+$ sudo uname -amnoprsv
+$ sudo uname --all
+$ sudo man uname
+
+$ sudo grep -E '^(VERSION|NAME)=' /etc/os-release
+$ sudo grep '^VERSION' /etc/os-release
+
+$ sudo apt --version
+
+$ sudo apt-get --version 
+
+$ sudo dpkg --version 
+$ sudo dpkg -l
+$ sudo whereis dpkg
+$ sudo man dpkg
+
+$ echo $0
+
+$ sudo arch
+
+$ id -un
+$ sudo id -un
+
+$ whoami
+$ sudo whoami
+$ echo `whoami`
+
+$ sudo echo $USER
+
+$ sudo echo $HOSTNAME
+$ sudo echo `hostname`
+
+$ sudo hostname
+$ sudo hostname -f
+$ sudo hostname -s
+$ sudo hostname -d
+
+$ sudo echo $HOME
+
+$ sudo echo ~/
+
+$ sudo echo $SHELL
+
+$ sudo echo $PATH
+
+$ sudo pwd
+$ sudo echo $(pwd)
+$ sudo echo $PWD
+
+$ sudo env
+$ sudo echo $(env)
+
+$ sudo date
+$ sudo echo $(date)
+$ sudo date +"%r"
+$ sudo date +"%T"
+$ sudo echo "Date: `date`"
+$ sudo date +"Time: %r"
+$ sudo date +"%A, %B %d, %Y,%l:%M:%S%3N %p, %Z, %z"
+$ sudo date +"Day Name: %A" && date +"Month Name: %B" && date +"Month: %m" && date +"Day: %d" && date +"Hour: %l" && date +"Minute: %M" && date +"Second: %S" && date +"Millisecond: %3N" && date +"TimeZone: %Z" && date +"GMT: %z"
+
+$ sudo locale
+$ sudo locale -a
+$ sudo echo $(locale)
+$ sudo echo $(locale -a) 
+
+$ sudo echo $LANG
+
+$ sudo ls
+$ sudo ls -a
+$ sudo ls /usr/local/bin
+$ sudo ls /usr/bin
+$ sudo ls /bin
+$ sudo ls /usr/sbin
+$ sudo ls /sbin
+
+$ type compgen
+$ compgen -c 
+$ compgen -a 
+$ compgen -b
+$ compgen -k
+$ compgen -A function
+$ compgen -A function -abck
+
+$ www-browser
+
+===========================================================================================================================
+
+# Technologies
+
+===========================================================================================================================
+
+$ node --version
+
+$ python3 --version
+
+$ ruby --version
+
+$ gcc --version
+$ cc --version
+$ g++ --version
+$ c++ --version
+
+$ java --version
+$ gradle --version
+$ mvn --version
+
+$ dotnet --version
+
+$ perl --version
+
+$ php --version
+
+$ go version
+
+===========================================================================================================================
+
+# Network
+
+===========================================================================================================================
+
+$ sudo apt update
+$ sudo apt upgrade
+
+[
+$ sudo apt-get update
+$ sudo apt-get upgrade
+]
+
+$ sudo netstat -tunpl
+$ sudo netstat -nr
+$ sudo netstat -ai
+$ sudo netstat -ant
+
+$ sudo ss -tunl
+$ sudo ss -t
+$ sudo ss -A tcp
+$ sudo ss -ua
+$ sudo ss -a -A udp
+$ sudo ss -nt
+$ sudo ss -ltn
+
+$ sudo apt-get install netcat
+# Address already in use # nc: Cannot assign requested address # 36523
+$ sudo nc -l localhost 36523
+# Not in use # 27017
+$ sudo nc -l localhost 27017
+# control + C
+[
+$ sudo apt-get remove netcat 
+$ sudo apt-get purge netcat
+# The following packages were automatically installed and are no longer required:
+# libpcre2-posix2 netcat-openbsd
+# Use 'sudo apt autoremove' to remove them.
+$ sudo apt autoremove
+]
+
+$ sudo apt-get install nmap
+$ sudo nmap -n -PN -sT -sU -p- localhost
+[
+$ sudo apt-get remove nmap
+$ sudo apt-get purge nmap
+# The following packages were automatically installed and are no longer required:
+# libblas3 liblinear4 liblua5.3-0 libpcap0.8 lua-lpeg nmap-common
+# Use 'sudo apt autoremove' to remove them.
+$ sudo apt autoremove
+]
+
+===========================================================================================================================
+
+# Docker
+
+===========================================================================================================================
+
+$ sudo docker --version
+
+$ sudo docker version
+
+$ sudo docker info
+
+===========================================================================================================================
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Amazon Web Services
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# AWS CLI version 2 # aws
+
+***************************************************************************************************************************
+
+% curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+% sudo installer -pkg AWSCLIV2.pkg -target /
+% aws --version
+% whereis aws
+% type aws
+[
+# rm -rf
+% ls -l /usr/local/bin/aws
+% sudo rm /usr/local/bin/aws
+% ls /usr/local/bin/aws_completer
+% sudo rm /usr/local/bin/aws_completer
+% ls /usr/local/aws-cli
+% sudo rm -rf /usr/local/aws-cli
+]
+
+***************************************************************************************************************************
+
+# AWS SAM CLI # sam
+
+***************************************************************************************************************************
+
+% sudo installer -pkg "$HOME/Downloads/Software/AWS/AWS SAM CLI/aws-sam-cli-macos-arm64.pkg" -target /
+% sam --version
+% whereis sam
+% type sam
+
+***************************************************************************************************************************
+
+# CLI for Amazon EKS # eksctl
+
+***************************************************************************************************************************
+
+# for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7` # export keyword optional
+% arch
+# AWS CloudShell
+# % export ARCH=amd64
+% export ARCH=arm64
+% export PLATFORM=$(uname -s)_$ARCH
+% curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
+% curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt" | grep $PLATFORM | sha256sum --check
+% tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
+% sudo mv /tmp/eksctl /usr/local/bin
+% eksctl version
+% whereis eksctl
+% type eksctl
+[
+# rm -rf
+% ls  /usr/local/bin/eksctl
+% sudo rm -rf  /usr/local/bin/eksctl
+]
+
+***************************************************************************************************************************
+
+# AWS IAM Authenticator for Kubernetes # aws-iam-authenticator
+
+***************************************************************************************************************************
+
+% brew install aws-iam-authenticator
+% aws-iam-authenticator version
+% whereis aws-iam-authenticator
+% type aws-iam-authenticator
+
+***************************************************************************************************************************
+
+# Amazon Linux centos rhel fedora
+
+***************************************************************************************************************************
+===========================================================================================================================
+
+# Linux centos rhel fedora
+
+===========================================================================================================================
+
+$ sudo cat /etc/os-release
+$ sudo cat /etc/*release
+
+$ sudo cat /etc/issue
+$ sudo more /etc/issue
+$ sudo less /etc/issue
+
+$ sudo cat /proc/version
+
+[
+$ sudo hostnamectl
+]
+$ sudo man hostnamectl
+
+$ sudo uname
+$ sudo uname -r
+$ sudo uname --release 
+$ sudo uname -srm
+$ sudo uname --kernel-name --kernel-release --kernel-version
+$ sudo uname --all
+$ sudo uname -amnoprsv
+$ sudo man uname
+
+$ sudo grep -E '^(VERSION|NAME)=' /etc/os-release
+$ sudo grep '^VERSION' /etc/os-release
+
+$ sudo yum --version
+
+$ sudo rpm --version 
+$ sudo rpm -qa
+$ sudo whereis rpm
+$ sudo man rpm
+
+$ echo $0
+
+$ sudo arch
+
+$ id -un
+$ sudo id -un
+
+$ whoami
+$ sudo whoami
+$ echo `whoami`
+
+$ sudo echo $USER
+
+$ sudo echo $HOME
+
+$ sudo echo ~/
+
+$ sudo echo $SHELL
+
+$ sudo echo $PATH
+
+$ sudo pwd
+$ sudo echo $(pwd)
+$ sudo echo $PWD
+
+$ sudo env
+$ sudo echo $(env)
+
+$ sudo date
+$ sudo echo $(date)
+$ sudo date +"%r"
+$ sudo date +"%T"
+$ sudo echo "Date: `date`"
+$ sudo date +"Time: %r"
+$ sudo date +"%A, %B %d, %Y,%l:%M:%S%3N %p, %Z, %z"
+$ sudo date +"Day Name: %A" && date +"Month Name: %B" && date +"Month: %m" && date +"Day: %d" && date +"Hour: %l" && date +"Minute: %M" && date +"Second: %S" && date +"Millisecond: %3N" && date +"TimeZone: %Z" && date +"GMT: %z"
+
+$ sudo locale
+$ sudo locale -a
+$ sudo echo $(locale)
+$ sudo echo $(locale -a)
+
+$ sudo echo $LC_ALL
+
+$ sudo ls
+$ sudo ls -a
+$ sudo ls /usr/local/bin
+$ sudo ls /usr/bin
+$ sudo ls /bin
+$ sudo ls /usr/sbin
+$ sudo ls /sbin
+
+$ whereis compgen
+$ type compgen
+$ man compgen
+$ compgen -c 
+$ compgen -a 
+$ compgen -b
+$ compgen -k
+$ compgen -A function
+$ compgen -A function -abck
+
+===========================================================================================================================
+
+# Technologies
+
+===========================================================================================================================
+
+$ node --version
+
+$ python3 --version
+
+$ perl --version
+
+$ go version
+
+===========================================================================================================================
+
+# Network
+
+===========================================================================================================================
+
+$ sudo yum update
+$ sudo yum upgrade
+
+[
+$ sudo yum install net-tools
+]
+$ sudo netstat -tunpl
+$ sudo netstat -nr
+$ sudo netstat -ai
+$ sudo netstat -ant
+[
+$ sudo yum remove net-tools
+]
+
+[
+$ sudo yum install iproute iproute-doc
+]
+$ sudo ss -tunl
+$ sudo ss -t
+$ sudo ss -A tcp
+$ sudo ss -ua
+$ sudo ss -a -A udp
+$ sudo ss -nt
+$ sudo ss -ltn
+[
+$ sudo yum remove iproute iproute-doc
+]
+
+$ sudo yum install nc
+# Ncat: bind to 127.0.0.1:36563: Address already in use. QUITTING.
+$ sudo nc -l localhost 36563
+# Not in use # 27017
+$ sudo nc -l localhost 27017
+# control + C
+[
+$ sudo yum remove nc
+$ sudo yum erase nc
+$ sudo yum autoremove
+]
+
+$ sudo yum install nmap
+$ sudo nmap -n -PN -sT -sU -p- localhost
+[
+$ sudo yum remove nmap
+$ sudo yum erase nmap
+$ sudo yum autoremove
+]
+
+===========================================================================================================================
+
+# Docker install
+
+===========================================================================================================================
+
+[
+$ sudo yum install -y docker
+]
+$ sudo amazon-linux-extras install docker
+
+$ sudo docker version
+
+$ sudo dockerd
+]
+
+===========================================================================================================================
+
+# Docker
+
+===========================================================================================================================
+
+$ sudo docker --version
+
+$ sudo docker version
+
+$ sudo docker info
+
+===========================================================================================================================
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Azure
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Azure CLI # azure-cli
+
+***************************************************************************************************************************
+
+% python3 --version
+% brew install azure-cli
+% az --version
+% whereis az
+% type az
+% az upgrade
+[
+% brew uninstall azure-cli
+% ls ~/.azure
+% rm -rf ~/.azure
+]
+
+***************************************************************************************************************************
+
+# Azure Kubelogin # kubelogin
+
+***************************************************************************************************************************
+
+% brew install Azure/kubelogin/kubelogin
+% kubelogin --version
+% whereis kubelogin
+% type kubelogin
+[
+% brew update %% brew upgrade Azure/kubelogin/kubelogin
+]
+
+***************************************************************************************************************************
+
+# Azure Common Base Linux Mariner
+
+***************************************************************************************************************************
+===========================================================================================================================
+
+# Linux Mariner
+
+===========================================================================================================================
+
+$ cat /etc/os-release
+$ cat /etc/*release
+
+$ cat /etc/issue
+$ more /etc/issue
+$ less /etc/issue
+
+$ cat /proc/version
+
+$ lsb_release --all
+$ lsb_release --description
+$ man lsb_release
+
+[
+$ hostnamectl
+]
+$ whereis hostnamectl
+$ type hostnamectl
+
+$ uname
+$ uname -r
+$ uname --release 
+$ uname -srm
+$ uname --kernel-name --kernel-release --kernel-version
+$ uname -amnoprsv
+$ uname --all
+$ man uname
+
+$ grep -E '^(VERSION|NAME)=' /etc/os-release
+$ grep '^VERSION' /etc/os-release
+
+$ yum --version
+
+$ rpm --version 
+$ rpm -qa 
+$ whereis rpm
+$ type rpm
+
+$ echo $0
+
+$ arch
+
+$ whoami
+$ echo `whoami`
+
+$ echo $USER
+
+$ echo $HOSTNAME
+$ echo `hostname`
+
+$ hostname
+$ hostname -f
+$ hostname -s
+$ hostname -d
+
+$ echo $HOME
+
+$ echo ~/
+
+$ echo $SHELL
+
+$ sudo echo $PATH
+
+$ sudo pwd
+$ sudo echo $(pwd)
+$ sudo echo $PWD
+
+$ sudo env
+$ sudo echo $(env)
+
+$ date
+$ echo $(date)
+$ date +"%r"
+$ date +"%T"
+$ echo "Date: `date`"
+$ date +"Time: %r"
+$ date +"%A, %B %d, %Y,%l:%M:%S%3N %p, %Z, %z"
+$ date +"Day Name: %A" && date +"Month Name: %B" && date +"Month: %m" && date +"Day: %d" && date +"Hour: %l" && date +"Minute: %M" && date +"Second: %S" && date +"Millisecond: %3N" && date +"TimeZone: %Z" && date +"GMT: %z"
+
+$ locale
+$ locale -a
+$ echo $(locale)
+$ echo $(locale -a) 
+
+$ sudo echo $LANG
+
+$ ls
+$ ls -a
+$ ls /usr/local/bin
+$ ls /usr/bin
+$ ls /bin
+$ ls /usr/sbin
+$ ls /sbin
+
+$ whereis compgen
+$ type compgen
+$ compgen -c 
+$ compgen -a 
+$ compgen -b
+$ compgen -k
+$ compgen -A function
+$ compgen -A function -abck
+
+===========================================================================================================================
+
+# Technologies
+
+===========================================================================================================================
+
+$ node --version
+
+$ python3 --version
+
+$ ruby --version
+
+$ gcc --version
+$ cc --version
+$ g++ --version
+$ c++ --version
+
+$ java --version
+$ mvn --version
+
+$ dotnet --version
+
+$ perl --version
+
+$ go version
+
+===========================================================================================================================
+
+# Network
+
+===========================================================================================================================
+
+$ netstat -tunpl
+$ netstat -nr
+$ netstat -ai
+$ netstat -ant
+
+$ ss -tunl
+$ ss -t
+$ ss -A tcp
+$ ss -ua
+$ ss -a -A udp
+$ ss -nt
+$ ss -ltn
+
+===========================================================================================================================
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Linux distro # Package Managers
+
+###########################################################################################################################
+
+apt / apt-get [Debian, Ubuntu, Mint]
+yum [Fedora, CentOS Stream, CentOS Linux, Oracle Linux, RHEL, Rocky, AlmaLinux]
+dnf [Fedora]
+rpm-ostree [Fedora CoreOS]
+microdnf [Oracle Linux]
+zypper [openSUSE and SUSE Linux Enterprise System]
+emerge [Gentoo Linux]
+apk [Alpine Linux]
+pacman [Arch Linux]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# chown # chmod
+
+###########################################################################################################################
+
+# chown
+# Set ownership
+$ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
+$ sudo chown -R vagrant:vagrant MongoDB_Spark_Course
+
+# chmod
+# Grant permission for the script to run as an executable
+$ sudo chmod +x ./dotnet-install.sh
+$ sudo chmod 755 gradlew*
+
+[
+$ ./dotnet-install.sh
+$ sh dotnet-install.sh
+$ bash dotnet-install.sh
+]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# ChromeOS # Penguin
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Debian GNU/Linux
+
+***************************************************************************************************************************
+
+$ sudo cat /etc/os-release
+$ sudo cat /etc/*release
+$ sudo cat /etc/*version
+
+$ sudo cat /etc/issue
+$ sudo more /etc/issue
+$ sudo less /etc/issue
+
+$ sudo cat /proc/version
+
+$ sudo hostnamectl
+$ sudo man hostnamectl
+
+$ sudo uname
+$ sudo uname -r
+$ sudo uname --release
+$ sudo uname -srm
+$ sudo uname --kernel-name --kernel-release --kernel-version
+$ sudo uname -amnoprsv
+$ sudo uname --all
+$ sudo man uname
+
+$ sudo grep -E '^(VERSION|NAME)=' /etc/os-release
+$ sudo grep '^VERSION' /etc/os-release
+
+$ sudo apt --version
+
+$ sudo apt-get --version 
+
+$ sudo dpkg --version 
+$ sudo dpkg -l
+$ sudo whereis dpkg
+$ sudo man dpkg
+
+$ echo $0
+
+$ sudo arch
+
+$ id -un
+$ sudo id -un
+
+$ whoami
+$ sudo whoami
+$ echo `whoami`
+
+$ sudo echo $USER
+
+$ sudo echo $HOSTNAME
+$ sudo echo `hostname`
+
+$ sudo hostname
+$ sudo hostname -f
+$ sudo hostname -s
+$ sudo hostname -d
+
+$ sudo echo $HOME
+
+$ sudo echo ~/
+
+$ sudo echo $SHELL
+
+$ sudo echo $PATH
+
+$ sudo pwd
+$ sudo echo $(pwd)
+$ sudo echo $PWD
+
+$ sudo env
+$ sudo echo $(env)
+
+$ sudo date
+$ sudo echo $(date)
+$ sudo date +"%r"
+$ sudo date +"%T"
+$ sudo echo "Date: `date`"
+$ sudo date +"Time: %r"
+$ sudo date +"%A, %B %d, %Y,%l:%M:%S%3N %p, %Z, %z"
+$ sudo date +"Day Name: %A" && date +"Month Name: %B" && date +"Month: %m" && date +"Day: %d" && date +"Hour: %l" && date +"Minute: %M" && date +"Second: %S" && date +"Millisecond: %3N" && date +"TimeZone: %Z" && date +"GMT: %z"
+
+$ sudo locale
+$ sudo locale -a
+$ sudo echo $(locale)
+$ sudo echo $(locale -a) 
+
+$ sudo echo $LANG
+
+$ sudo ls
+$ sudo ls -a
+$ sudo ls /usr/local/bin
+$ sudo ls /usr/bin
+$ sudo ls /bin
+$ sudo ls /usr/sbin
+$ sudo ls /sbin
+
+$ type compgen
+$ compgen -c 
+$ compgen -a 
+$ compgen -b
+$ compgen -k
+$ compgen -A function
+$ compgen -A function -abck
+
+$ www-browser https://google.com
+
+***************************************************************************************************************************
+
+# Technologies
+
+***************************************************************************************************************************
+
+$ python3 --version
+
+$ perl --version
+
+$ wget https://download.java.net/java/GA/jdk23.0.2/6da2a6609d6e406f85c491fcb119101b/7/GPL/openjdk-23.0.2_linux-x64_bin.tar.gz
+$ tar -xvzf openjdk-23.0.2_linux-x64_bin.tar.gz
+$ wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+$ sudo tar -xvzf apache-maven-3.9.9-bin.tar.gz
+$ export PATH="$HOME/jdk-23.0.2/bin/:$HOME/apache-maven-3.9.9/bin/":$PATH
+$ java --version
+$ mvn --version
+
+[
+$ curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup
+# Or
+$ curl -fL https://github.com/VirtusLab/coursier-m1/releases/latest/download/cs-aarch64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup
+]
+
+$ wget https://download.visualstudio.microsoft.com/download/pr/308f16a9-2ecf-4a42-b8bb-c1233de985fd/be6e87045ab21935bd8bb98ce69026c4/dotnet-sdk-9.0.100-linux-x64.tar.gz
+$ DOTNET_FILE=dotnet-sdk-9.0.100-linux-x64.tar.gz
+$ export DOTNET_ROOT=$HOME/.dotnet
+$ mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
+$ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+$ vim ~/.bashrc    
+[  
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+]
+$ dotnet --version
+
+***************************************************************************************************************************
+
+# Debian LXDE Desktop # Without Rooting
+
+***************************************************************************************************************************
+
+$ sudo apt update -y
+[
+$ sudo apt-get update -y
+]
+
+$ sudo apt dist-upgrade -y
+
+$ sudo apt install task-lxde-desktop -y
+
+$ sudo apt install xserver-xephyr -y
+
+$ sudo systemctl disable lightdm
+
+$ sudo nano /usr/bin/debian
+[
+Xephyr -br -fullscreen -resizeable :20 &
+sleep 5
+DISPLAY=:20 startlxde &
+]
+$ sudo ls /usr/bin/debian
+$ sudo cat /usr/bin/debian
+
+$ debian
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# macOS
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Darwin
+
+***************************************************************************************************************************
+
+% sw_vers
+
+% uname
+% uname -amnoprsv
+
+% echo $0
+
+% arch
+% arch -x86_64 zsh                                                   
+% arch -arm64 zsh 
+
+% id -F
+% sudo id -F
+% id -un
+% sudo id -un
+
+% whoami
+% sudo whoami
+% echo `whoami`
+
+% echo $USER
+
+% echo $USERNAME
+
+% echo $HOST    
+% echo `hostname`  
+
+% hostname
+% hostname -f
+% hostname -s
+% hostname -d
+
+% echo $HOME
+
+% echo ~/
+
+% echo $SHELL
+
+% echo $PATH
+
+% pwd
+% echo $(pwd)
+% echo $PWD
+
+% env
+% echo $(env)
+
+% date
+% echo $(date)
+% date +"%r"
+% date +"%T"
+% echo "Date: `date`"
+% date +"Time: %r"
+% date +"%A, %B %d, %Y,%l:%M:%S%3N %p, %Z, %z"
+% date +"Day Name: %A" && date +"Month Name: %B" && date +"Month: %m" && date +"Day: %d" && date +"Hour: %l" && date +"Minute: %M" && date +"Second: %S" && date +"Millisecond: %3N" && date +"TimeZone: %Z" && date +"GMT: %z"
+
+% locale
+% locale -a
+% echo $(locale)
+% echo $(locale -a) 
+
+% echo $LC_CTYPE
+
+% ls
+% ls -a
+% ls /usr/local/bin
+% ls /usr/bin
+% ls /bin
+% ls /usr/sbin
+% ls /sbin
+
+% type compgen
+% compgen -c 
+% compgen -a 
+% compgen -b
+% compgen -k
+% compgen -A function
+% compgen -A function -abck
+
+===========================================================================================================================
+
+# Network
+
+===========================================================================================================================
+
+% lsof -v             
+% whereis lsof                 
+% type lsof 
+% man lsof 
+
+% ls /usr/sbin/lsof 
+% ls /usr/share/man/man8/lsof.8
+
+# 80
+% sudo lsof -i tcp:80
+[
+COMMAND PID USER   FD   TYPE            DEVICE SIZE/OFF NODE NAME
+]
+      
+% whereis netstat  
+% type netstat 
+% man netstat 
+
+% netstat
+% netstat -r
+# All Ports
+% netstat -a
+# All Ports TCP
+% netstat -at
+# All Ports UDP
+% netstat -au
+# Listening Ports
+% netstat -l
+# Listening Ports TCP
+% netstat -lt
+# Listening Ports UDP
+% netstat -lu
+# Statistics by Protocol 
+% netstat -s
+# Statistics by Protocol TCP
+% netstat -st
+# Statistics by Protocol UDP
+% netstat -su
+# Network Interfaces
+% netstat -i
+
+% ls /usr/sbin/netstat
+% /usr/share/man/man1/netstat.1
+
+[
+% netstat -vanp tcp | grep 80
+]
+% netstat -vanp tcp 
+[
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)        rxbytes    txbytes  rhiwat  shiwat    pid   epid state  options           gencnt    flags   flags1 usecnt rtncnt fltrs
+]
+
+===========================================================================================================================
+
+# whereis # type # man # where # which # whence
+
+===========================================================================================================================
+
+% ls /usr/share/man/man1
+[
+whereis
+type 
+man
+where
+which
+]
+
+% whereis swift 
+% type swift
+% man swift
+% where swift
+% which swift
+% whence swift
+
+# whereis # type # where # which # whence # ls -l 
+% ls -l `whereis swift`
+% ls -l `type swift` 
+% ls -l `where swift`  
+% ls -l `which swift`  
+% ls -l `whence swift`
+
+# whereis # type # where # which # whence # ls -a
+% ls -a `whereis swift`
+% ls -a `type swift`
+% ls -a `where swift`    
+% ls -a `which swift`
+% ls -a `whence swift`
+
+===========================================================================================================================
+
+# /etc/paths # prepend path
+
+===========================================================================================================================
+
+% sudo nano /etc/paths  
+[
+/usr/local/bin
+/usr/bin/bin
+/usr/sbin
+/sbin
+]
+% cat /etc/paths 
+
+===========================================================================================================================
+
+# Xcode
+
+===========================================================================================================================
+
+% xcode-select --install
+% xcode-select --version
+% whereis xcode-select
+% type xcode-select
+% man xcode-select
+
+% xcodebuild -version
+% whereis xcodebuild
+% type xcodebuild
+% man xcodebuild
+
+% xcrun --version
+% whereis xcrun
+% type xcrun
+% man xcrun
+
+% xcrun simctl list  
+
+% export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin/":$PATH
+% simctl list
+
+[
+% xcrun simctl boot 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7
+]
+
+===========================================================================================================================
+
+# Swift
+
+===========================================================================================================================
+
+% swift --version
+% whereis swift
+% type swift
+% man swift
+
+===========================================================================================================================
+
+# otool # llvm
+
+===========================================================================================================================
+
+% otool --version
+% whereis otool
+% type otool
+% man otool
+
+# llvm is keg-only, which means it was not symlinked into /opt/homebrew, because macOS already provides this software and installing another version in parallel can cause all kinds of trouble
+
+% brew list llvm
+% ls /opt/homebrew/Cellar/llvm
+
+===========================================================================================================================
+
+# openssl 
+
+===========================================================================================================================
+
+% openssl --version
+% whereis openssl  
+% type openssl
+% man openss
+
+---------------------------------------------------------------------------------------------------------------------------
+# tls.sh # % sudo chmod +x ./tls.sh # % ./tls.sh
+---------------------------------------------------------------------------------------------------------------------------
+#!/usr/bin/env zsh
+
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+# Common variables
+COUNTRY_OR_REGION="AU"
+STATE_OR_PROVINCE="Some-State"
+LOCALITY="city"
+ORGANIZATION_NAME="Internet Widgits Pty Ltd"
+ORGANIZATIONAL_UNIT_NAME="section"
+COMMON_NAME_CA="CA.FQDN"
+COMMON_NAME_SERVER="Server.FQDN"
+COMMON_NAME_CLIENT="Client.FQDN"
+EMAIL_ADDRESS_CA="ca@email.com"
+EMAIL_ADDRESS_SERVER="server@email.com"
+EMAIL_ADDRESS_CLIENT="client@email.com"
+
+setopt no_nomatch
+rm -rf *.crt *.csr *.key *.pem *.srl
+setopt nomatch
+
+# CA # "SHA256" is now the default digest for TS query used by openssl ts
+openssl req -x509 -days 3650 -newkey rsa:4096 -keyout ca.key -nodes -out ca.crt -subj "/C=${COUNTRY_OR_REGION}/ST=${STATE_OR_PROVINCE}/L=${LOCALITY}/O=${ORGANIZATION_NAME}/OU=${ORGANIZATIONAL_UNIT_NAME}/CN=${COMMON_NAME_CA}/emailAddress=${EMAIL_ADDRESS_CA}" -quiet 
+cat ca.crt ca.key > ca.pem
+
+echo Server
+openssl req -new -newkey rsa:4096 -keyout server.key -out server.csr -nodes -subj "/C=${COUNTRY_OR_REGION}/ST=${STATE_OR_PROVINCE}/L=${LOCALITY}/O=${ORGANIZATION_NAME}/OU=${ORGANIZATIONAL_UNIT_NAME}/CN==${COMMON_NAME_SERVER}/emailAddress=${EMAIL_ADDRESS_SERVER}" -quiet 
+openssl x509 -req -CA ca.crt -CAkey ca.key -in server.csr -out server.crt -days 365 -CAcreateserial
+cat server.crt ca.crt > server.pem
+
+echo Client
+openssl req -new -newkey rsa:4096 -nodes -keyout client.key -out client.csr -quiet -subj "/C=${COUNTRY_OR_REGION}/ST=${STATE_OR_PROVINCE}/L=${LOCALITY}/O=${ORGANIZATION_NAME}/OU=${ORGANIZATIONAL_UNIT_NAME}/CN=${COMMON_NAME_CLIENT}/emailAddress=${EMAIL_ADDRESS_CLIENT}"
+openssl x509 -req -CA ca.crt -CAkey ca.key -in client.csr -out client.crt -days 365 -CAcreateserial
+
+openssl x509 -text -noout -in ca.crt
+---------------------------------------------------------------------------------------------------------------------------
+===========================================================================================================================
+***************************************************************************************************************************
+
+
+***************************************************************************************************************************
+
+# GitHub CLI
+
+***************************************************************************************************************************
+
+% brew install gh
+% gh --version
+% whereis gh
+% type gh
+% man gh
+
+% gh auth login
+
+***************************************************************************************************************************
+
+
+***************************************************************************************************************************
+
+# SDKMAN! # sdk
+
+***************************************************************************************************************************
+
+[
+% wget -O sdkman-init.sh "https://get.sdkman.io"
+% sudo chmod +x ./sdkman-init.sh
+% ./sdkman-init.sh
+
+% cat $HOME/.bash_profile
+% cat $HOME/.zshrc
+
+% source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Or
+% exec "$SHELL"
+% sdk version
+% ls $HOME/.sdkman
+
+# rm .sdkman
+% ls $HOME/.sdkman
+% rm -rf $HOME/.sdkman
+
+# rm # .bash_profile
+% ls $HOME/.bash_profile
+% cat $HOME/.bash_profile
+% rm -rf $HOME/.bash_profile
+
+# rm # .zshrc
+% cat $HOME/.zshrc
+% sed -i '' '$d' $HOME/.zshrc
+% sed -i '' '$d' $HOME/.zshrc
+% sed -i '' '$d' $HOME/.zshrc
+]
+
+% curl -s "https://get.sdkman.io" | bash
+
+% source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+% sdk version
+% whereis sdk
+% whence sdk
+% type sdk
+
+[
+% rm -rf $HOME/.bash_profile
+% rm -rf $HOME/.sdkman
+]
+
+***************************************************************************************************************************
+
+# SDKMAN! # gradle
+
+***************************************************************************************************************************
+
+% sdk install gradle
+
+% gradle --version
+% whereis gradle
+% whence gradle
+% type gradle
+
+[
+% sdk uninstall gradle 8.12 --force
+]
+
+***************************************************************************************************************************
+
+# SDKMAN! # GraalVM
+
+***************************************************************************************************************************
+
+% sdk install java 23-graal
+% java --version
+% whereis java
+% type java
+% man java
+
+% native-image --version
+% whereis native-image
+% type native-image
+
+[
+% sdk uninstall java 23-graal --force
+]
+
+***************************************************************************************************************************
+
+# hdiutil # manipulate disk images (attach, verify, create, etc)
+
+***************************************************************************************************************************
+
+% hdiutil help
+% whereis hdiutil
+% type hdiutil
+% man hdiutil
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# curl # wget
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# curl update
+
+***************************************************************************************************************************
+
+% brew install curl
+% curl --version
+% \curl --version
+% whereis curl
+% type curl
+% man curl
+
+% brew reinstall curl
+
+***************************************************************************************************************************
+
+# wget update
+
+***************************************************************************************************************************
+
+% brew install wget
+% wget --version
+% whereis wget
+% type wget
+% man wget
+
+% brew reinstall wget
+
+***************************************************************************************************************************
+
+# curl # wget # open # https # http
+
+***************************************************************************************************************************
+===========================================================================================================================
+
+# https
+
+===========================================================================================================================
+
+# curl: (60) SSL certificate problem: unable to get local issuer certificate
+# More details here: https://curl.se/docs/sslcerts.html
+# -k
+% curl -k https://localhost:44303/
+
+# ERROR: cannot verify localhost's certificate, issued by ‘CN=localhost’:
+#  Self-signed certificate encountered.
+# To connect to localhost insecurely, use `--no-check-certificate'.
+# --no-check-certificate
+% wget -S -O - https://localhost:44303/ --no-check-certificate
+
+% open https://localhost:44303/
+
+===========================================================================================================================
+
+# http
+
+===========================================================================================================================
+
+% curl http://localhost:5015/
+% wget -S -O - http://localhost:5015/
+% open http://localhost:5015/
+
+===========================================================================================================================
+***************************************************************************************************************************
+
+# curl
+
+***************************************************************************************************************************
+
+% curl -L -o swift-wasm-5.10.0-RELEASE-macos_arm64.pkg https://github.com/swiftwasm/swift/releases/download/swift-wasm-5.10.0-RELEASE/swift-wasm-5.10.0-RELEASE-macos_arm64.pkg
+
+# --location # Or -L
+% curl --location https://storage.googleapis.com/minikube-site-examples/ingress-example.yaml
+% curl -L https://storage.googleapis.com/minikube-site-examples/ingress-example.yaml
+
+# -o # <Name>
+% curl -o Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4"
+# -O # Rename
+% curl -O "https://avatars.githubusercontent.com/u/9950313?s=48&v=4"; mv 9950313 Node.png
+
+# --output # <Name>
+% curl --output Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4"
+# -o # <Name>
+% curl -o Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4"
+
+# --create-dirs --output-dir
+% curl --output Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4" --create-dirs --output-dir public/images
+
+#  -H
+% curl -H 'Host: www.example.com' http://93.184.216.34
+
+# bash
+% curl https://wasmtime.dev/install.sh -sSf | bash
+% curl -o install.sh https://wasmtime.dev/install.sh -sSf; sudo chmod +x ./install.sh; ./install.sh
+
+***************************************************************************************************************************
+
+# wget
+
+***************************************************************************************************************************
+
+% wget https://github.com/swiftwasm/swift/releases/download/swift-wasm-5.10.0-RELEASE/swift-wasm-5.10.0-RELEASE-macos_arm64.pkg
+
+# --directory-prefix # Or # -P 
+% wget https://raw.githubusercontent.com/tachyons-css/tachyons/master/css/tachyons.min.css --directory-prefix=public
+% wget https://raw.githubusercontent.com/tachyons-css/tachyons/master/css/tachyons.min.css --directory-prefix="public"
+% wget https://raw.githubusercontent.com/tachyons-css/tachyons/master/css/tachyons.min.css --directory-prefix="$HOME/Kubernetes/minikube/node-mongodb-app/public"
+% wget "https://avatars.githubusercontent.com/u/9950313?s=48&v=4" --directory-prefix="public/images"
+% wget "https://avatars.githubusercontent.com/u/9950313?s=48&v=4" -P "public/images"
+
+# --output-document # Or # -O 
+% wget --output-document=Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4"
+% wget -O Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4"
+
+# --output # And # && mv 
+# Instead of 
+# --output # And # --directory-prefix
+% wget --output-document=Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4" && mv Node.png "public/images"
+% wget -O Node.png "https://avatars.githubusercontent.com/u/9950313?s=48&v=4" && mv Node.png "public/images"
+
+# bash
+% wget -O - https://wasmtime.dev/install.sh | bash
+% wget https://wasmtime.dev/install.sh -v -O install.sh; sudo chmod +x ./install.sh; ./install.sh
+
+***************************************************************************************************************************
+
+# nslookup # dig # scutil # dns-sd # dscacheutil # dns-sd # host
+
+***************************************************************************************************************************
+
+% open https://www.nslookup.io/domains/example.com/webservers/ 
+% open https://www.nslookup.io/domains/www.example.com/webservers/
+
+# nslookup # query Internet name servers interactively
+% nslookup example.com
+% nslookup www.example.com
+
+# dig # DNS lookup utility
+% dig +short example.com 
+% dig +short www.example.com
+
+# scutil # Manage system configuration parameters
+% scutil --get ComputerName
+% scutil --dns
+% scutil -r example.com
+% scutil -r www.example.com 
+% scutil -W -r example.com
+% scutil -W -r www.example.com 
+
+# dns-sd # Multicast DNS (mDNS) & DNS Service Discovery (DNS-SD) Test Tool
+% dns-sd -G v4v6 example.com 
+% dns-sd -G v4v6 www.example.com 
+
+# dscacheutil # Gather information, statistics and initiate queries to the Directory Service cache
+% dscacheutil -q host -a name example.com
+% dscacheutil -q host -a name www.example.com 
+
+# dns-sd # Multicast DNS (mDNS) & DNS Service Discovery (DNS-SD) Test Tool
+% dns-sd -q example.com
+% dns-sd -q www.example.com
+
+% nslookup example.com 
+# 23.192.228.80
+[
+% curl -H 'Host: example.com' http://23.192.228.80
+]
+% nslookup www.example.com 
+# 23.200.238.48
+[
+% curl -H 'Host: www.example.com' http://23.200.238.48
+]
+
+# host # DNS lookup utility
+% host -t cname www.example.com        
+[
+www.example.com is an alias for www.example.com-v4.edgesuite.net.
+]
+% host -t cname www.github.com
+[
+www.github.com is an alias for github.com.
+]
+% host -t cname www.abc.xyz
+[
+www.abc.xyz is an alias for www3.l.google.com.
+]
+% host -t cname www.aws.amazon.com
+[
+www.aws.amazon.com is an alias for www.cname-proxy.amazon.com.
+]
+% host -t cname www.azure.microsoft.com
+[
+www.azure.microsoft.com is an alias for acom-vanity-router-prod-glbl-01.trafficmanager.net.
+]
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Homebrew # brew tap # brew install # brew install --cask # brew remove # brew uninstall # brew untap
+
+###########################################################################################################################
+
+% git --version
+% whereis git
+% type git
+% man git
+% curl --version
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# % echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+% nano ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+% cat ~/.zprofile
+% brew --version
+% brew doctor
+% brew doctor `brew doctor --list-checks | grep -v stray_headers`
+% brew bundle dump
+[
+% brew update-reset
+]
+% brew update
+% brew upgrade
+% brew outdated
+% brew --prefix
+% whereis brew
+% type brew
+% man brew
+% brew list
+% brew list --cask
+# Or
+% brew list --casks
+% brew deps --tree --installed
+% ls ~/Library/Caches/Homebrew/downloads
+
+# brew search
+% brew search libpq
+
+# brew info
+% brew info libpq
+
+***************************************************************************************************************************
+
+# openssl
+
+***************************************************************************************************************************
+
+% brew install openssl    
+[
+% brew reinstall openssl@3
+]
+% openssl --version
+% whereis openssl
+% type openssl
+% man openssl
+
+***************************************************************************************************************************
+
+# Git
+
+***************************************************************************************************************************
+
+% brew install git
+% git version
+% whereis git
+% type git
+% man git
+
+***************************************************************************************************************************
+
+# Kubernetes # K8s # kubectl
+
+***************************************************************************************************************************
+
+% brew install kubectl
+% kubectl version
+% whereis kubectl
+% type kubectl
+% man kubectl
+
+***************************************************************************************************************************
+
+# minikube 
+
+***************************************************************************************************************************
+
+% brew install minikube
+% minikube version
+% whereis minikube
+% type minikube
+
+% eval $(minikube docker-env)
+% echo $(minikube docker-env)
+% eval $(minikube docker-env -u)
+% echo $(minikube docker-env -u)
+
+***************************************************************************************************************************
+
+# multipass # multipass-1.15.0+mac-Darwin.pkg # microk8s-vm # nstall --cask # uninstall --zap
+
+***************************************************************************************************************************
+
+[
+% brew install --cask multipass
+]
+# multipass-1.15.0+mac-Darwin.pkg
+% multipass version 
+% whereis multipass
+% type multipass
+
+% multipass launch --name microk8s-vm --memory 4G --disk 40G
+
+% multipass shell microk8s-vm
+ubuntu@microk8s-vm:~$ sudo snap install microk8s --classic
+ubuntu@microk8s-vm:~$ sudo microk8s.status --wait-ready
+ubuntu@microk8s-vm:~$ sudo microk8s.enable dns dashboard registry
+ubuntu@microk8s-vm:~$ sudo snap alias microk8s.kubectl kubectl
+ubuntu@microk8s-vm:~$ sudo microk8s.disable dashboard dns registry
+
+% multipass stop microk8s-vm
+% multipass delete microk8s-vm
+% multipass purge
+
+[
+% brew uninstall --zap multipass
+% ls /usr/local/bin
+% ls /usr/local/bin/multipass
+% rm -rf /usr/local/bin/multipass
+]
+
+***************************************************************************************************************************
+
+# Docker # Docker.dmg
+
+***************************************************************************************************************************
+
+[
+% ls $HOME/Downloads/Software/Docker/Docker.dmg
+
+% cd $HOME/Downloads/Software/Docker
+
+% hdiutil attach Docker.dmg
+
+% /Volumes/Docker/Docker.app/Contents/MacOS/install
+
+% hdiutil detach /Volumes/Docker
+]
+
+% export PATH="/Applications/Docker.app/Contents/Resources/bin/:/Applications/Docker.app/Contents/Resources/cli-plugins/":$PATH
+
+% docker --version
+
+% docker version
+
+
+% ls -1 /Applications/Docker.app/Contents/Resources/bin
+[
+com.docker.webgpu-runtime
+compose-bridge
+docker
+docker-credential-desktop
+docker-credential-ecr-login
+docker-credential-osxkeychain
+extension-admin
+hub-tool
+kubectl
+]
+
+% ls -1 /Applications/Docker.app/Contents/Resources/cli-plugins
+[
+docker-ai
+docker-buildx
+docker-compose
+docker-debug
+docker-desktop
+docker-dev
+docker-extension
+docker-feedback
+docker-init
+docker-sbom
+docker-scout
+]
+
+[
+% ls /usr/local/bin
+]
+
+***************************************************************************************************************************
+
+# Docker # Cleanup
+
+***************************************************************************************************************************
+
+% docker version
+
+% docker container list --all
+% docker image list --all
+
+[
+% docker ps --all --quiet
+% docker stop $(docker ps -a -q)
+% docker rm $(docker ps -a -q) --force
+]
+
+% docker container list --all --quiet
+% docker stop $(docker container list -a -q)
+% docker rm $(docker container list -a -q) --force
+% docker container prune
+
+% docker image list --all --quiet
+% docker rmi $(docker image list -a -q) --force 
+% docker image prune --all
+
+% docker volume list --quiet
+% docker volume rm $(docker volume list --quiet) --force
+% docker volume prune --all
+
+% docker network list --quiet --filter "type=custom"
+% docker network rm $(docker network list --quiet --filter "type=custom")
+% docker network prune
+
+% docker system info
+% docker system prune --all --volumes
+
+***************************************************************************************************************************
+
+# Podman
+
+**************************************************************************************************************************
+
+% brew install podman
+
+[
+% brew uninstall podman
+
+% ls /opt
+% ls /opt/podman
+% ls /opt/podman/bin
+% ls /opt/podman/bin/podman
+% sudo rm -rf /opt/podman
+
+% ls /etc/paths.d
+% sudo rm -rf /etc/paths.d/podman-pkg
+
+% ls ~/.local
+% rm -rf ~/.local
+
+% ls ~/.config
+% rm -rf ~/.config
+]
+
+***************************************************************************************************************************
+
+# Podman # Cleanup
+
+***************************************************************************************************************************
+
+% podman system connection list
+% podman machine list 
+
+% podman container list 
+% podman image list --all
+
+[
+% podman ps --all --quiet
+% podman stop $(podman ps -a -q)
+% podman rm $(podman ps -a -q) --force
+]
+
+% podman container list --all --quiet
+% podman stop $(podman container list -a -q)
+% podman rm $(podman container list -a -q) --force
+% podman container prune
+
+% podman image list --all --quiet
+% podman rmi $(podman image list -a -q) --force 
+% podman image prune --all
+
+% podman volume list --quiet
+% podman volume rm $(podman volume list --quiet) --force
+% podman volume prune
+
+% podman network ls
+% podman network ls --quiet --filter dangling=true
+% podman network rm $(podman network ls --quiet --filter dangling=true)
+% podman network prune
+
+% podman system info
+% podman system prune --all --volumes
+
+% podman system connection list
+% podman machine list 
+% podman machine stop
+% podman machine rm podman-machine-default
+
+***************************************************************************************************************************
+
+# nginx
+
+***************************************************************************************************************************
+
+% brew install nginx
+
+% nginx -version
+% whereis nginx
+% type nginx
+% man nginx
+
+% nginx -V
+% nginx -t
+
+% launchctl load /opt/homebrew/Cellar/nginx/1.27.3/homebrew.mxcl.nginx.plist
+
+% curl http://127.0.0.1:8080/
+
+% launchctl unload /opt/homebrew/Cellar/nginx/1.27.3/homebrew.mxcl.nginx.plist
+
+[
+% ls /opt/homebrew/bin/nginx
+% ls /opt/homebrew/Cellar/nginx
+% ls /opt/homebrew/Cellar/nginx/1.27.3
+% cat /opt/homebrew/Cellar/nginx/1.27.3/homebrew.nginx.service
+% cat /opt/homebrew/Cellar/nginx/1.27.3/homebrew.mxcl.nginx.plist
+% ls /opt/homebrew/etc/nginx
+% ls /opt/homebrew/etc/nginx/nginx.conf
+% cat /opt/homebrew/etc/nginx/nginx.conf
+]
+
+[
+% brew uninstall nginx
+% ls /opt/homebrew/bin/nginx
+% rm -r /opt/homebrew/bin/nginx
+% ls /opt/homebrew/etc/nginx
+% rm -r /opt/homebrew/etc/nginx
+]
+
+***************************************************************************************************************************
+
+# Terraform
+
+***************************************************************************************************************************
+
+% brew tap hashicorp/tap
+% brew install hashicorp/tap/terraform
+% terraform --version
+% whereis terraform
+% type terraform
+% touch ~/.zprofile
+% terraform -install-autocomplete
+
+***************************************************************************************************************************
+
+# gradle
+
+***************************************************************************************************************************
+
+% brew install gradle
+% gradle --version
+% whereis gradle
+% type gradle
+
+[
+% brew uninstall gradle
+]
+
+***************************************************************************************************************************
+
+# MinIO # brew install # make
+
+***************************************************************************************************************************
+
+[
+% brew uninstall minio
+]
+% brew install minio/stable/minio
+
+% minio --version
+
+[
+# RELEASE
+% wget https://github.com/minio/minio/archive/refs/tags/RELEASE.2023-11-01T18-37-25Z.zip
+
+% unzip RELEASE.2023-11-01T18-37-25Z.zip
+
+% cd minio-RELEASE.2023-11-01T18-37-25Z
+
+% make --version
+
+% make
+
+% ./minio --version
+
+% ./minio server --address 127.0.0.1:9000 --console-address :9090 ~/Minio
+]
+
+***************************************************************************************************************************
+
+# cmake
+
+***************************************************************************************************************************
+
+% brew install cmake
+% cmake --version
+% whereis cmake
+% type cmake
+
+***************************************************************************************************************************
+
+# zip # unzip # p7zip # 7z
+
+***************************************************************************************************************************
+
+% zip  
+% unzip
+
+# p7zip
+% brew install p7zip
+% 7z
+% whereis 7z
+% type 7z
+% man 7z
+
+[
+# Size > 50 MB # Print
+% find . -depth -size +50M -print
+
+# Zip
+% zip "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz"
+
+# Split Zip = 45 MB
+% zip "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" --out "Split openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" -s 45m
+
+# Merge Zip # Extract Split Archive
+% 7z x "Split openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip"
+
+# Size > 50 MB # Delete
+% find . -depth -size +50M -delete
+]
+
+# Password
+[
+# File 
+% zip -er "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz"
+% unzip "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip"
+# Folder
+% zip -er "OpenJDK Jextract.zip" "OpenJDK Jextract"
+% unzip "OpenJDK Jextract.zip"
+]
+
+***************************************************************************************************************************
+
+# jq # JSON processor
+
+***************************************************************************************************************************
+
+% brew install jq
+% jq --version 
+% whereis jq
+% type jq
+% man jq
+
+***************************************************************************************************************************
+
+# tree # list contents of directories in a tree-like format
+
+***************************************************************************************************************************
+
+% brew install tree
+% tree --version 
+% whereis tree
+% type tree
+% man tree
+
+***************************************************************************************************************************
+
+# Beyond Compare
+
+***************************************************************************************************************************
+
+% brew install --cask beyond-compare
+% bcomp
+% brew uninstall --cask beyond-compare
+
+***************************************************************************************************************************
+
+# youtube-dl
+
+***************************************************************************************************************************
+
+% brew install youtube-dl
+% youtube-dl --version
+% whereis youtube-dl
+% type youtube-dl
+% man youtube-dl
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# MacPorts # pkg
+
+###########################################################################################################################
+
+% port version
+% whereis port
+% type port
+% man port
+% sudo port -v self update
+
+% cat $HOME/.zprofile
+[
+##
+# Your previous /Users/rajaniapple/.zprofile file was backed up as /Users/rajaniapple/.zprofile.macports-saved_2025-01-07_at_23:40:08
+##
+
+# MacPorts Installer addition on 2025-01-07_at_23:40:08: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Emscripten
+
+###########################################################################################################################
+
+% brew install emscripten
+% emcc --version
+% whereis emcc
+% type emcc
+
+% em++ --version
+% whereis em++
+% type em++
+
+===========================================================================================================================
+
+# Emscripten # WebAssembly (Wasm) # emsdk # emcc # em++ # Node.js # HTML
+
+===========================================================================================================================
+
+[
+# Instead of installing Emscripten using Homebrew
+% brew install emscripten
+]
+# Install Emscripten using SDK
+% ./emsdk install latest
+
+% emcc --version
+
+% em++ --version
+
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# WABT # The WebAssembly Binary Toolkit
+
+###########################################################################################################################
+
+% brew install wabt
+
+% brew list wabt
+[
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/spectest-interp
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm-decompile
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm-interp
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm-objdump
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm-stats
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm-strip
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm-validate
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm2c
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wasm2wat
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wast2json
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wat-desugar
+/opt/homebrew/Cellar/wabt/1.0.36_1/bin/wat2wasm
+/opt/homebrew/Cellar/wabt/1.0.36_1/include/wabt/ (64 files)
+/opt/homebrew/Cellar/wabt/1.0.36_1/include/ (2 files)
+/opt/homebrew/Cellar/wabt/1.0.36_1/lib/cmake/ (4 files)
+/opt/homebrew/Cellar/wabt/1.0.36_1/lib/ (2 files)
+/opt/homebrew/Cellar/wabt/1.0.36_1/sbom.spdx.json
+/opt/homebrew/Cellar/wabt/1.0.36_1/share/man/ (12 files)
+/opt/homebrew/Cellar/wabt/1.0.36_1/share/wabt/ (4 files)
+]
+
+===========================================================================================================================
+# wabt.sh # % sudo chmod +x ./wabt.sh # % ./wabt.sh  
+===========================================================================================================================
+#!/usr/bin/env zsh
+
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+echo 1 wat2wasm: translate from WebAssembly text format to the WebAssembly binary format
+wat2wasm --version
+whereis wat2wasm 
+type wat2wasm
+man -w wat2wasm
+echo 
+
+echo 2 wasm2wat: the inverse of wat2wasm, translate from the binary format back to the text format "(also known as a .wat)"
+wasm2wat --version
+whereis wasm2wat 
+type wasm2wat
+man -w wasm2wat
+echo 
+
+echo 3 wasm-objdump: print information about a wasm binary. Similiar to objdump.
+wasm-objdump --version
+whereis wasm-objdump 
+type wasm-objdump
+man -w wasm-objdump
+echo 
+
+echo 4 wasm-interp: decode and run a WebAssembly binary file using a stack-based interpreter
+wasm-interp --version
+whereis wasm-interp
+type wasm-interp
+man -w wasm-interp
+echo 
+
+echo 5 wasm-decompile: decompile a wasm binary into readable C-like syntax.
+wasm-decompile --version
+whereis wasm-decompile
+type wasm-decompile
+man -w wasm-decompile
+echo 
+
+echo 6 wat-desugar: parse .wat text form as supported by the spec interpreter "(s-expressions, flat syntax, or mixed)" and print "canonical" flat format
+wat-desugar --version
+whereis wat-desugar
+type wat-desugar
+man -w wat-desugar
+echo 
+
+echo 7 wasm2c: convert a WebAssembly binary file to a C source and header
+wasm2c --version
+whereis wasm2c
+type wasm2c
+man -w wasm2c
+echo 
+
+echo 8 wasm-strip: remove sections of a WebAssembly binary file
+wasm-strip --version
+whereis wasm-strip
+type wasm-strip
+man -w wasm-strip
+echo 
+
+echo 9 wasm-validate: validate a file in the WebAssembly binary format
+wasm-validate --version
+whereis wasm-validate
+type wasm-validate
+man -w wasm-validate
+echo 
+
+echo 10 wast2json: convert a file in the wasm spec test format to a JSON file and associated wasm binary files
+wast2json --version
+whereis wast2json
+type wast2json
+man -w wast2json
+echo 
+
+echo 11 wasm-stats: output stats for a module
+wasm-stats --version
+whereis wasm-stats
+type wasm-stats
+man -w wasm-stats
+echo 
+
+echo 12 spectest-interp: read a Spectest JSON file, and run its tests in the interpreter
+spectest-interp --version
+whereis spectest-interp
+type spectest-interp
+man -w spectest-interp
+===========================================================================================================================
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Go
+
+###########################################################################################################################
+
+% brew install go
+% go version  
+% whereis go
+% type go
+
+===========================================================================================================================
+
+# Go # WebAssembly (wasm) # tinygo
+
+===========================================================================================================================
+
+% brew tap tinygo-org/tools
+% brew install tinygo
+% tinygo version  
+% whereis tinygo
+% type tinygo
+
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Dart # Flutter
+
+###########################################################################################################################
+
+% mkdir -p ~/development/
+
+% unzip ~/Downloads/Software/Flutter/flutter_macos_arm64_3.27.2-stable.zip -d ~/development/
+
+[
+% echo 'export PATH="$HOME/development/flutter/bin:$PATH"' >> ~/.zprofile
+# Terminal New Window
+% cat ~/.zprofile
+% flutter --version
+]
+
+[
+% echo 'export PATH="$HOME/development/flutter/bin:$PATH"' >> ~/.zshenv
+% cat ~/.zshenv
+% exec "$SHELL"
+% flutter --version
+]
+
+% export PATH="$HOME/development/flutter/bin/":$PATH
+% flutter --version
+% whereis flutter
+% type flutter
+
+% flutter doctor --version
+
+% flutter doctor
+
+% flutter doctor --verbose
+
+% dart --version
+% whereis dart
+% type dart
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Android # android-studio-2024.2.2.15-mac_arm.dmg
+
+###########################################################################################################################
+# Ensure Java Runtime
+# Java 23.0.2
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/":$PATH
+% java --version
+
+# Sources for Android 35 (revision 1)
+https://dl.google.com/android/repository/source-35_r01.zip
+
+# Android SDK Platform 35 (revision 2)
+https://dl.google.com/android/repository/platform-35_r02.zip
+
+# Android SDK Build-Tools 35.0.1 v.35.0.1
+https://dl.google.com/android/repository/build-tools_r35.0.1_macosx.zip
+
+# Android SDK Platform-Tools v.35.0.2
+https://dl.google.com/android/repository/platform-tools_r35.0.2-darwin.zip
+
+# Android Emulator v.35.3.12
+https://dl.google.com/android/repository/emulator-darwin_aarch64-12990079.zip
+
+[
+% ls $HOME/Library/Android
+% ls $HOME/Library/Android/sdk
+% ls $HOME/Library/Android/sdk/emulator
+% ls $HOME/Library/Android/sdk/platform-tools
+]
+
+# Android Studio > More Action > SDK Manager > Languages & Frameworks > Android SDK > SDK Tools
+[
+Android SDK Command-line Tools (latest)
+Android Auto API Simulators
+Android Auto Desktop Head Unit Emulator
+]
+
+Android SDK Command-line Tools (latest) v.19.0.0 rc1
+https://dl.google.com/android/repository/commandlinetools-mac-12996373_latest.zip
+
+Android Auto API Simulators v.1
+https://dl.google.com/android/repository/simulator_r01.zip
+
+Android Auto Desktop Head Unit Emulator v.2.0
+https://dl.google.com/android/repository/desktop-head-unit-darwin-aarch64_r02.0.zip
+
+# Android SDK Command-line Tools (latest)
+% ls $HOME/Library/Android/sdk/cmdline-tools
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest/bin
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager
+
+# Android Auto Desktop Head Unit Emulator
+% ls $HOME/Library/Android/sdk/extras
+% ls $HOME/Library/Android/sdk/extras/google
+% ls $HOME/Library/Android/sdk/extras/google/auto
+
+[
+# Ensure the DHU binary is executable # Connect Android Phone via USB
+% chmod +x $HOME/Library/Android/sdk/extras/google/auto/desktop-head-unit
+% $HOME/Library/Android/sdk/extras/google/auto/desktop-head-unit --usb
+]
+
+# Android Auto API Simulators
+% ls $HOME/Library/Android/sdk/extras
+% ls $HOME/Library/Android/sdk/extras/google
+% ls $HOME/Library/Android/sdk/extras/google/simulators
+
+% export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin/":$PATH
+% sdkmanager --version
+% sdkmanager --list
+[
+Installed packages:
+  Path                                                       | Version    | Description                                                | Location                                                  
+  -------                                                    | -------    | -------                                                    | -------                                                   
+  build-tools;35.0.1                                         | 35.0.1     | Android SDK Build-Tools 35.0.1                             | build-tools/35.0.1                                        
+  cmdline-tools;latest                                       | 19.0.0 rc1 | Android SDK Command-line Tools (latest)                    | cmdline-tools/latest                                      
+  emulator                                                   | 35.3.12    | Android Emulator                                           | emulator                                                  
+  extras;google;auto                                         | 2.0        | Android Auto Desktop Head Unit Emulator                    | extras/google/auto                                        
+  extras;google;simulators                                   | 1          | Android Auto API Simulators                                | extras/google/simulators                                  
+  platform-tools                                             | 35.0.2     | Android SDK Platform-Tools                                 | platform-tools                                            
+  platforms;android-35                                       | 2          | Android SDK Platform 35                                    | platforms/android-35                                      
+  sources;android-35                                         | 1          | Sources for Android 35                                     | sources/android-35                                        
+  system-images;android-34-ext9;android-automotive;arm64-v8a | 4          | Android Automotive with Google APIs arm64-v8a System Image | system-images/android-34-ext9/android-automotive/arm64-v8a
+
+Available Packages:
+  Path                                                                            | Version           | Description                                                               
+...
+  system-images;android-34-ext9;android-automotive;arm64-v8a                      | 4                 | Android Automotive with Google APIs arm64-v8a System Image   
+... 
+  system-images;android-35;google_apis;arm64-v8a                                  | 9                 | Google APIs ARM 64 v8a System Image
+...    
+  system-images;android-Baklava;google_apis;arm64-v8a                             | 4                 | Google APIs ARM 64 v8a System Image                                  
+...
+]
+
+% sdkmanager --install emulator
+
+[
+# Android Studio > More Actions > Virtual Device Manager
+]
+[
+% sdkmanager --install "system-images;android-34-ext9;android-automotive;arm64-v8a"
+% ls $HOME/Library/Android/sdk/system-images  
+% ls $HOME/Library/Android/sdk/system-images/android-34-ext9
+% ls $HOME/Library/Android/sdk/system-images/android-34-ext9/android-automotive
+% ls $HOME/Library/Android/sdk/system-images/android-34-ext9/android-automotive/arm64-v8a
+
+% sdkmanager --install "system-images;android-35;google_apis;arm64-v8a"
+% ls $HOME/Library/Android/sdk/system-images  
+% ls $HOME/Library/Android/sdk/system-images/android-35
+% ls $HOME/Library/Android/sdk/system-images/android-35/google_apis
+% ls $HOME/Library/Android/sdk/system-images/android-35/google_apis/arm64-v8a
+
+% sdkmanager --install "system-images;android-Baklava;google_apis;arm64-v8a"
+% ls $HOME/Library/Android/sdk/system-images  
+% ls $HOME/Library/Android/sdk/system-images/android-Baklava
+% ls $HOME/Library/Android/sdk/system-images/android-Baklava/google_apis
+% ls $HOME/Library/Android/sdk/system-images/android-Baklava/google_apis/arm64-v8a
+]
+
+% avdmanager 
+% avdmanager list
+% avdmanager list device
+% avdmanager list target
+% avdmanager list avd 
+[
+% avdmanager create avd -n Android_34_Ext9_Android_Automotive_ARM64_V8a -k "system-images;android-34-ext9;android-automotive;arm64-v8a"
+% avdmanager create avd -n Android_35_Google_APIs_ARM64_V8a -k "system-images;android-35;google_apis;arm64-v8a"
+% avdmanager create avd -n Android_Baklava_Google_APIs_ARM64_V8a -k "system-images;android-Baklava;google_apis;arm64-v8a"
+]
+
+# Edit # hw.keyboard=no
+% nano $HOME/.android/avd/Android_Baklava_Google_APIs_ARM64_V8a.avd/config.ini
+[
+...
+hw.keyboard=yes
+...
+]
+% cat $HOME/.android/avd/Android_Baklava_Google_APIs_ARM64_V8a.avd/config.ini
+
+% export PATH="$HOME/Library/Android/sdk/emulator/":$PATH
+% emulator -version
+% emulator -list-avds
+% avdmanager list avd    
+
+[
+% emulator -avd Android_34_Ext9_Android_Automotive_ARM64_V8a
+% emulator -avd Android_35_Google_APIs_ARM64_V8a
+% emulator -avd Android_Baklava_Google_APIs_ARM64_V8a
+]
+
+[
+% export PATH="$HOME/Library/Android/sdk/platform-tools/":$PATH
+% adb --version
+# List of devices attached
+% adb devices
+# print offline | bootloader | device
+% adb get-state
+% adb shell
+$ cat /proc/version
+$ uname
+$ uname -r
+$ uname -srm
+$ uname -amnoprsv
+$ id -un
+$ echo $0
+$ whoami
+$ echo `whoami`
+$ echo $USER
+$ echo $HOSTNAME
+$ echo `hostname`
+$ hostname
+$ hostname -f
+$ hostname -s
+$ hostname -d
+$ echo $HOME
+$ echo ~/
+$ echo $SHELL
+$ echo $PATH
+$ pwd
+$ echo $(pwd)
+$ echo $PWD
+$ env
+$ echo $(env)
+$ date
+$ echo $(date)
+$ date +"%r"
+$ date +"%T"
+$ echo "Date: `date`"
+$ date +"Time: %r"
+$ date +"%A, %B %d, %Y,%l:%M:%S%3N %p, %Z, %z"
+$ date +"Day Name: %A" && date +"Month Name: %B" && date +"Month: %m" && date +"Day: %d" && date +"Hour: %l" && date +"Minute: %M" && date +"Second: %S" && date +"Millisecond: %3N" && date +"TimeZone: %Z" && date +"GMT: %z"
+$ ls
+$ ls -a
+$ ls /bin
+$ exit
+% adb root
+% adb shell
+# exit
+]
+
+[
+% avdmanager delete avd --name Android_34_Ext9_Android_Automotive_ARM64_V8a
+% avdmanager delete avd --name Android_35_Google_APIs_ARM64_V8a
+% avdmanager delete avd --name Android_Baklava_Google_APIs_ARM64_V8a
+]
+
+[
+% ls $HOME/.android
+% sudo rm -rf $HOME/.android
+% ls $HOME/.emulator_console_auth_token
+% sudo rm -rf $HOME/.emulator_console_auth_token
+]
+
+[
+% export ANDROID_HOME=~/Library/Android/sdk
+% export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+]
+
+% export ANDROID_HOME="$HOME/Library/Android/sdk/"
+% export PATH="$ANDROID_HOME/platform-tools/":$PATH
+
+[
+% ls $HOME/Library/Android
+% sudo rm -rf $HOME/Library/Android
+]
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Rust
+
+###########################################################################################################################
+===========================================================================================================================
+
+# Rust # rustup
+
+===========================================================================================================================
+
+% curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+[
+% curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+]
+% curl -o sh.rustup.rs --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf; sudo chmod +x ./sh.rustup.rs; ./sh.rustup.rs
+
+% ls "$HOME/.cargo/env"
+% . "$HOME/.cargo/env"
+[
+% source "$HOME/.cargo/env.fish"
+]
+
+% rustc --version
+% whereis rustc
+% type rustc
+
+% cargo --version
+% whereis cargo
+% type cargo
+
+% cargo install wasm-pack
+% wasm-pack --version
+% whereis wasm-pack
+% type wasm-pack
+
+% rustup --version
+% whereis rustup
+% type rustup
+
+===========================================================================================================================
+
+# Rust # brew # install # remove # uninstall
+
+===========================================================================================================================
+
+[
+% brew install rust
+% rustc --version  
+% whereis rustc
+% type rustc
+
+% cargo --version
+% whereis cargo
+% type cargo
+
+[
+% brew remove rust
+]
+% brew uninstall rust
+
+===========================================================================================================================
+
+# Rust # WebAssembly (wasm) # cargo # TOML # wasm-pack
+
+===========================================================================================================================
+
+% rustup --version
+
+% cargo --version
+
+% cargo install wasm-pack
+
+% wasm-pack --version
+
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Node.js
+
+###########################################################################################################################
+
+[
+% ls ~/.nvm
+% sudo rm -rf ~/.nvm
+]
+% curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+% nano ~/.zprofile
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+% cat ~/.zprofile
+
+# Terminal New Window
+% nvm --version
+% whereis nvm
+% type nvm
+% nvm list
+
+[
+% nvm install node
+]
+
+% brew install node
+[
+% brew link node
+Target /opt/homebrew/bin/corepack
+already exists. You may want to remove it:
+  rm '/opt/homebrew/bin/corepack'
+To force the link and overwrite all conflicting files:
+  brew link --overwrite node
+To list all files that would be deleted:
+  brew link --overwrite node --dry-run
+]
+% node --version
+% whereis node
+% type node
+% man node
+
+# REPL
+% node
+> process.version
+> .exit
+
+[
+% brew uninstall node
+% brew uninstall node --ignore-dependencies
+]
+
+% npx --version
+% npx update --global
+[
+% npx outdated --global
+]
+% whereis npx
+% type npx
+% man npx
+
+# Server
+% npm --version
+% npm install http-server --global
+% http-server
+# Or
+% http-server -p 8000
+http://127.0.0.1:8000
+http://XXX.XXX.XXX.XXX:8000
+[
+% npm uninstall http-server --global
+]
+[
+npm notice
+npm notice New major version of npm available! 10.9.2 -> 11.0.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.0.0
+npm notice To update run: npm install -g npm@11.0.0
+npm notice
+]
+% npm update --global
+% npm upgrade --global
+% npm outdated --global
+[
+Package  Current  Wanted  Latest  Location            Depended by
+minio      8.0.4   8.0.3   8.0.3  node_modules/minio  global
+]
+% npm install minio --global
+% npm install npm --global
+% npm view node
+% npm view node version
+% npm show node
+% npm show node version
+% npm list --global
+% npm list
+% npm view npm
+% npm view npm version
+% npm show npm
+% npm show npm version
+% npm view corepack
+% npm view corepack version
+% npm show corepack
+% npm show corepack version
+% whereis npm
+% type npm
+% man npm
+[
+% ls ~/.npm
+% sudo rm -rf ~/.npm
+]
+
+% npm install -g assemblyscript
+% asc --version
+% whereis asc
+% type asc
+
+% npm prune
+
+% npm install yarn --global
+[
+% npm update yarn
+]
+% yarn --version
+% whereis yarn
+% type yarn
+[
+# package.json
+% yarn install --check-files
+]
+
+% yarnpkg --version
+% whereis yarnpkg
+% type yarnpkg
+
+
+% npm install gulp --global
+[
+% npm update gulp
+]
+% gulp --version
+% whereis gulp
+% type gulp
+[
+% npm uninstall gulp --global
+]
+
+% npm install n --global
+[
+% npm update n
+]
+% n --version
+% whereis n
+% type n
+% man n
+[
+% sudo n latest
+% sudo n prune
+% sudo npm uninstall n --global
+% ls /usr/local/n
+% sudo rm -rf /usr/local/n
+% ls /usr/local/bin/node 
+% sudo rm -rf /usr/local/bin/node 
+]
+
+[
+# package.json
+% npm run-script
+% npm install npm-add-script --global
+% npmAddScript -k start -v "node index.js"
+% npm uninstall npm-add-script --global
+]
+
+% npm install pnpm --global
+[
+% npm update pnpm
+]
+% pnpm --version
+% pnpm setup 
+% source ~/.zshrc
+
+# Terminal New Window
+% pnpm update --global
+% pnpm upgrade --global
+% pnpm outdated --global
+[
+% pnpm install --global pnpm
+]
+% whereis pnpm
+% type pnpm
+
+% pnpm prune
+
+===========================================================================================================================
+
+# TypeScript # WebAssembly (wasm) # AssemblyScript # npm # asc
+
+===========================================================================================================================
+
+# AssemblyScript Compiler for WebAssembly (wasm)
+% npm install -g assemblyscript
+
+% asc --version
+
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Python # pkg
+
+###########################################################################################################################
+
+% python3 --version
+% whereis python3
+% type python3
+% man python3
+
+# REPL # IDLE Shell
+% python3
+>>>  __import__("sys").version
+>>> import sys
+>>> sys.version_info
+>>> sys.version_info.major
+>>> sys.version_info.minor
+>>> sys.version_info.micro
+>>> sys.version_info.releaselevel
+>>> sys.version_info.serial
+# Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+
+# Server
+% python3 -m http.server
+# Or
+% python3 -m http.server 8000
+http://[::]:8000/
+
+% pip3 --version
+# Or
+% python3 -m pip --version
+% pip3 install --upgrade pip
+# Or
+% python3 -m pip install --upgrade pip
+% whereis pip3
+% type pip3
+
+% pip3 list
+# Or
+% python3 -m pip3 list
+
+% pip3 install tensorflow
+# Or 
+% python3 -m pip uninstall tensorflow
+
+# install specific version of a package
+% pip install numpy==1.26.2
+# Or
+% python3 -m pip install numpy==1.26.2
+[
+% pip uninstall numpy==1.26.2
+# Or
+% python3 -m pip uninstall numpy==1.26.2
+]
+
+# install latest version of a package
+% pip3 install pandas --upgrade
+# Or
+% python3 -m pip install pandas --upgrade
+[
+% pip3 uninstall pandas
+# Or
+% python3 -m pip uninstall pandas
+]
+
+% pip list
+% pip freeze
+
+[
+% pip freeze > requirements.txt
+% cat requirements.txt
+% rm -rf requirements.txt
+% ls requirements.txt
+]
+
+% pip cache purge
+
+# https://pypi.org/search
+% pip3 install poetry 
+% poetry search pipreqs
+% pip3 install pipreqs
+% python3 -m pip show pipreqs
+% pipreqs --version
+% whereis pipreqs
+% type pipreqs
+# cd from ~ %
+% cd ~/Desktop
+% nano py-requests.py
+import requests
+print(requests.__version__)
+% python3 py-requests.py
+% python3 -m pip show requests
+% pipreqs
+% pipreqs --force
+% cat requirements.txt
+% rm -rf requirements.txt
+% ls requirements.txt
+]
+
+% ls /Library/Frameworks/Python.framework/Versions
+# Current
+% ls /Library/Frameworks/Python.framework/Versions/Current
+% ls /Library/Frameworks/Python.framework/Versions/Current/lib
+% ls /Library/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages
+% ls /Library/Frameworks/Python.framework/Versions/Current/bin
+# 3.11
+% ls /Library/Frameworks/Python.framework/Versions/3.11
+% ls /Library/Frameworks/Python.framework/Versions/3.11/lib
+% ls /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages
+% ls /Library/Frameworks/Python.framework/Versions/3.11/bin
+# 3.10
+% ls /Library/Frameworks/Python.framework/Versions/3.10
+% ls /Library/Frameworks/Python.framework/Versions/3.10/lib
+% ls /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages
+% ls /Library/Frameworks/Python.framework/Versions/3.10/bin
+
+# Initialize the Python virtual environment
+% python3 -m venv .venv
+
+# Activate the Python virtual environment
+[
+> .venv\Scripts\Activate.ps1
+]
+[
+$ . ./.venv/bin/activate
+]
+% source .venv/bin/activate
+
+
+# Ensure pip within the virtual environment is up-to-date
+[
+% pip3 install --upgrade pip
+% pip install --upgrade pip
+]
+% python3 -m pip install --upgrade pip
+
+===========================================================================================================================
+
+# Python # WebAssembly (wasm) # Pyodide
+
+===========================================================================================================================
+
+# Pyodide # REPL
+# Python on emscripten
+% wget https://github.com/pyodide/pyodide/releases/download/0.27.0/pyodide-0.27.0.tar.bz2
+% sudo tar -xvzf pyodide-0.27.0.tar.bz2
+% cd pyodide
+% ./python 
+
+===========================================================================================================================
+***************************************************************************************************************************
+
+# pgadmin4
+
+***************************************************************************************************************************
+
+% sudo mkdir -p /var/lib/pgadmin
+% ls /var/lib/pgadmin
+[
+% sudo rm -rf /var/lib/pgadmin
+]
+% sudo mkdir -p /var/log/pgadmin
+% ls /var/log/pgadmin
+[
+% sudo rm -rf /var/log/pgadmin
+]
+% sudo chown $USER /var/lib/pgadmin
+% sudo chown $USER /var/log/pgadmin
+[
+% python3 -m venv pgadmin4
+% source pgadmin4/bin/activate
+# (pgadmin4) % pip3 install pgadmin4
+# (pgadmin4) % whereis pgadmin4
+# (pgadmin4) % type pgadmin4
+# (pgadmin4) % pgadmin4
+]
+% pip3 install pgadmin4
+% whereis pgadmin4
+% type pgadmin4
+% pgadmin4
+# pgadmin$4
+[
+NOTE: Configuring authentication for SERVER mode.
+
+Enter the email address and password to use for the initial pgAdmin user account:
+
+Email address: pgadmin4@example.com
+Password: *********
+Retype password: *********
+]
+[
+% pip3 uninstall pgadmin4
+% ls /var/lib/pgadmin
+% sudo rm -rf /var/lib/pgadmin
+
+% ls /var/log/pgadmin
+% sudo rm -rf /var/log/pgadmin
+]
+
+***************************************************************************************************************************
+
+# Django
+
+***************************************************************************************************************************
+
+% python3 -m pip install django
+% python3 -m django --version
+% django-admin --version
+% whereis django-admin
+% type django-admin
+
+***************************************************************************************************************************
+
+# Flask
+
+***************************************************************************************************************************
+
+% pip3 install flask
+% flask --version
+% whereis flask
+% type flask
+
+[
+% pip3 uninstall flask
+% sudo ls /Library/Frameworks/Python.framework/Versions/3.11/bin/flask
+% sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.11/bin/flask
+% sudo ls /Library/Frameworks/Python.framework/Versions/3.11/bin
+]
+
+***************************************************************************************************************************
+
+# Coverage
+
+***************************************************************************************************************************
+
+% pip3 install coverage 
+% coverage --version  
+% whereis coverage
+% type coverage
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Java
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Java # macOS # Default
+
+***************************************************************************************************************************
+
+% java -version
+% whereis java
+% type java
+
+***************************************************************************************************************************
+
+# Java # OpenJDK # JDK23.0.2 # openjdk-23.0.2_macos-aarch64_bin.tar.gz
+
+***************************************************************************************************************************
+
+% wget https://download.java.net/java/GA/jdk23.0.2/6da2a6609d6e406f85c491fcb119101b/7/GPL/openjdk-23.0.2_macos-aarch64_bin.tar.gz \
+--directory-prefix="$HOME/Downloads/Software/OpenJDK/JDK23.0.2"
+
+% wget https://download.java.net/java/GA/jdk23.0.2/6da2a6609d6e406f85c491fcb119101b/7/GPL/openjdk-23.0.2_macos-aarch64_bin.tar.gz.sha256 \
+--directory-prefix="$HOME/Downloads/Software/OpenJDK/JDK23.0.2"
+
+% shasum -a 256 $HOME/Downloads/Software/OpenJDK/JDK23.0.2/openjdk-23.0.2_macos-aarch64_bin.tar.gz
+[
+bff699bb27455c2bb51d6e8f2467b77a4833388412aa2d95ec1970ddfb0e7b6c
+]
+
+[
+% tar -xzf $HOME/Downloads/Software/OpenJDK/JDK23.0.2/openjdk-23.0.2_macos-aarch64_bin.tar.gz -C $HOME/Downloads/Software/OpenJDK/JDK23.0.2
+]
+% tar -xzvf $HOME/Downloads/Software/OpenJDK/JDK23.0.2/openjdk-23.0.2_macos-aarch64_bin.tar.gz -C $HOME/Downloads/Software/OpenJDK/JDK23.0.2
+
+[
+% sudo mv $HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk /Library/Java/JavaVirtualMachines
+]
+% sudo cp -r $HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk /Library/Java/JavaVirtualMachines
+
+[
+% ls /Library/Java/JavaVirtualMachines
+% sudo rm -rf /Library/Java/JavaVirtualMachines/jdk-23.0.2.jdk
+]
+
+***************************************************************************************************************************
+
+# Java # JDK # JDK23.0.2 # jdk-23_macos-aarch64_bin.dmg
+
+***************************************************************************************************************************
+
+% hdiutil attach $HOME/Downloads/Software/JDK/jdk-23_macos-aarch64_bin.dmg
+
+% ls "/Volumes/JDK 23.0.2/"
+% ls "/Volumes/JDK 23.0.2/JDK 23.0.2.pkg"
+
+% sudo installer -package "/Volumes/JDK 23.0.2/JDK 23.0.2.pkg" -target /
+[
+installer: Package name is JDK 23.0.2
+installer: Installing at base path /
+installer: The install was successful.
+]
+
+% hdiutil detach "/Volumes/JDK 23.0.2/"
+
+% ls /Library/Java/JavaVirtualMachines
+[
+jdk-23.0.2.jdk	jdk-23.jdk
+]
+
+[
+% sudo rm -rf /Library/Java/JavaVirtualMachines/jdk-23.0.2.jdk
+]
+
+***************************************************************************************************************************
+
+# Java # Homebrew
+
+***************************************************************************************************************************
+
+% brew install openjdk
+
+[
+% brew reinstall openjdk
+]
+
+% brew --prefix java
+
+[
+% export PATH="/opt/homebrew/opt/openjdk/bin/":$PATH
+]
+
+***************************************************************************************************************************
+
+# Eclipse Temurin # Java
+
+***************************************************************************************************************************
+
+% sudo ls /Library/Java/JavaVirtualMachines
+% sudo ls /Library/Java/JavaVirtualMachines/temurin-8.jdk
+% sudo rm -rf /Library/Java/JavaVirtualMachines/temurin-8.jdk
+
+***************************************************************************************************************************
+
+# Java # OpenJDK
+
+***************************************************************************************************************************
+
+# Java 23.0.2
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/":$PATH
+
+% java --version
+% whereis java
+% type java
+
+% jar --version
+% whereis jar
+% type jar
+
+# jar
+[
+% jar tvf stdlib.jar
+% unzip stdlib.jar -d "Standard Libraries"/ 
+
+% javac Program.java
+
+% jar cvf program.jar Program.class
+added manifest
+adding: Program.class(in = 421) (out= 293)(deflated 30%)
+
+% jar tf program.jar
+META-INF/
+META-INF/MANIFEST.MF
+Program.class
+
+% rm -rf Program.class
+
+% jar xvf program.jar
+  created: META-INF/
+ inflated: META-INF/MANIFEST.MF
+ inflated: Program.class
+
+% ls Program.class
+Program.class
+
+% unzip -q -c program.jar META-INF/MANIFEST.MF 
+[
+# -q will suppress verbose output from the unzip program
+# -c will extract to stdout
+% unzip -q -c program.jar META-INF/MANIFEST.MF > test
+]
+
+% jar cfm program.jar META-INF/MANIFEST.MF Program.class
+
+% jar cfe program.jar Program Program.class
+
+% java -jar program.jar
+
+% java -cp "program.jar.;" Program
+# OR
+% export CLASSPATH="program.jar;.;"
+% echo $CLASSPATH
+]
+
+% javac -version
+% whereis javac
+% type javac
+
+% javap -version
+% whereis javap
+% type javap
+
+% jshell --version
+% whereis jshell
+% type jshell
+% man jshell
+
+# REPL
+% jshell
+% jshell --enable-preview 
+> System.getProperty("java.version");
+> System.getProperty("java.vm.name");
+> /exit
+
+# pid diagnostic
+% whereis jcmd
+% type jcmd
+% jcmd <pid> Thread.dump_to_file -format=json output_file.txt
+% jcmd <pid> Thread.dump_to_file -format=json output_file.txt -overwrite
+
+# Server
+% jwebserver
+# Or
+% jwebserver --port 8000
+http://127.0.0.1:8000/
+
+# rm Java
+% ls /Library/Java/JavaVirtualMachines
+% ls /Library/Java
+% ls /Library
+% sudo rm -rf /Library/Java
+% ls /Library
+
+# NB
+# Do not attempt to uninstall Java by removing the Java tools from /usr/bin
+# This directory is part of the system software and any changes will be reset by Apple the next time that you perform an update of the OS
+
+***************************************************************************************************************************
+
+# Java # Apache Maven # JAVA_HOME # M2_HOME # M2 # PATH # MAVEN_OPTS
+
+***************************************************************************************************************************
+
+# Java 23.0.2 # Apache Maven 3.9.9 
+% export JAVA_HOME="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home"
+% export M2_HOME="$HOME/Downloads/Software/ApacheMaven/apache-maven-3.9.9"
+% export M2="$M2_HOME/bin"
+% export PATH=$PATH:"$M2:$JAVA_HOME/bin"
+[
+% export MAVEN_OPTS="-Xms256m -Xmx512m --enable-preview"
+]
+% export MAVEN_OPTS="-Xms256m -Xmx512m"
+# Or
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/:$HOME/Downloads/Software/ApacheMaven/apache-maven-3.9.9/bin/":$PATH
+
+% java --version
+% mvn --version
+% whereis mvn
+% type mvn
+
+***************************************************************************************************************************
+
+# Java # Gradle
+
+***************************************************************************************************************************
+
+# Java 23.0.2 # Gradle 8.12
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/:$HOME/Downloads/Software/Gradle/gradle-8.12/bin/":$PATH
+
+% java --version
+% gradle --version
+% whereis gradle
+% type gradle
+
+***************************************************************************************************************************
+
+# Java # Gradle # Apache Maven
+
+***************************************************************************************************************************
+
+# Java 23.0.2 # Gradle 8.12 # Apache Maven 3.9.9 
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/:$HOME/Downloads/Software/Gradle/gradle-8.12/bin/:$HOME/Downloads/Software/ApacheMaven/apache-maven-3.9.9/bin/":$PATH
+
+% java --version
+
+% gradle --version
+
+% mvn --version
+
+***************************************************************************************************************************
+===========================================================================================================================
+
+# Java # WebAssembly (wasm) # GraalVM # native-image # Apache Maven
+
+===========================================================================================================================
+
+# GraalVM 23.0.2 # Apache Maven 3.9.9 
+% export JAVA_HOME="$HOME/Downloads/Software/Oracle/GraalVM/graalvm-jdk-23.0.2+7.1/Contents/Home"
+% export M2_HOME="$HOME/Downloads/Software/ApacheMaven/apache-maven-3.9.9"
+% export M2="$M2_HOME/bin"
+% export PATH=$PATH:"$M2:$JAVA_HOME/bin"
+[
+% export MAVEN_OPTS="-Xms256m -Xmx512m --enable-preview"
+]
+% export MAVEN_OPTS="-Xms256m -Xmx512m"
+
+% java --version
+[
+java 23.0.2 2025-01-21
+Java(TM) SE Runtime Environment Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7-jvmci-b01)
+Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7-jvmci-b01, mixed mode, sharing)
+]
+
+% mvn --version 
+[
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /Users/rajaniapple/Downloads/Software/ApacheMaven/apache-maven-3.9.9
+Java version: 23.0.2, vendor: Oracle Corporation, runtime: /Users/rajaniapple/Downloads/Software/Oracle/GraalVM/graalvm-jdk-23.0.2+7.1/Contents/Home
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "15.1", arch: "aarch64", family: "mac"
+]
+
+% native-image --version
+[
+native-image 23.0.2 2025-01-21
+GraalVM Runtime Environment Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7-jvmci-b01)
+Substrate VM Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7, serial gc, compressed references)
+]
+
+===========================================================================================================================
+
+# Java # WebAssembly (wasm) # GraalVM # native-image
+
+===========================================================================================================================
+
+# GraalVM 23.0.2 # Gradle 8.12 # Apache Maven 3.9.9 
+% export PATH="$HOME/Downloads/Software/Oracle/GraalVM/graalvm-jdk-23.0.2+7.1/Contents/Home/bin/:$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/:$HOME/Downloads/Software/Gradle/gradle-8.12/bin/:$HOME/Downloads/Software/ApacheMaven/apache-maven-3.9.9/bin/":$PATH
+
+% java --version
+[
+java 23.0.2 2025-01-21
+Java(TM) SE Runtime Environment Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7-jvmci-b01)
+Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7-jvmci-b01, mixed mode, sharing)
+]
+
+% gradle --version
+[
+Welcome to Gradle 8.12!
+
+Here are the highlights of this release:
+ - Enhanced error and warning reporting with the Problems API
+ - File-system watching support on Alpine Linux
+ - Build and test Swift 6 libraries and apps
+
+For more details see https://docs.gradle.org/8.12/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.12
+------------------------------------------------------------
+
+Build time:    2024-12-20 15:46:53 UTC
+Revision:      a3cacb207fec727859be9354c1937da2e59004c1
+
+Kotlin:        2.0.21
+Groovy:        3.0.22
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  23.0.2 (Oracle Corporation 23.0.2+7-jvmci-b01)
+Daemon JVM:    /Users/rajaniapple/Downloads/Software/Oracle/GraalVM/graalvm-jdk-23.0.2+7.1/Contents/Home (no JDK specified, using current Java home)
+OS:            Mac OS X 15.1 aarch64
+]
+
+% mvn --version
+[
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /Users/rajaniapple/Downloads/Software/ApacheMaven/apache-maven-3.9.9
+Java version: 23.0.2, vendor: Oracle Corporation, runtime: /Users/rajaniapple/Downloads/Software/Oracle/GraalVM/graalvm-jdk-23.0.2+7.1/Contents/Home
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "15.1", arch: "aarch64", family: "mac"
+]
+
+% native-image --version
+[
+native-image 23.0.2 2025-01-21
+GraalVM Runtime Environment Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7-jvmci-b01)
+Substrate VM Oracle GraalVM 23.0.2+7.1 (build 23.0.2+7, serial gc, compressed references)
+]
+
+===========================================================================================================================
+
+# Java # WebAssembly (wasm) # GraalVM # SDKMAN! # sdk install java 23-graal # native-image
+
+===========================================================================================================================
+
+% sdk version
+
+% sdk install java 23-graal
+
+% java --version
+[
+java 23 2024-09-17
+Java(TM) SE Runtime Environment Oracle GraalVM 23+37.1 (build 23+37-jvmci-b01)
+Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 23+37.1 (build 23+37-jvmci-b01, mixed mode, sharing)
+]
+% whereis java
+% type java 
+% man java
+
+% jshell --version
+% whereis jshell
+% type jshell
+% man jshell
+
+# REPL
+% jshell
+% jshell --enable-preview 
+> System.getProperty("java.version");
+> System.getProperty("java.vendor.version");
+> System.getProperty("java.vm.name");
+> /exit
+
+% native-image --version
+[
+native-image 23 2024-09-17
+GraalVM Runtime Environment Oracle GraalVM 23+37.1 (build 23+37-jvmci-b01)
+Substrate VM Oracle GraalVM 23+37.1 (build 23+37, serial gc, compressed references)
+]
+% whereis native-image
+% type native-image
+
+[
+% sdk uninstall java 23-graal --force
+]
+
+===========================================================================================================================
+
+# Java # WebAssembly (wasm) # wabt # WebAssembly Text Format
+
+===========================================================================================================================
+
+% brew install wabt
+
+===========================================================================================================================
+
+# Java # WebAssembly (wasm) # emcc # em++ # Embed C in Java # Embedding GraalWasm in Java
+
+===========================================================================================================================
+
+# Java 23.0.2 # Gradle 8.12 # Apache Maven 3.9.9 
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/:$HOME/Downloads/Software/Gradle/gradle-8.12/bin/:$HOME/Downloads/Software/ApacheMaven/apache-maven-3.9.9/bin/":$PATH
+
+% java --version
+
+% gradle --version
+
+% mvn --version
+
+% brew install emscripten
+
+% emcc --version
+
+% em++ --version
+
+===========================================================================================================================
+
+# Java # WebAssembly (wasm) # GraalVM # Truffle # Espresso
+
+===========================================================================================================================
+
+% export PATH="$HOME/Downloads/Software/Oracle/GraalVM/graalvm-espresso-jdk-21.0.1+11.1/Contents/Home/bin/":$PATH
+
+% java --version
+
+% java -truffle -version
+
+% java -truffle --version
+
+===========================================================================================================================
+***************************************************************************************************************************
+
+# Scala
+
+***************************************************************************************************************************
+
+% brew install coursier/formulas/coursier && cs setup
+
+% cat $HOME/.zprofile
+[
+# >>> coursier install directory >>>
+export PATH="$PATH:/Users/rajaniapple/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
+]
+
+% scala --version
+
+% scalac --version
+% whereis scalac
+% type scalac
+
+% sbt --version
+% whereis sbt
+% type sbt
+
+% sbtn
+% whereis sbtn
+% type sbtn
+
+% amm --version
+% whereis amm
+% type amm
+
+% scalafmt --version
+% whereis scalafmt
+% type scalafmt
+
+% scala --version
+% whereis scala
+% type scala
+
+% scala-cli --version
+% whereis scala-cli
+% type scala-cli
+
+# REPL
+% scala
+# Or
+% scala repl
+# Or
+% scala-cli
+> util.Properties.versionNumberString
+> util.Properties.versionString
+> util.Properties.versionMsg
+> :exit
+
+% cs version
+% whereis cs
+% type cs
+
+% cs launch scala:2.13.15
+> scala.tools.nsc.Properties.versionNumberString
+> scala.tools.nsc.Properties.versionString
+> scala.tools.nsc.Properties.versionMsg
+> :quit
+
+% cs launch scalac:2.13.15
+
+# If you prefer Scala 2 to be run by default, you can force that version to be installed with:
+# % cs install scala:2.13.15 scalac:2.13.15
+
+***************************************************************************************************************************
+
+# Clojure
+
+***************************************************************************************************************************
+
+% brew install clojure/tools/clojure
+
+# If you already have the CLI installed, you can use this command to upgrade to the latest version:
+# % brew upgrade clojure/tools/clojure
+
+% clojure --version
+% whereis clojure
+% type clojure
+% man clojure
+
+% clj --version
+% whereis clj
+% type clj
+% man clj
+
+# REPL
+% clojure
+# Or
+% clj
+> *clojure-version*
+# type Ctrl-D here to exit the REPL (does not print)
+
+***************************************************************************************************************************
+
+# JAVA_HOME # Apache Tomcat
+
+***************************************************************************************************************************
+
+% cd "$HOME/Downloads/Software/ApacheTomcat/apache-tomcat-11.0.1/bin"
+[
+% sudo chmod 755 ./startup.sh
+% sudo chmod 755 ./shutdown.sh
+]
+% sudo chmod +x ./startup.sh
+% sudo chmod +x ./shutdown.sh
+% export JAVA_HOME="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/"
+% export PATH="$HOME/Downloads/Software/ApacheTomcat/apache-tomcat-11.0.1/bin/":$PATH   
+% startup.sh  
+% open http://localhost:8080/ 
+% shutdown.sh
+
+[
+% jar tvf $(pwd)/target/spring-jetty-tomcat-app.war
+% cp target/java-app.war $HOME/Downloads/Software/ApacheTomcat/apache-tomcat-11.0.1/webapps
+% open http://localhost:8080/target/spring-jetty-tomcat-app
+]
+
+***************************************************************************************************************************
+
+# Supersede existing Java installation # Suffix :$PATH
+
+***************************************************************************************************************************
+
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/":$PATH
+
+***************************************************************************************************************************
+
+# Jython
+
+***************************************************************************************************************************
+
+# Installer Jar
+% java -jar jython-installer-2.7.3.jar --help
+% java -jar jython-installer-2.7.3.jar
+% java -jar jython-installer-2.7.3.jar --console
+
+# Standalone Jar
+% java -jar jython-standalone-2.7.3.jar --help
+% java -jar jython-standalone-2.7.3.jar
+% java -jar jython.jar
+% java -jar jython.jar script.py
+
+% brew install jython
+
+***************************************************************************************************************************
+
+# JRuby
+
+***************************************************************************************************************************
+
+% brew install jruby
+
+***************************************************************************************************************************
+
+# Apache NetBeans
+
+***************************************************************************************************************************
+
+[
+% brew install --cask netbeans
+
+% brew uninstall --cask netbeans
+]
+
+% export PATH="$HOME/Downloads/Software/ApacheNetBeans/NetBeans22/netbeans/bin/":$PATH
+
+% ls $HOME/Downloads/Software/ApacheNetBeans/NetBeans22/netbeans/etc/netbeans.conf
+% cat $HOME/Downloads/Software/ApacheNetBeans/NetBeans22/netbeans/etc/netbeans.conf
+% nano $HOME/Downloads/Software/ApacheNetBeans/NetBeans22/netbeans/etc/netbeans.conf
+[
+#netbeans_jdkhome="/path/to/jdk"
+netbeans_jdkhome="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home"
+]
+% cat $HOME/Downloads/Software/ApacheNetBeans/NetBeans22/netbeans/etc/netbeans.conf
+% netbeans
+
+***************************************************************************************************************************
+##########################################################################################################################
+
+
+###########################################################################################################################
+
+# .NET
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# dotnet # SDK pkg # installs [.NET SDK + .NET Runtime + ASP.NET Core Runtime]
+
+***************************************************************************************************************************
+
+% dotnet --version  
+% whereis dotnet   
+% type dotnet
+
+% dotnet --list-sdks
+% /usr/local/share/dotnet/x64/dotnet --version
+% /usr/local/share/dotnet/x64/dotnet --list-sdks
+% dotnet --list-runtimes
+% /usr/local/share/dotnet/x64/dotnet --list-runtimes
+% dotnet --info
+% /usr/local/share/dotnet/x64/dotnet --info
+
+% dotnet --help
+% dotnet --diagnostics
+
+% dotnet nuget --version
+% whereis dotnet nuget
+% type dotnet nuget
+
+% dotnet fsi --version
+% dotnet fsi '/langversion:?'
+
+# REPL
+% dotnet fsi
+> System.Environment.Version;;
+> System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;;
+> #quit;;
+
+# SDK
+% ls /usr/local/share/dotnet/sdk/$version/
+% ls /usr/local/share/dotnet/x64/
+% ls /usr/local/share/dotnet/x64/sdk/$version/
+
+# Runtime
+% ls /usr/local/share/dotnet/shared/$product/$version
+% ls /usr/local/share/dotnet/x64/shared/$product/$version
+
+# .NET host
+% ls /usr/local/share/dotnet/host/fxr/$version/
+% ls /usr/local/share/dotnet/x64/host/fxr/$version/
+
+% dotnet tool
+% dotnet tool list
+[
+% dotnet new tool-manifest
+% cat ./.config/dotnet-tools.json
+]
+% dotnet tool install ironpython.console --tool-path .
+
+# rm dotnet
+% ls /usr/local/share/dotnet
+% ls /usr/local/share
+% sudo rm -rf /usr/local/share/dotnet
+% ls /usr/local/share
+% ls /etc/paths.d/dotnet
+% cat /etc/paths.d/dotnet
+% ls /etc/paths.d
+% sudo rm -rf /etc/paths.d/dotnet
+% ls /etc/paths.d
+% ls /etc/paths.d/dotnet-cli-tools
+% cat /etc/paths.d/dotnet-cli-tools
+% ls /etc/paths.d
+% sudo rm -rf /etc/paths.d/dotnet-cli-tools
+% ls /etc/paths.d
+
+===========================================================================================================================
+
+# CS # WebAssembly (wasm) # dotnet # wasmbrowser # Node.js # wasmconsole
+
+===========================================================================================================================
+
+# CS # WebAssembly (wasm) # dotnet # wasmbrowser
+% sudo dotnet workload install wasm-tools
+% dotnet workload search wasm-tools
+% sudo dotnet workload install wasm-experimental
+% dotnet workload search wasm-experimental
+% dotnet new install Microsoft.NET.Runtime.WebAssembly.Templates
+
+% dotnet new list
+% dotnet new blazorwasm 
+% dotnet new blazorwasm-empty
+
+===========================================================================================================================
+
+# FS # WebAssembly (wasm) # Bolero
+
+===========================================================================================================================
+
+% dotnet new install Bolero.Templates
+
+===========================================================================================================================
+
+# CS # React
+
+==========================================================================================================================
+
+% dotnet new list
+% dotnet new react
+
+===========================================================================================================================
+
+# CS # Angular
+
+==========================================================================================================================
+
+% dotnet new list
+% dotnet new angular 
+
+===========================================================================================================================
+***************************************************************************************************************************
+
+# Supersede existing dotnet arm64 with x64
+
+***************************************************************************************************************************
+
+# dotnet arm64
+% ls /usr/local/share/dotnet/sdk
+
+# framework-dependent app # exe
+ls /usr/local/share/dotnet/sdk/9.0.102/Roslyn/bincore/csc.dll \
+ls /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/9.0.1/ref/net9.0/System.Console.dll
+ls /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/9.0.1/ref/net9.0/System.Runtime.dll
+
+# dotnet x64
+% ls /usr/local/share/dotnet/x64/sdk
+
+% export PATH="/usr/local/share/dotnet/x64/":$PATH
+
+***************************************************************************************************************************
+
+# Visual Studio Code CLI # /etc/paths # prepend path to # vscode_cli_darwin_arm64_cli/code
+
+***************************************************************************************************************************
+
+% code --version
+% whereis code
+% type code
+
+***************************************************************************************************************************
+
+# Mono # MDK pkg
+
+***************************************************************************************************************************
+
+% fsharpi --help
+% whereis fsharpi   
+% type fsharpi
+% fsharpi '/langversion:?'
+
+# REPL
+% fsharpi
+> System.Environment.Version;;
+> System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;;
+> #quit;;
+
+% csc -version
+% whereis csc    
+% type csc
+% csc '/langversion:?'
+
+% csi -version
+% whereis csi  
+% type csi
+% csi '/langversion:?'
+
+# REPL
+% csi
+> System.Environment.Version
+> System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription
+Ctrl-C
+
+% csharp --version
+% whereis csharp 
+% type csharp
+
+# REPL
+% csharp
+> System.Environment.Version;
+> System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+> quit;
+
+% vbc -version
+% whereis vbc 
+% type vbc
+% vbc '/langversion:?'
+
+% mono --version
+% whereis mono   
+% type mono
+% man mono
+
+# xsp
+% xsp --version
+% whereis xsp  
+% type xsp
+% man xsp
+
+# Mono.WebServer
+% xsp
+% xsp --port 8000
+
+# xsp2 
+% xsp2 --version
+% whereis xsp2    
+% type xsp2
+
+# Mono.WebServer
+% xsp2 
+% xsp2 --port 8000
+
+% mcs -about
+% mcs --version
+% whereis mcs   
+% type mcs
+% man mcs
+
+% monodis
+% whereis monodis     
+% type monodis
+% man monodis
+
+% ilasm --version
+% whereis ilasm    
+% type ilasm
+% man ilasm
+
+% ikdasm
+% whereis monodis 
+% type monodis
+% man monodis
+
+% nuget
+% nuget help
+% whereis nuget   
+% type nuget
+
+# nuget update
+% brew install nuget
+
+# rm Mono.framework
+% ls /Library/Frameworks/Mono.framework
+% sudo rm -rf /Library/Frameworks/Mono.framework
+% ls /Library/Frameworks
+% sudo pkgutil --forget com.xamarin.mono-MDK.pkg
+% ls /etc/paths.d/mono-commands
+% cat /etc/paths.d/mono-commands
+% sudo rm -rf /etc/paths.d/mono-commands
+% ls /etc/paths.d/
+
+***************************************************************************************************************************
+
+# IronPython # IronPython3 pkg
+
+***************************************************************************************************************************
+
+% dotnet tool install ironpython.console --tool-path .
+% ipy
+>>> import sys
+>>> sys.version_info
+>>> sys.version_info.major
+>>> sys.version_info.minor
+>>> sys.version_info.build
+>>> sys.version_info.releaselevel
+>>> sys.version_info.serial
+# 'Use Ctrl-Z plus Return to exit'
+
+***************************************************************************************************************************
+
+# PowerShell
+
+***************************************************************************************************************************
+
+% brew install powershell/tap/powershell
+% pwsh --version
+% whereis pwsh 
+% type pwsh 
+
+# REPL
+% pwsh
+> $host
+> $host.Version
+> $PSVersionTable
+> help
+> exit
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Ruby on Rails
+
+###########################################################################################################################
+
+% brew install ruby
+% nano ~/.zprofile
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+% cat ~/.zprofile
+% brew pin ruby
+% ruby --version
+% whereis ruby
+% type ruby
+% man ruby
+
+% irb --version
+% whereis irb
+% type irb
+% man irb
+
+# REPL
+% irb
+> RUBY_VERSION
+> RUBY_DESCRIPTION
+> exit
+
+# Server
+# gem install webrick
+% ruby -run -e httpd
+# Or
+% ruby -run -e httpd . -p 8000
+http://127.0.0.1:8000
+
+% gem --version
+% gem update
+% gem update --system
+% whereis gem
+% type gem
+% man gem
+
+[
+% bundler install
+]
+% bundler --version
+% whereis bundler
+% type bundler
+[
+% nano Gemfile                            
+[                           
+source "https://rubygems.org"
+ruby "3.2.2"
+gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+gem 'rack', '~> 3.0', '>= 3.0.8'
+gem 'rspec', '~> 3.12'
+]
+% cat Gemfile
+% bundler install                         
+Resolving dependencies...
+Fetching gem metadata from https://rubygems.org/.......
+Bundle complete! 3 Gemfile dependencies, 10 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+% cat Gemfile.lock
+% bundler config set --local frozen 'true'
+]
+
+[
+% bundle install
+]
+% bundle --version
+% whereis bundle
+% type bundle
+% man bundle
+[
+% nano Gemfile                            
+[                           
+source "https://rubygems.org"
+ruby "3.2.2"
+gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+gem 'rack', '~> 3.0', '>= 3.0.8'
+gem 'rspec', '~> 3.12'
+]
+% cat Gemfile
+% bundle install                         
+Fetching gem metadata from https://rubygems.org/.......
+Resolving dependencies...
+Bundle complete! 3 Gemfile dependencies, 10 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+% cat Gemfile.lock
+% bundle config set --local frozen 'true'
+]
+
+% rake --version
+% whereis rake
+% type rake
+
+% gem install rails
+# Restart terminal window
+% rails --version
+% whereis rails
+% type rails
+
+# rbenv
+% brew install rbenv
+# % echo 'eval "$(rbenv init -)"' >> $HOME/.zprofile
+% nano ~/.zprofile
+eval "$(rbenv init -)"
+% cat ~/.zprofile
+% source ~/.zprofile
+
+% rbenv --version
+% whereis rbenv
+% type rbenv
+% man rbenv
+
+# latest
+% rbenv install --list
+# local
+% rbenv install --list-all
+
+[
+% rbenv install 3.4.1
+
+% rbenv global 3.4.1
+]
+
+% cat ~/.rbenv/version 
+[
+3.4.1
+]
+% gem env home
+[
+/opt/homebrew/Cellar/ruby/3.4.1/lib/ruby/gems/3.4.0
+]
+
+% ruby --version
+% gem --version
+% gem update
+% gem update --system
+% echo "gem: --no-document" > ~/.gemrc
+% bundler --version
+% bundle --version
+% rake --version
+% gem env home
+% gem install rails
+% rails --version
+% gem search '^rails$' --all
+# % gem install rails --version 6.1.7.6
+# For a new version of Ruby or a gem 
+# % rbenv rehash
+% brew upgrade rbenv ruby-build
+# Uninstall Ruby version 3.0.6
+# % rbenv uninstall 3.0.6
+# % sed -in-place '/eval "$(rbenv init -)"/d' $HOME/.zprofile
+# % nano ~/.zprofile
+eval "$(rbenv init -)"
+# % cat ~/.zprofile
+# % source ~/.zprofile
+# % rm -rf `rbenv root`
+# % brew uninstall rbenv
+
+% gem env 
+% gem list
+[
+% gem which cocoapods
+% gem list -i "^cocoapods$"
+% gem list -i "cocoapods" 
+% gem list -i "cocoapods" -v 1.16.2
+]
+
+[
+% brew upgrade ruby
+% brew uninstall ruby
+]
+
+% ruby --version
+% gem --version
+% gem update
+% gem update --system
+% sudo gem update --system
+
+% bundler --version
+% bundle --version
+% rake --version
+% gem install rails
+% rails --version
+
+===========================================================================================================================
+
+# Ruby # WebAssembly (wasm) # WASI # ruby.wasm # wasmtime # Node.js
+
+===========================================================================================================================
+---------------------------------------------------------------------------------------------------------------------------
+# Ruby # WebAssembly (wasm) # WASI # ruby.wasm # wasmtime
+---------------------------------------------------------------------------------------------------------------------------
+
+% gem --version
+
+% gem install ruby_wasm
+
+# Download a prebuilt Ruby release
+% curl -LO https://github.com/ruby/ruby.wasm/releases/latest/download/ruby-3.3-wasm32-unknown-wasip1-full.tar.gz
+% sudo tar xfz ruby-3.3-wasm32-unknown-wasip1-full.tar.gz
+
+# Extract ruby binary not to pack itself
+% sudo mv ruby-3.3-wasm32-unknown-wasip1-full/usr/local/bin/ruby ruby.wasm
+
+# Ruby File
+% nano src/wasi_app.rb
+
+# Pack the whole directory under /usr and the app dir # wasi-ruby-app.wasm
+% rbwasm pack ruby.wasm --dir ./src::/src --dir ./ruby-3.3-wasm32-unknown-wasip1-full/usr::/usr -o wasi-ruby-app.wasm
+
+# Dependencies: wasmtime
+# Run the packed scripts
+# wasmtime installation
+% curl https://wasmtime.dev/install.sh -sSf | bash
+
+# Ruby # Node.js
+# Install @ruby/3.3-wasm-wasi and @ruby/wasm-wasi from npm
+% npm install --save @ruby/3.3-wasm-wasi @ruby/wasm-wasi
+
+---------------------------------------------------------------------------------------------------------------------------
+# Ruby # WebAssembly (wasm) # npm install --save @ruby/3.3-wasm-wasi @ruby/wasm-wasi # Node.js
+---------------------------------------------------------------------------------------------------------------------------
+
+% npm --version
+
+# Install @ruby/3.3-wasm-wasi and @ruby/wasm-wasi from npm
+% npm install --save @ruby/3.3-wasm-wasi @ruby/wasm-wasi
+
+---------------------------------------------------------------------------------------------------------------------------
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# C/C++
+
+###########################################################################################################################
+
+% clang --version
+% whereis clang
+% type clang
+% man clang
+
+% brew install gcc
+% gcc --version
+% whereis gcc
+% type gcc
+
+% cc --version
+% whereis cc
+% type cc
+
+% g++ --version
+% whereis g++
+
+% type g++
+
+% c++ --version
+% whereis c++
+% type c++
+
+===========================================================================================================================
+
+# C/C++ # WebAssembly (wasm) # Emscripten # emcc # em++ # Node.js # HTML
+
+===========================================================================================================================
+
+[
+# Instead of installing Emscripten using SDK
+% ./emsdk install latest
+]
+# Instead Emscripten using Homebrew
+% brew install emscripten
+
+% emcc --version
+
+% em++ --version
+
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Swift
+
+###########################################################################################################################
+
+% swift --version
+% whereis swift    
+% type swift
+% man swift
+
+# REPL
+% swift
+> :version
+> :exit
+
+% swiftc --version
+% whereis swiftc
+% type swiftc
+
+===========================================================================================================================
+
+# Swift # WebAssembly (wasm) # SwiftWasm
+
+===========================================================================================================================
+
+# Swift SDK for WebAssembly # Cross compile to WebAssembly
+# Match the Swift Toolchain Version # swift-5.10-RELEASE # swift-wasm-5.10.0-RELEASE
+# Install Swift SDKs for WebAssembly 
+% wget https://github.com/swiftwasm/swift/releases/download/swift-wasm-5.10.0-RELEASE/swift-wasm-5.10.0-RELEASE-macos_arm64.artifactbundle.zip
+% swift sdk install swift-wasm-5.10.0-RELEASE-macos_arm64.artifactbundle.zip
+
+# SwiftWasm Toolchain # Install # pkg
+% wget https://github.com/swiftwasm/swift/releases/download/swift-wasm-5.10.0-RELEASE/swift-wasm-5.10.0-RELEASE-macos_arm64.pkg
+# swift-wasm-5.10.0-RELEASE-macos_arm64.pkg
+
+# export swift-wasm Toolchain
+% export PATH="/Library/Developer/Toolchains/swift-wasm-5.10.0-RELEASE.xctoolchain/usr/bin/":$PATH
+
+# Compile the Swift code into WebAssembly with WASI
+# Run the produced binary with wasmtime (or other WebAssembly runtime) # After downloading and installing the wasmtime
+% curl https://wasmtime.dev/install.sh -sSf | bash
+
+# WASMTIME_HOME
+% cat ~/.zshrc
+
+===========================================================================================================================
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# PHP
+
+###########################################################################################################################
+
+[
+# You must `brew unpin ruby` as installing php requires the latest version of pinned dependencies
+% brew unpin ruby
+]
+
+% brew install php
+% php --version 
+% whereis php 
+% type php
+% man php
+
+% brew services start php
+% brew services restart php
+% brew services stop php
+
+# REPL
+% php -a
+> print phpversion();
+> exit
+
+# Server
+% php -S 127.0.0.1:8000
+
+# composer
+% brew install composer
+% composer --version
+% whereis composer 
+% type composer
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Perl
+
+###########################################################################################################################
+
+% perl --version 
+% whereis perl 
+% type perl
+% man perl
+
+% perldoc -Version
+
+# REPL
+% perl -de1
+> print "$]\n"; 
+> q
+
+% cpan -V 
+% whereis cpan 
+% type cpan
+% man cpan
+
+# REPL
+% cpan    
+> help
+> quit
+# Or
+> exit
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# MongoDB
+
+###########################################################################################################################
+
+% brew tap mongodb/brew
+[
+% brew untap mongodb/brew && brew tap mongodb/brew
+]
+% brew install mongodb-community@8.0
+% mongod --version
+% whereis mongod
+% type mongod
+
+[
+% brew services list
+% brew services start mongodb-community
+]
+% brew services restart mongodb/brew/mongodb-community
+% brew services list
+% ps aux | grep -v grep | grep mongod
+[
+% brew services stop mongodb-community
+% brew services restart mongodb-community
+]
+
+[
+% brew uninstall mongodb-community
+
+% ls /opt/homebrew/var/log/mongodb/mongo.log
+% cat /opt/homebrew/var/log/mongodb/mongo.log
+% rm -rf /opt/homebrew/var/log/mongodb/mongo.log
+% ls /opt/homebrew/var/log/mongodb
+% rm -rf /opt/homebrew/var/log/mongodb
+
+% ls /opt/homebrew/var/mongodb
+% rm -rf /opt/homebrew/var/mongodb
+
+% ls /opt/homebrew/var/homebrew/linked/mongodb-database-tools
+% rm -rf /opt/homebrew/var/homebrew/linked/mongodb-database-tools
+% ls /opt/homebrew/var/homebrew/linked/mongosh
+% rm -rf /opt/homebrew/var/homebrew/linked/mongosh
+
+% ls /opt/homebrew/etc/mongod.conf
+% rm -rf /opt/homebrew/etc/mongod.conf
+
+% ls /opt/homebrew/Cellar/mongodb-database-tools
+% rm -rf /opt/homebrew/Cellar/mongodb-database-tools
+% ls /opt/homebrew/Cellar/mongosh
+% rm -rf /opt/homebrew/Cellar/mongosh
+
+% ls /opt/homebrew/opt/mongodb-database-tools
+% rm -rf /opt/homebrew/opt/mongodb-database-tools
+% ls /opt/homebrew/opt/mongosh
+% rm -rf /opt/homebrew/opt/mongosh
+
+# mongod # mongodump # mongoexport # mongofiles # mongoimport # mongorestore # mongos # mongosh # mongostat # mongotop
+% ls /opt/homebrew/bin/mongod
+% rm -rf /opt/homebrew/bin/mongod
+
+% ls /opt/homebrew/bin/mongodump
+% rm -rf /opt/homebrew/bin/mongodump
+
+% ls /opt/homebrew/bin/mongoexport
+% rm -rf /opt/homebrew/bin/mongoexport
+
+% ls /opt/homebrew/bin/mongofiles
+% rm -rf /opt/homebrew/bin/mongofiles
+
+% ls /opt/homebrew/bin/mongoimport
+% rm -rf /opt/homebrew/bin/mongoimport
+
+% ls /opt/homebrew/bin/mongorestore
+% rm -rf /opt/homebrew/bin/mongorestore
+
+% ls /opt/homebrew/bin/mongos
+% rm -rf /opt/homebrew/bin/mongos
+
+% ls /opt/homebrew/bin/mongosh
+% rm -rf /opt/homebrew/bin/mongosh
+
+% ls /opt/homebrew/bin/mongostat
+% rm -rf /opt/homebrew/bin/mongostat
+
+% ls /opt/homebrew/bin/mongotop
+% rm -rf /opt/homebrew/bin/mongotop
+]
+
+# log file
+/opt/homebrew/var/log/mongodb/mongo.log
+# log directory
+/opt/homebrew/var/log/mongodb
+# data directory
+/opt/homebrew/var/mongodb
+# configuration file
+/opt/homebrew/etc/mongod.conf
+
+[
+% ls /opt/homebrew/var
+% ls /opt/homebrew/var/mongodb
+% ls /opt/homebrew/var/log
+% ls /opt/homebrew/var/log/mongodb/mongo.log
+% ls /opt/homebrew/var/log/mongodb
+% ls /opt/homebrew/var/homebrew/linked
+% ls /opt/homebrew/var/homebrew/linked/mongodb-community
+% ls /opt/homebrew/var/homebrew/linked/mongodb-database-tools
+% ls /opt/homebrew/var/homebrew/linked/mongosh
+
+% ls /opt/homebrew/etc
+% ls /opt/homebrew/etc/mongod.conf
+
+% ls /opt/homebrew/Cellar
+% ls /opt/homebrew/Cellar/mongodb-community
+% ls /opt/homebrew/Cellar/mongodb-database-tools
+% ls /opt/homebrew/Cellar/mongosh
+
+% ls /opt/homebrew/opt
+% ls /opt/homebrew/opt/mongodb-community
+% ls /opt/homebrew/opt/mongodb-community@7.0
+% ls /opt/homebrew/opt/mongodb-database-tools
+% ls /opt/homebrew/opt/mongosh
+]
+
+# mongod # mongodump # mongoexport # mongofiles # mongoimport # mongorestore # mongos # mongosh # mongostat # mongotop
+% ls /opt/homebrew/bin
+
+# % pgrep mongo # % pkill mongo
+# % pgrep mongod # % pkill mongod
+# % ps -A | grep mongod | awk '{print $1}' # kill <mongod pid>
+# % ps aux | grep -v grep | grep mongod # kill <mongod pid>
+# % ps aux | grep -v grep | grep mongod | awk '{print $2}' # kill <mongod pid>
+% ls /opt/homebrew/var/mongodb
+% ls /opt/homebrew/var/log/mongodb/mongo.log
+% mongod --dbpath /opt/homebrew/var/mongodb --logpath /opt/homebrew/var/log/mongodb/mongo.log --fork
+
+# % pgrep mongo # % pkill mongo
+# % pgrep mongod # % pkill mongod
+# % ps -A | grep mongod | awk '{print $1}' # kill <mongod pid>
+# % ps aux | grep -v grep | grep mongod # kill <mongod pid>
+# % ps aux | grep -v grep | grep mongod | awk '{print $2}' # kill <mongod pid>
+% ls /opt/homebrew/etc/mongod.conf
+% sudo nano /opt/homebrew/etc/mongod.conf
+% cat /opt/homebrew/etc/mongod.conf 
+% mongod --config /opt/homebrew/etc/mongod.conf --fork
+
+% mongosh --version
+% whereis mongosh
+% type mongosh
+
+# REPL
+% mongosh
+> db.version()
+> db.serverCmdLineOpts()
+> db.serverCmdLineOpts().parsed.storage.dbPath 
+> exit
+
+% mongos --version
+% whereis mongos
+% type mongos
+
+% mongoimport --version
+% whereis mongoimport
+% type mongoimport
+
+% mongoexport --version
+% whereis mongoexport
+% type mongoexport
+
+% mongodump --version
+% whereis mongodump
+% type mongodump
+
+% mongotop --version
+% whereis mongotop     
+% type mongotop
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Redis # redis-server # redis-stack-server # redis-cli
+
+###########################################################################################################################
+
+% brew install redis
+% redis-server --version
+% whereis redis-server
+% type redis-server
+% brew services start redis
+% brew services info redis
+% brew services restart redis
+[
+% brew services stop redis
+]
+
+% redis-cli --version
+% whereis redis-server
+% type redis-server
+
+# REPL
+% redis-cli 
+> INFO
+> HELP
+> ping
+> quit
+# Or
+> exit
+
+% brew tap redis-stack/redis-stack
+% brew install redis-stack
+
+% whereis redis-stack-server
+% type redis-stack-server
+
+# Server
+% redis-stack-server
+
+# Terminal New Window
+# REPL
+% redis-cli 
+> INFO
+> HELP
+> ping
+> quit
+# Or
+> exit
+
+[
+% brew uninstall redis-stack-redisinsight redis-stack-server redis
+% brew untap redis-stack/redis-stack
+]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# PostgreSQL
+
+###########################################################################################################################
+
+% brew install postgresql@16
+# Restart terminal window
+% brew services start postgresql@16
+[
+% ls /opt/homebrew/var/log
+% ls /opt/homebrew/var/log/postgresql@16.log
+% cat /opt/homebrew/var/log/postgresql@16.log
+
+% ls /opt/homebrew/var/
+% ls /opt/homebrew/var/postgresql@16
+
+% ls /opt/homebrew/Cellar
+% ls /opt/homebrew/Cellar/postgresql@16
+% ls /opt/homebrew/Cellar/postgresql@16/16.1
+
+% ls /opt/homebrew/opt
+% ls /opt/homebrew/opt/postgresql@16
+
+# postgres # psql # pgbench
+% ls /opt/homebrew/opt/postgresql@16/bin
+]
+# % whoami
+% export PATH=$PATH:"/opt/homebrew/opt/postgresql@16/bin"
+# % createdb `whoami`
+# role "postgres"
+# % createuser -s postgres 
+
+% psql --version
+% whereis psql  
+% type psql
+% man psql
+
+# REPL
+% psql               
+# SELECT version();
+# exit
+
+% psql -U postgres -l
+
+[
+% dropdb `whoami`
+]
+% dropdb `whoami` && createdb `whoami`
+
+[
+% brew services stop postgresql@16
+% brew services restart postgresql@16
+]
+
+% locale -a
+% locale
+% export PGDATA="/opt/homebrew/var/postgresql@16"
+% export LC_ALL="en_US"
+
+% postgres --version
+% whereis postgres  
+% type postgres
+% man postgres
+% postgres
+
+# In another terminal
+% psql
+
+% pgbench --version
+% whereis pgbench 
+% type pgbench
+% man pgbench
+% pgbench -i `whoami`
+% pgbench
+
+[
+% brew uninstall postgresql@16
+
+% ls /opt/homebrew/var/log/postgresql@16.log
+% cat /opt/homebrew/var/log/postgresql@16.log
+% rm -r  /opt/homebrew/var/log/postgresql@16.log
+
+% ls /opt/homebrew/var/postgresql@16
+% rm -r  /opt/homebrew/var/postgresql@16
+
+[
+% ls /opt/homebrew/Cellar/postgresql@16
+% rm -r  /opt/homebrew/Cellar/postgresql@16
+
+% ls /opt/homebrew/opt/postgresql@16
+% rm -r  /opt/homebrew/opt/postgresql@16
+]
+]
+
+# brew info
+% brew info libpq
+
+# export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+% brew link --force libpq
+% echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
+
+# REPL
+% psql -h localhost -p 5432 -U root
+
+###########################################################################################################################
+
+
+
+###########################################################################################################################
+
+# MySQL
+
+###########################################################################################################################
+
+# brew install mysql
+% mysql --version
+% whereis mysql   
+% type mysql
+% man mysql
+% brew services start mysql
+[
+% ls /opt/homebrew/var/
+% ls /opt/homebrew/var/mysql
+
+% ls /opt/homebrew/Cellar
+% ls /opt/homebrew/Cellar/mysql
+% ls /opt/homebrew/Cellar/mysql/8.1.0
+
+% ls /opt/homebrew/opt
+% ls /opt/homebrew/opt/mysql
+
+# mysql # mysql.server # mysqladmin
+% ls /opt/homebrew/opt/mysql/bin
+]
+
+# NB: If root password was not set during mysql installation, then the password is blank.
+
+# REPL
+% mysql -u root
+> SELECT VERSION();
+> exit
+[
+% brew services stop mysql
+% brew services restart mysql
+]
+% sudo mysql.server start
+% sudo mysql.server stop
+% mysqladmin -u root status
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# MySQL Shell # mysql-shell-8.2.0-macos13-arm64.dmg
+
+###########################################################################################################################
+
+% mysqlsh --version
+% whereis mysqlsh    
+% type mysqlsh
+
+# NB: If root password was not set during mysql installation, then the password is blank.
+
+# REPL
+% mysqlsh              
+> \sql
+> \connect root@localhost:3306
+> SELECT VERSION();
+> \exit
+
+[
+# mysqlsh
+% ls /usr/local/bin
+]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# SQL Server 2022 # Docker # Rosetta
+
+###########################################################################################################################
+
+% docker version
+# Find the “Features in development” option, and select the “Use Rosetta for x86/amd64 emulation on Apple Silicon” checkbox
+[
+# WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+]
+% docker pull mcr.microsoft.com/mssql/server:2022-latest
+# $QL$erver@2022
+% docker run -d --name mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=**************' -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest
+# Azure SQL Edge
+% docker pull mcr.microsoft.com/azure-sql-edge:latest
+# @zure$QLEdge1433
+% docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=****************' -p 1433:1433 --name azuresqledge -d mcr.microsoft.com/azure-sql-edge                           
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# SQL Server command-line query tool # sql-cli
+
+###########################################################################################################################
+
+% npm show sql-cli
+% npm show sql-cli version
+% npm view sql-cli
+% npm view sql-cli version
+% npm install sql-cli --global
+% mssql --version  
+% whereis mssql   
+% type mssql
+% man mssql
+
+# REPL
+% mssql -u sa -p
+> SELECT @@VERSION;                                                                                                                                                               
+> .quit  
+
+[
+% poetry search mssql-cli
+% pip install mssql-cli
+% python3 -m pip install mssql-cli
+% mssql-cli --version
+]
+% pip3 install mssql
+% mssql --version
+% whereis mssql
+% type mssql
+[
+# mssql
+% ls ~/.nvm/versions/node/v20.9.0/bin
+]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Oracle Database 23c Free Release 23.0.0.0.0 # Docker # Lima # Ubuntu
+
+###########################################################################################################################
+
+# Lima # Ubuntu # Docker # Oracle
+
+% brew install lima
+
+% lima --version
+
+% limactl --version
+
+% limactl start
+
+# Select
+Open an editor to review or modify the current configuration
+
+# Using the default editor (vi) modify the arch field to the following (i to enter insert mode, make the change, ESC to enter command mode, :wq to exit and save)
+arch: "x86_64"
+
+# Run the newly created default Lima VM, and change directories to the new VM's home directory. (All commands past this should be run in the newly started shell unless specified otherwise)
+% lima
+
+***************************************************************************************************************************
+
+# Install Docker for Ubuntu in the Lima VM
+
+***************************************************************************************************************************
+
+$ ls
+
+# Install Docker Engine on Ubuntu
+
+# Run the following command to uninstall all conflicting packages:
+$ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+  
+# Set up Docker's apt repository.
+
+# Add Docker's official GPG key:
+$ sudo apt-get update
+$ sudo apt-get install ca-certificates curl gnupg
+[
+Package configuration
+                                                        ┌────┤ Daemons using outdated libraries ├─────┐
+                                                        │                                             │ 
+                                                        │                                             │ 
+                                                        │ Which services should be restarted?         │ 
+                                                        │                                             │ 
+                                                        │  [*] packagekit.service                     │ 
+                                                        │                                             │ 
+                                                        │                                             │ 
+                                                        │          <Ok>              <Cancel>         │ 
+                                                        │                                             │ 
+                                                        └─────────────────────────────────────────────┘ 
+]
+
+<ok>
+
+$ sudo install -m 0755 -d /etc/apt/keyrings
+
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+$ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+$ echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+***************************************************************************************************************************
+
+# Ubuntu
+
+***************************************************************************************************************************
+
+$ sudo cat /etc/os-release
+
+$ arch
+
+$ sudo apt --version
+
+$ sudo apt update
+
+$ sudo apt --version
+
+$ sudo apt-get --version
+
+$ sudo apt-get update
+
+$ sudo apt-get --version
+
+***************************************************************************************************************************
+
+# Docker
+
+***************************************************************************************************************************
+
+# Install the Docker packages
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Verify that the Docker Engine installation is successful by running the hello-world image.
+$ sudo docker run hello-world
+
+# Add your user to the docker group, and activate the changes to be able to run docker commands without root access
+$ sudo usermod -aG docker $USER
+$ newgrp docker
+
+# Run Image from docker hub
+$ docker login
+
+$ docker pull container-registry.oracle.com/database/free:latest
+
+$ docker image list
+[
+REPOSITORY                                    TAG       IMAGE ID       CREATED        SIZE
+container-registry.oracle.com/database/free   latest    39cabc8e6db0   2 months ago   9.16GB
+hello-world                                   latest    9c7a54a9a43c   6 months ago   13.3kB
+]
+
+$ docker run -d -p 1521:1521 -e ORACLE_PASSWORD=Oracle_23c container-registry.oracle.com/database/free:latest
+
+$ docker container list --all --format "table"
+[
+CONTAINER ID   IMAGE                                                COMMAND                  CREATED              STATUS                                 PORTS                                       NAMES
+a2162156edd5   container-registry.oracle.com/database/free:latest   "/bin/bash -c $ORACL…"   About a minute ago   Up About a minute (health: starting)   0.0.0.0:1521->1521/tcp, :::1521->1521/tcp   angry_wing
+d39603b235cb   hello-world                                          "/hello"                 25 minutes ago       Exited (0) 25 minutes ago                                                          charming_wilson
+]
+
+***************************************************************************************************************************
+
+$ docker exec -it a2162156edd5 bash
+
+***************************************************************************************************************************
+
+bash-4.4$ ls
+setPassword.sh
+bash-4.4$ cat setPassword.sh
+#!/bin/bash
+# LICENSE UPL 1.0
+#
+# Copyright (c) 1982-2023 Oracle and/or its affiliates. All rights reserved.
+# 
+# Since: November, 2016
+# Author: gerald.venzl@oracle.com
+# Description: Sets the password for sys, system and pdb_admin
+#
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+# 
+
+if [ -e "${ORACLE_BASE}/oradata/${ORACLE_SID}/.prebuiltdb" ] && [ -n "${ORACLE_PWD}" ] && [ "${ORACLE_PWD}" != "$1" ]; then
+      echo "WARNING: The database password can not be changed for this container having a prebuilt database. The original password exists in the container environment. Your new password has been ignored!"
+      exit 1
+fi
+
+ORACLE_PWD=$1
+ORACLE_SID="$(grep "$ORACLE_HOME" /etc/oratab | cut -d: -f1)"
+ORACLE_PDB="$(ls -dl "$ORACLE_BASE"/oradata/"$ORACLE_SID"/*/ | grep -v -e pdbseed -e "${ARCHIVELOG_DIR_NAME:-archive_logs}"| awk '{print $9}' | cut -d/ -f6)"
+ORAENV_ASK=NO
+source oraenv
+
+sqlplus / as sysdba << EOF
+      ALTER USER SYS IDENTIFIED BY "$ORACLE_PWD";
+      ALTER USER SYSTEM IDENTIFIED BY "$ORACLE_PWD";
+      ALTER SESSION SET CONTAINER=$ORACLE_PDB;
+      ALTER USER PDBADMIN IDENTIFIED BY "$ORACLE_PWD";
+      exit;
+EOF
+
+***************************************************************************************************************************
+
+bash-4.4$ ./setPassword.sh Oracle_23c
+The Oracle base remains unchanged with value /opt/oracle
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Sat Nov 11 15:48:29 2023
+Version 23.3.0.23.09
+
+Copyright (c) 1982, 2023, Oracle.  All rights reserved.
+
+Connected to:
+Oracle Database 23c Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.3.0.23.09
+
+SQL> 
+User altered.
+
+SQL> 
+User altered.
+
+SQL> 
+Session altered.
+
+SQL> 
+User altered.
+
+SQL> Disconnected from Oracle Database 23c Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.3.0.23.09
+bash-4.4$ sqlplus PDBADMIN/Oracle_23c@//localhost:1521/FREEPDB1
+
+***************************************************************************************************************************
+
+-- Version
+SQL> SELECT * FROM V$VERSION;
+
+-- USER
+SQL> SELECT user FROM DUAL;
+
+-- INSTANCE_NAME
+SQL> SELECT sys_context('USERENV','INSTANCE_NAME') FROM DUAL;
+
+-- SID
+SQL> SELECT sys_context('USERENV', 'SID') FROM DUAL;
+
+-- DB_NAME
+SQL> SELECT sys_context('USERENV','DB_NAME') FROM DUAL;
+
+-- SERVICE_NAME
+SQL> SELECT sys_context('USERENV','SERVICE_NAME') FROM DUAL;
+
+-- ORA_DATABASE_NAME
+SQL> SELECT ora_database_name FROM DUAL;
+
+-- GLOBAL_NAME
+SQL> SELECT * from global_name;
+
+-- Tables in USER
+SQL> SELECT table_name FROM user_tables;
+
+SQL> EXIT
+
+***************************************************************************************************************************
+
+bash-4.4$ export APP_USER="Oracle_23c_Free_User"
+bash-4.4$ export APP_USER_PASSWORD="Oracle_23c_Free"
+bash-4.4$ export TARGET_PDB="FREEPDB1"
+
+bash-4.4$ echo $APP_USER
+bash-4.4$ echo $APP_USER_PASSWORD
+bash-4.4$ echo $TARGET_PDB
+
+bash-4.4$ ALTER_SESSION_CMD="ALTER SESSION SET CONTAINER=${TARGET_PDB};"
+
+bash-4.4$ sqlplus -s / as sysdba << EOF
+   -- Exit on any errors
+   WHENEVER SQLERROR EXIT SQL.SQLCODE
+
+   ${ALTER_SESSION_CMD}
+
+   CREATE USER ${APP_USER} IDENTIFIED BY "${APP_USER_PASSWORD}" QUOTA UNLIMITED ON USERS;
+   GRANT CONNECT, RESOURCE, CREATE VIEW, CREATE MATERIALIZED VIEW, CREATE SYNONYM TO ${APP_USER};
+   exit;
+EOF
+
+***************************************************************************************************************************
+
+bash-4.4$ sqlplus Oracle_23c_Free_User/Oracle_23c_Free@//localhost:1521/FREEPDB1
+ 
+***************************************************************************************************************************
+
+-- Version
+SQL> SELECT * FROM V$VERSION;
+
+-- USER
+SQL> SELECT user FROM DUAL;
+
+-- INSTANCE_NAME
+SQL> SELECT sys_context('USERENV','INSTANCE_NAME') FROM DUAL;
+
+-- SID
+SQL> SELECT sys_context('USERENV', 'SID') FROM DUAL;
+
+-- DB_NAME
+SELECT sys_context('USERENV','DB_NAME') FROM DUAL;
+
+-- SERVICE_NAME
+SQL> SELECT sys_context('USERENV','SERVICE_NAME') FROM DUAL;
+
+-- ORA_DATABASE_NAME
+SQL> SELECT ora_database_name FROM DUAL;
+
+-- GLOBAL_NAME
+SQL> SELECT * from global_name;
+
+-- Tables in USER
+SQL> SELECT table_name FROM user_tables;
+
+-- DROP SEQUENCE seq_id;
+
+SQL> CREATE SEQUENCE seq_id
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
+-- DROP TABLE users;
+
+SQL> CREATE TABLE users
+(
+    id INT NOT NULL,
+    username VARCHAR(50) NOT NULL, 
+    login_date DATE NOT NULL,
+    login_time VARCHAR(10) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,    
+    CONSTRAINT pk_id PRIMARY KEY(id),
+    CONSTRAINT idx_username UNIQUE(username)    
+);
+
+SQL> COMMIT;
+
+SQL> INSERT INTO users(id, username, login_date, login_time, created_at, updated_at)
+VALUES
+(
+seq_id.nextval,
+'Foo', 
+TO_DATE('2016-11-06', 'YYYY-MM-DD'), 
+'10:49:35', 
+TO_TIMESTAMP('2016-11-06 10:49:35.0', 'YYYY-MM-DD HH:MI:SS.FF'), 
+TO_TIMESTAMP('2016-11-06 10:49:35.0', 'YYYY-MM-DD HH:MI:SS.FF')
+);
+
+SQL> COMMIT;
+
+SQL> INSERT INTO users(id, username, login_date, login_time, created_at, updated_at)
+VALUES
+(
+seq_id.nextval,
+'Bar', 
+TO_DATE('2016-11-06', 'YYYY-MM-DD'), 
+'10:49:35', 
+TO_TIMESTAMP('2016-11-06 10:49:35.0', 'YYYY-MM-DD HH:MI:SS.FF'), 
+TO_TIMESTAMP('2016-11-06 10:49:35.0', 'YYYY-MM-DD HH:MI:SS.FF')
+);
+
+SQL> COMMIT;
+
+SQL> SELECT * FROM users;
+
+-- Tables in USER
+SQL> SELECT table_name FROM user_tables;
+
+SQL> EXIT
+
+***************************************************************************************************************************
+
+-- SQL Developer --
+Name:
+Oracle_23c_Free_Docker
+
+Database Type:
+Oracle
+
+User Info
+
+Authentication Type:
+Default
+
+Username:
+Oracle_23c_Free_User
+Password:
+Oracle_23c_Free
+
+Role: Default
+
+Connection Type:
+Basic
+
+Hostname:
+localhost
+Port:
+1521
+Service name:
+FREEPDB1
+
+***************************************************************************************************************************
+
+% sqlplus Oracle_23c_Free_User/Oracle_23c_Free@//localhost:1521/FREEPDB1
+
+-- Version
+SQL> SELECT * FROM V$VERSION;
+
+-- USER
+SQL> SELECT user FROM DUAL;
+
+-- INSTANCE_NAME
+SQL> SELECT sys_context('USERENV','INSTANCE_NAME') FROM DUAL;
+
+-- SID
+SQL> SELECT sys_context('USERENV', 'SID') FROM DUAL;
+
+-- DB_NAME
+SQL> SELECT sys_context('USERENV','DB_NAME') FROM DUAL;
+
+-- SERVICE_NAME
+SQL> SELECT sys_context('USERENV','SERVICE_NAME') FROM DUAL;
+
+-- ORA_DATABASE_NAME
+SQL> SELECT ora_database_name FROM DUAL;
+
+-- GLOBAL_NAME
+SQL> SELECT * from global_name;
+
+-- Tables in USER
+SQL> SELECT table_name FROM user_tables;
+
+SQL> SELECT * FROM users;
+
+SQL> EXIT
+
+***************************************************************************************************************************
+
+bash-4.4$ exit
+
+***************************************************************************************************************************
+
+$ exit
+
+[
+# Lima Shell # logout # exit
+% lima
+$ exit
+]
+
+% limactl shell default uname -a
+% lima uname -a
+[
+Linux lima-default 6.5.0-9-generic #9-Ubuntu SMP PREEMPT_DYNAMIC Sat Oct  7 01:35:40 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+]
+
+# List instance(s)
+% limactl list
+[
+NAME       STATUS     SSH                VMTYPE    ARCH      CPUS    MEMORY    DISK      DIR
+default    Running    127.0.0.1:60022    qemu      x86_64    4       4GiB      100GiB    ~/.lima/default
+]
+
+# Stop instance
+[
+% limactl stop default
+]
+% limactl stop
+
+# List instance(s)
+% limactl list
+[
+NAME       STATUS     SSH            VMTYPE    ARCH      CPUS    MEMORY    DISK      DIR
+default    Stopped    127.0.0.1:0    qemu      x86_64    4       4GiB      100GiB    ~/.lima/default
+]
+
+# Delete instance # default
+% limactl delete default 
+
+[
+% brew uninstall lima
+
+% ls ~/.lima
+% rm -rf ~/.lima
+]
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# SQL*Plus
+
+###########################################################################################################################
+
+% brew tap InstantClientTap/instantclient
+% brew install instantclient-basic
+% brew install instantclient-sqlplus
+% nano ~/.zprofile
+export LD_LIBRARY_PATH=/usr/local/Cellar/instantclient-sqlplus/19.3.0.0.0dbru/lib:/usr/local/Cellar/instantclient-basic/19.3.0.0.0dbru/lib:$LD_LIBRARY_PATH
+export PATH=/usr/local/Cellar/instantclient-sqlplus/19.3.0.0.0dbru/bin:$PATH
+% cat ~/.zprofile
+% source ~/.zprofile
+% sqlplus -version
+% whereis sqlplus   
+% type sqlplus
+
+# REPL
+% sqlplus PDBADMIN/Oracle_23c@//localhost:1521/FREEPDB1
+> SELECT * FROM V$VERSION;
+> EXIT
+
+[
+# sqlplus
+% ls /opt/homebrew/bin
+]
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# SQLite
+
+###########################################################################################################################
+
+# sqlite3
+% brew install sqlite3
+% sqlite3 --version
+% whereis sqlite3    
+% type sqlite3
+% man sqlite3
+
+# REPL
+% sqlite3
+> .version
+> SELECT sqlite_version();
+> .exit
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# H2
+
+###########################################################################################################################
+
+% brew install h2
+% h2 -help
+% whereis h2
+% type h2
+
+# Database Engine
+% h2
+
+[
+% brew uninstall h2
+]
+
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# Windows
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Git Bash
+
+***************************************************************************************************************************
+
+$ echo $PATH
+$ set
+[
+# dotnet 6+ # dotnet 6 # Exists # C:/Program Files/dotnet/ # Suffix :$PATH $ dotnet --version
+$ export PATH="/C/Users/Rajani/Downloads/CS.NET/Binaries/dotnet-sdk-6+/":$PATH
+]
+# csc # .NET Framework $ csc -version $ csc -langversion:? $ csi -version
+$ export PATH=$PATH:"/C/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/Roslyn/"
+# nuget $ nuget ? $ nuget install Microsoft.Net.Compilers.Toolset -Version 4.0.1
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/CS.NET/NuGet/"
+# csc # .NET Framework $ csc -version $ csc -langversion:? $ csi -version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/CS.NET/NuGet/Microsoft.Net.Compilers.Toolset.4.0.1/tasks/net472"
+# devenv $ devenv -?
+$ export PATH=$PATH:"/C/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/"
+# ildasm # sn # xsd # SvcUtil # wsdl $ ildasm -? $ sn -version $ xsd -version $ svcutil -version $ wsdl /?
+$ export PATH=$PATH:"/C/Program Files (x86)/Microsoft SDKs/Windows/v10.0A/bin/NETFX 4.8 Tools/"
+# NUnit # $ nunit3-console --version $ nunit3-console $ nunit.engine.tests --version $ nunit.engine.tests $ testhost --version
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/.NET/NUnit/NUnit.Console-3.12.0/bin/netcoreapp3.1/"
+# NUnit Lite $ nunitlite.tests --version $ nunitlite.tests $ nunitlite-runner --version $ nunitlite-runner
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/.NET/NUnit/NUnit.Framework-3.13.2/bin/net35/"
+# SQL Server # sqlpackage $ winpty sqlpackage -help
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/SQL Server 2019/sqlpackage/sqlpackage-win7-x64-en-US-15.0.5084.2/"
+# SQL Server # SqlPackage # Visual Studio $ SqlPackage -help
+$ export PATH=$PATH:"/C/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/Extensions/Microsoft/SQLDB/DAC/"
+# Java $ java --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/"
+# Apache Tomcat $ ./startup.sh $ start http://localhost:8080/ $ ./shutdown.sh
+$ cd "C:\Users\Rajani\Downloads\Java\Apache Tomcat\apache-tomcat-10.0.13-windows-x64\apache-tomcat-10.0.13\bin"
+# Java # Apache Maven $ java --version $ mvn --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/"
+# Scala # Java # Coursier Native Launcher $ java --version $ cs --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/"
+# Scala # Java # Apache Maven # Coursier Native Launcher $ java --version $ mvn --version $ cs --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/"
+# Scala # Java # Coursier JAR-based Launcher $ java --version $ coursier --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/"
+# Scala # Java # Apache Maven # Coursier JAR-based Launcher $ java --version $ mvn --version $ coursier --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/"
+# Scala # Java # sbt $ java --version $ sbt --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/sbt/sbt-1.5.6/sbt/bin/"
+# Scala # Java # Apache Maven # sbt $ java --version $ mvn --version $ sbt --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/sbt/sbt-1.5.6/sbt/bin/"
+# Python $ winpty python --version $ pip --version $ python -m pip install --upgrade pip $ pip show pip $ pip show setuptools $ pip list $ pip install django $ python -m django --version $ django-admin --version $ python -c "import django; print(django.__version__)"
+$ export PATH=$PATH:"/C/Python310/:/C/Python310/Scripts/"
+# PostgreSQL ($ pip --version) $ pip show pgAdmin4 $ winpty pgAdmin4
+$ pip install pgAdmin4
+# PostgreSQL $ pgAdmin4
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/PostgreSQL/postgresql-13.1-1-windows-x64-binaries/pgsql/pgAdmin 4/bin/"
+# PostgreSQL $ winpty initdb --version $ pg_ctl --version $ winpty psql --version $ winpty psql -U postgres
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/PostgreSQL/postgresql-13.1-1-windows-x64-binaries/pgsql/bin/"
+# Node.js $ node -v $ npm -v $ npx -v $ npm -g list $ npm view npm version $ npm view npm $ npm show npm version $ npm show npm $ npm view corepack $ npm view corepack version $ npm show corepack $ npm show corepack version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Node.js/node-v16.13.1-win-x64/"
+# Ruby $ ruby --version $ gem --version $ rake --version $ gem install bundler $ bundler --version $ bundle --version $ gem install rails $ rails --version $ npm install --global yarn $ yarn --version $ yarn install --check-files
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Node.js/node-v16.13.1-win-x64/:/C/Ruby30-x64/bin/"
+# SQLite $ winpty sqlite3 -version
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/SQLite/sqlite-tools-win32-x86-3330000/"
+# MongoDB $ mongo -version
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/MongoDB/mongodb-win32-x86_64-2012plus-4.2.8/bin/"
+# MySQL $ winpty mysqlsh --version $ winpty mysqlsh --sql # \connect --mysql root@localhost
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/MySQL/MySQL Shell/mysql-shell-8.0.25-windows-x86-64bit/bin/"
+# XAMPP $ xampp-control $ xampp_start $ xampp_stop
+# MySQL # MariaDB $ winpty mysqladmin --version $ mysql_start.bat $ winpty mysqladmin -u root password $ winpty mysql --version $ winpty mysql -u root -p $ mysql_stop.bat
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/XAMPP/xampp/:/C/Users/rajanis/Downloads/XAMPP/xampp/mysql/bin/"
+# PHP $ php -version
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/XAMPP/xampp/php/"
+# Composer $ php -version $ composer --version
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/XAMPP/xampp/php/:/C/Users/rajanis/Downloads/XAMPP/xampp/php/Composer/"
+# Perl # Git # Exists # C:/Users/rajanis/AppData/Local/Programs/Git/usr/bin/ # Suffix :$PATH $ perl --version
+$ export PATH="/C/Users/rajanis/Downloads/Perl/strawberry-perl-5.32.0.1-64bit-portable/perl/bin/":$PATH
+# gcc $ gcc --version
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/Perl/strawberry-perl-5.32.0.1-64bit-portable/c/bin/"
+# OR
+$ export PATH=$PATH:"/C/Ruby30-x64/msys64/mingw64/bin/"
+# wget $ wget -V
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/wget/"
+# PowerShell $ pwsh --version $ pwsh
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/PowerShell/Binary/PowerShell-7.2.1-win-x64/"
+
+***************************************************************************************************************************
+
+
+***************************************************************************************************************************
+
+# cmd
+
+***************************************************************************************************************************
+
+> path
+> echo %path%
+> set
+[
+# dotnet 6+ # dotnet 6 # Exists # C:/Program Files/dotnet/ # Suffix ;%path% > dotnet --version
+> set path=C:\Users\Rajani\Downloads\CS.NET\Binaries\dotnet-sdk-6+\;%path%
+]
+# csc # .NET Framework > csc -version > csc -langversion:? > csi -version
+> set path=%path%;C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\
+# nuget > nuget ? > nuget install Microsoft.Net.Compilers.Toolset -Version 4.0.1
+> set path=%path%;C:\Users\Rajani\Downloads\CS.NET\NuGet\
+# csc # .NET Framework > csc -version > csc -langversion:? > csi -version
+> set path=%path%;C:\Users\Rajani\Downloads\CS.NET\NuGet\Microsoft.Net.Compilers.Toolset.4.0.1\tasks\net472\
+# devenv > devenv /?
+> set path=%path%;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\
+# ildasm # sn # xsd # SvcUtil # wsdl > ildasm -? > sn -version > xsd -version > svcutil -version > wsdl /?
+> set path=%path%;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\
+# NUnit # $ nunit3-console --version $ nunit3-console $ nunit.engine.tests --version $ nunit.engine.tests $ testhost --version
+> set path=%path%;C:\Users\rajanis\Downloads\.NET\NUnit\NUnit.Console-3.12.0\bin\netcoreapp3.1\
+# NUnit Lite $ nunitlite.tests --version $ nunitlite.tests $ nunitlite-runner --version $ nunitlite-runner
+> set path=%path%;C:\Users\rajanis\Downloads\.NET\NUnit\NUnit.Framework-3.13.2\bin\net35\
+# SQL Server # sqlpackage > sqlpackage -help
+> set path=%path%;C:\Users\Rajani\Downloads\SQL Server 2019\sqlpackage\sqlpackage-win7-x64-en-US-15.0.5084.2\
+# SQL Server # SqlPackage # Visual Studio > SqlPackage -help
+> set path=%path%;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\
+# Java > java --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\
+# Apache Tomcat # startup.bat and shutdown.bat require JAVA_HOME and M2_HOME hence startup.sh and shutdown.sh > startup.sh > start http://localhost:8080/ > shutdown.sh
+> cd "C:\Users\Rajani\Downloads\Java\Apache Tomcat\apache-tomcat-10.0.13-windows-x64\apache-tomcat-10.0.13\bin"
+# Java # Apache Maven > java --version > cs --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\
+# Scala # Java # Coursier Native Launcher > java --version > cs --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\
+# Scala # Java # Apache Maven # Coursier Native Launcher > java --version > mvn --version > cs --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\
+# Scala # Java # Coursier JAR-based Launcher > java --version > coursier --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\
+# Scala # Java # Apache Maven # Coursier JAR-based Launcher > java --version > mvn --version > coursier --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\
+# Scala # Java # sbt > java --version > sbt --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\sbt\sbt-1.5.6\sbt\bin\
+# Scala # Java # Apache Maven # sbt > java --version > mvn --version > sbt --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\sbt\sbt-1.5.6\sbt\bin\
+# Python > winpty python --version > pip --version > python -m pip install --upgrade pip > pip show pip > pip show setuptools > pip list > pip install django > python -m django --version > django-admin --version > python -c "import django; print(django.__version__)"
+> set path=%path%;C:\Python310\;C:\Python310\Scripts\
+# PostgreSQL (> pip --version) > pip show pgAdmin4 > pgAdmin4
+> pip install pgAdmin4
+# PostgreSQL > pgAdmin4
+> set path=%path%;C:\Users\rajanis\Downloads\PostgreSQL\postgresql-13.1-1-windows-x64-binaries\pgsql\pgAdmin 4\bin\
+# PostgreSQL > initdb --version > pg_ctl --version > psql --version > psql -U postgres
+> set path=%path%;C:\Users\rajanis\Downloads\PostgreSQL\postgresql-13.1-1-windows-x64-binaries\pgsql\bin\
+# Node.js > node -v > npm -v > npx -v > npm -g list > npm view npm version > npm view npm > npm show npm version > npm show npm > npm view corepack > npm view corepack version > npm show corepack > npm show corepack version
+> set path=%path%;C:\Users\Rajani\Downloads\Node.js\node-v16.13.1-win-x64\
+# Ruby > ruby --version > gem --version > rake --version > gem install bundler > bundler --version > bundle --version > gem install rails > rails --version > npm install --global yarn > yarn --version > yarn install --check-files
+> set path=%path%;C:\Users\Rajani\Downloads\Node.js\node-v16.13.1-win-x64\;C:\Ruby30-x64\bin\
+# SQLite > sqlite3 -version
+> set path=%path%;C:\Users\rajanis\Downloads\SQLite\sqlite-tools-win32-x86-3330000\
+# MongoDB > mongo -version
+> set path=%path%;C:\Users\rajanis\Downloads\MongoDB\mongodb-win32-x86_64-2012plus-4.2.8\bin\
+# MySQL > mysqlsh --version > mysqlsh --sql # \connect --mysql root@localhost
+> set path=%path%;C:\Users\rajanis\Downloads\MySQL\MySQL Shell\mysql-shell-8.0.25-windows-x86-64bit\bin\
+# XAMPP > xampp-control > xampp_start > xampp_stop
+# MySQL # MariaDB > mysqladmin --version > mysql_start.bat > mysqladmin -u root password > mysql --version > mysql -u root -p > mysql_stop.bat
+> set path=%path%;C:\Users\rajanis\Downloads\XAMPP\xampp\;C:\Users\rajanis\Downloads\XAMPP\xampp\mysql\bin\
+# PHP > php -version
+> set path=%path%;C:\Users\rajanis\Downloads\XAMPP\xampp\php\
+# Composer > php -version > composer --version
+> set path=%path%;C:\Users\rajanis\Downloads\XAMPP\xampp\php\;C:\Users\rajanis\Downloads\XAMPP\xampp\php\Composer\
+# Perl # Git > perl --version
+> set path=%path%;C:\Program Files\Git\usr\bin
+# Perl > perl --version
+> set path=%path%;C:\Users\rajanis\Downloads\Perl\strawberry-perl-5.32.0.1-64bit-portable\perl\bin\
+# gcc > gcc --version
+> set path=%path%;C:\Users\rajanis\Downloads\Perl\strawberry-perl-5.32.0.1-64bit-portable\c\bin\
+# OR
+> set path=%path%;C:\Ruby30-x64\msys64\mingw64\bin\
+# wget > wget -V
+> set path=%path%;C:\Users\rajanis\Downloads\wget\
+# PowerShell > pwsh --version > pwsh
+> set path=%path%;C:\Users\Rajani\Downloads\PowerShell\Binary\PowerShell-7.2.1-win-x64\
+
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+// Credits
+/*
+https://chromeos.google/
+https://apple.com/macos/
+https://microsoft.com/windows/
+*/

@@ -1,0 +1,1335 @@
+###########################################################################################################################
+
+# open
+
+###########################################################################################################################
+% open https://www.google.com
+% open -n -a "Google Chrome" --args "--new-window" "https://google.com"
+% open -n -a "Microsoft Edge" --args "--new-window" "https://google.com"
+% open -n -a "Firefox" --args "--new-window" "https://google.com"
+% open -n -a "Opera" --args "--new-window" "https://google.com"
+% open -n -a "DuckDuckGo" --args "--new-window" "https://google.com"
+% open -n -a "Google Chrome" --args "--new-window" "https://google.com" -incognito
+% open -n -a "Microsoft Edge" --args "--new-window" "https://google.com" -inprivate
+% open -n -a "Opera" --args "--new-window" "https://google.com" -private
+
+[
+% open -n -a "Google Chrome" --args "--new-window" file:///$HOME/surefire.html
+]
+###########################################################################################################################
+
+# touch # cat # tee # sed # echo # tac
+
+###########################################################################################################################
+# mkdir -p "A/B"
+% touch File.txt
+% touch "A/B/File.txt"
+
+% mkdir -p "A/B" && touch A/B/File.txt
+
+% cat File.txt
+% cat "A/B/File.txt"
+
+% mkdir -p "A/B" && cat > A/B/px-mongo-sc.yaml << EOF
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: px-ha-sc
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   repl: "3"
+   io_profile: "db_remote"
+   priority_io: "high"
+   fs: "xfs"
+EOF
+
+# NB # cat # \$ # \`
+% mkdir -p "A/B" && cat > A/B/index.js << EOF
+const express = require('express');
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send("Node.js Version: " + process.version + "\n");
+});
+
+app.listen(port, () => {
+  console.log(\`Server started on port \${port}\`);
+});
+EOF
+
+# NB # cat # \$ # \`
+% mkdir -p "A/B" && cat << EOF > A/B/index.js
+const express = require('express');
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send("Node.js Version: " + process.version + "\n");
+});
+
+app.listen(port, () => {
+  console.log(\`Server started on port \${port}\`);
+});
+EOF
+
+# NB # cat # \$ # \`
+% mkdir -p "A/B" && cat << EOF | tee A/B/index.js
+const express = require('express');
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send("Node.js Version: " + process.version + "\n");
+});
+
+app.listen(port, () => {
+  console.log(\`Server started on port \${port}\`);
+});
+EOF
+
+# NB # echo # Single Quotes
+% echo 'Hello, World!' > source.txt
+% echo 'Hello World!' >> source.txt
+
+% cat source.txt > destination.txt
+% cat source.txt >> destination.txt
+% cat source.txt destination.txt > destination2.txt 
+% cat source.txt > destination.txt > destination2.txt 
+
+% cat > file.txt << EOF
+Alpha
+Beta
+Gamma
+Delta
+EOF
+
+% cat file.txt | more
+% cat file.txt | less
+% cat -v file.txt | sort
+% cat -v file.txt | sort -r
+% cat -n file.txt
+% cat -n file.txt | tail -1 
+% cat file.txt | wc -l
+
+[
+% mkdir -p macOSAArch64/Scala
+% cd macOSAArch64/Scala
+% echo 'object method { def main(args: Array[String]) = { println("Main Method Scala Version Number String: " + util.Properties.versionNumberString) } }' > program.scala
+]
+% mkdir -p "macOSAArch64/Scala" && cat > macOSAArch64/Scala/program.scala << EOF
+object method { def main(args: Array[String]) = { println("Main Method Scala Version Number String: " + util.Properties.versionNumberString) } }
+EOF
+
+[
+% mkdir -p macOSAArch64/Scala3
+% echo '@main def method() = println("Main Method Scala Version Number String: " + util.Properties.versionNumberString)' > program.scala
+]
+% mkdir -p "macOSAArch64/Scala3" && cat > macOSAArch64/Scala3/program.scala << EOF
+@main def method() = println("Main Method Scala Version Number String: " + util.Properties.versionNumberString)
+EOF
+
+% man cat
+% man cd
+
+% export LANG="en_US.UTF-8"
+# Or
+% export LC_CTYPE="en_US.UTF-8"
+% man cd > mancd
+% cat mancd
+
+% sort file.txt
+% sort -r file.txt
+
+% wc -l file.txt
+
+# Delete last line of file
+% cat file.txt
+% sed -i '' '$d' file.txt
+% cat file.txt
+
+% sed -n '=' file.txt
+% sed -n '$=' file.txt
+
+% awk 'END { print NR }' file.txt
+
+% grep -c ".*" file.txt
+% grep -c \^ file.txt 
+% grep -Hc ".*" file.txt
+
+% nl file.txt
+% nl file.txt | tail -1 | awk '{print $1}'
+
+% perl -lne 'END { print $. }' file.txt
+
+# scp – OpenSSH secure file copy
+% man scp
+
+% tail File.txt
+% tail -r File.txt
+
+[
+% tac file.txt
+]
+
+# tail -f # log
+% tail -f /Library/Logs/Multipass/multipassd.log
+
+# Clear contents of file
+% echo -n > file.txt
+
+% stat
+% mkdir -p "A/B" && stat "A/B"
+% stat File.txt
+
+% ipconfig getifaddr en0
+% ifconfig | grep inet
+% ifconfig | grep inet | grep 192.168
+
+% ipconfig getifaddr en0 | tee >> A/B/t.txt
+% ls | tee >> A/B/t.txt
+% cat A/B/t.txt
+% dotnet --version | tee > A/B/d.txt
+% mkdir -p "A/B" && dotnet --version | tee > A/B/d.txt
+% cat A/B/d.txt
+# For the given executable
+[
+% mono | tee t.txt
+]
+
+# printf # echo
+Alpha
+&& Beta
+!
+% printf "Alpha\n&& Beta\n\!\n"
+$ printf "Alpha\n&& Beta\n!"
+% echo "Alpha\n&& Beta\n\!"
+$ echo -e "Alpha\n&& Beta\n!"
+> (echo Hello && echo ^&^& World && echo !)
+% clear
+$ clear
+> cls
+###########################################################################################################################
+
+# vim
+
+###########################################################################################################################
+# Insert Mode
+Esc
+i
+
+# Write and Quit
+Esc
+:wq
+
+# Quit Without Writing
+Esc
+:q!
+
+# Empty File
+Esc
+gg [This will take the cursor to the first line of the file.]
+d+g [Keep pressing the keys till the last line is reached.]
+
+# Undo
+Esc
+u
+
+# Redo
+Ctrl+R
+
+# Copy Paste from Clipboard
+Esc
+i
+Shift+Insert or Click the mouse middle button (usually the wheel) or Press Ctrl + Shift + V to Paste [Check if the first line is pasted correctly.]
+###########################################################################################################################
+
+# nano
+
+###########################################################################################################################
+# nano Save
+% nano Text.txt
+<control + X>
+<Y>
+<return>
+
+# nano WriteOut
+% nano Text.txt
+<control + O>
+# File Name
+<return>
+<control + X>
+###########################################################################################################################
+
+# find
+
+###########################################################################################################################
+# default # find recursively # directories in pre-order i.e. before their contents # not a breadth-first traversal
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+# -maxdepth 1 # current directory # at most 1 directory level
+
+# Find files with leading and trailing whitespace
+% find . -type f -depth \( -name ' *' -o -name '* .*' \)
+% find . -type f \( -name ' *' -o -name '* .*' \)
+
+# Find folders with leading and trailing whitespace
+% find . -type d -depth \( -name ' *' -o -name '* ' \)
+% find . -type d \( -name ' *' -o -name '* ' \)
+
+# Remove leading whitespace from files
+% find . -type f -depth -name ' *' -execdir bash -c 'f=${1#./}; mv "./$f" "./${f#"${f%%[![:space:]]*}"}"' Move {} \;
+
+# Remove leading whitespace from folders
+% find . -type d -depth -name ' *' -execdir bash -c 'f=${1#./}; mv "./$f" "./${f#"${f%%[![:space:]]*}"}"' Move {} \;
+
+# Remove trailing whitespace from files
+# NB 
+# Files might have multiple extensions
+% find . -type f -name '* *' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); fn="${1%.*}"; fe="${1##*.}"; src="${fn}.${fe}"; tgt="${fn%"${fn##*[^[:space:]]}"}.${fe}"; \
+   mv "${src}" "${tgt}"' _ {} \;
+
+# Remove trailing whitespace from folders
+% find . -type d -depth -name '* ' -execdir bash -c 'mv "$1" "${1%"${1##*[^[:space:]]}"}"' Move {} \;
+
+# File names # recursively
+% find . -type f -exec basename {} \;
+
+# Folder names # recursively
+% find . -type d -exec basename {} \;
+
+# Find and delete file named ".DS_Store"
+% find . -type f -depth -iname ".DS_Store" -print
+% find . -type f -depth -iname ".DS_Store" -delete
+
+# Find and delete file named "__MACOSX"
+% find . -type d -depth -iname "__MACOSX" | while read d; do printf "$d\n"; done
+% find . -type d -depth -iname "__MACOSX" | while read d; do rm -rf "$d"; done
+***************************************************************************************************************************
+
+# Files # Remove # Replace # Characters
+
+***************************************************************************************************************************
+# Remove &
+# default # find recursively # directories in pre-order i.e. before their contents # not a breadth-first traversal
+% find . -type f -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//&/}"' _ {} \;
+
+# Remove &
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+% find . -type f -depth -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//&/}"' _ {} \;
+
+# Remove &
+# -maxdepth 1 # current directory # at most 1 directory level
+% find . -type f -maxdepth 1 -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//&/}"' _ {} \;
+
+# Remove / # Or # :
+% find . -type f -name '*:*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//:/''}" ' _ {} \;
+
+# Remove \
+% find . -type f -name '*\\*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//\\/}"' _ {} \;
+
+# Remove ?
+% find . -type f -name '*?*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//\?/}"' _ {} \;
+
+# Filename Extension
+% find . -type f -name '*.*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   echo "${1##*.}" ' _ {} \;
+
+# Filename Without Extension
+% find . -type f -name '*.*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   echo "${1%.*}" ' _ {} \;
+
+# Filename With Extension
+% find . -type f -name '*.*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   echo "${1%.*}"."${1##*.}" ' _ {} \;
+
+# Filename With Extension # &
+% find . -type f -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); fn="${1%.*}"; fe="${1##*.}"; \
+   echo "$fn.$fe" ' _ {} \;
+
+# Filename With Extension # Remove &
+% find . -type f -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); fn="${1%.*}"; fe="${1##*.}"; \
+   mv "$fn.$fe" "${fn//&/}.$fe"' _ {} \;
+
+# Filename With Extension # Remove .
+% find . -type f -name '*.*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); fn="${1%.*}"; fe="${1##*.}"; src="${fn}.${fe}"; tgt=".${fn//./}.${fe}"; \
+   mv "${src}" "${tgt}"' _ {} \;
+
+# Replace & [With] and
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+% find . -type f -depth -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//&/and}"' _ {} \;
+
+# Replace <space><space>[With] <space>
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+% find . -type f -depth -name '*  *' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//  / }"' _ {} \;
+***************************************************************************************************************************
+
+# Folders # Remove # Replace # Characters
+
+***************************************************************************************************************************
+# Remove &
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+% find . -type d -depth -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//&/}"' _ {} \;
+
+# Remove &
+# -maxdepth 1 # current directory # at most 1 directory level
+% find . -type d -maxdepth 1 -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//&/}"' _ {} \;
+
+# Replace & [With] and
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+% find . -type d -depth -name '*&*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//&/and}"' _ {} \;
+
+# Replace <space><space>[With] <space>
+# -depth # find recursively # directories are visited in post-order # all entries in a directory will be acted on before the directory itself # depth-first traversal
+% find . -type d -depth -name '*  *' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//  / }"' _ {} \;
+***************************************************************************************************************************
+###########################################################################################################################
+
+# zip # unzip # rar # p7zip # 7z # split
+
+###########################################################################################################################
+# zip with/without password, (rm) unzip # zip rar and unzip rar
+# zip file
+% zip "Kubernetes Secrets.pdf.zip" "Kubernetes Secrets.pdf"
+# zip file with password
+% zip -er "The Kubernetes Book.pdf.zip" "The Kubernetes Book.pdf"
+# unzip file
+% unzip "Kubernetes Secrets.pdf.zip" 
+# unzip password protected file # replace ...? [y]es, [n]o, [A]ll, [N]one, [r]ename: r
+% unzip "The Kubernetes Book.pdf.zip"
+# zip folder
+% zip -r Rajani.zip Rajani 
+# zip folder with password
+% zip -er "Cloud Computing.zip" "Cloud Computing"
+# unzip folder
+% unzip Rajani.zip
+# unzip password protected folder # replace ...? [y]es, [n]o, [A]ll, [N]one, [r]ename: N
+% unzip "Cloud Computing.zip"
+# unzip password protected zipped file # unzip may require password (twice) % unzip "The Kubernetes Book.pdf.zip.zip"  % unzip "The Kubernetes Book.pdf.zip" # [replace ...? [y]es, [n]o, [A]ll, [N]one, [r]ename: r
+% zip -er "The Kubernetes Book.pdf.zip.zip" "The Kubernetes Book.pdf.zip"
+# unzip password protected zipped folder # unzip may require password (twice) % unzip "Cloud Computing.zip.zip"  % unzip "Cloud Computing.zip" # replace ...? [y]es, [n]o, [A]ll, [N]one, [r]ename: N
+% zip -er "Cloud Computing.zip.zip" "Cloud Computing.zip"
+# zip folders and files with password
+% zip -er "Cloud Computing.zip" * 
+Enter password: 
+Verify password: 
+% rm -rf "Cloud Computing" 
+% unzip "Cloud Computing.zip"
+Archive:  Cloud Computing.zip
+   creating: Cloud Computing/
+[Cloud Computing.zip] Cloud Computing/OpenShift in Action.pdf password: 
+
+# split zip/rar into zips # Target size less than source size
+% zip "Cloud Computing.zip" --out "Split Cloud Computing.zip" -s 75m
+% zip "Cloud Computing.rar" --out "Split Cloud Computing.zip" -s 50m
+# < 50m
+% zip "sampledata.archive.zip" --out "Split sampledata.archive.zip" -s 45m
+
+# zip # unzip # p7zip # 7z
+% zip  
+% unzip
+
+# p7zip
+% brew install p7zip
+% 7z
+% where 7z
+% whereis 7z
+% which 7z
+% type 7z
+% man 7z
+
+[
+# Files With Size >
+% find . -depth -size +50M -print
+[
+% find . -depth -size +100M -print
+]
+% find . -depth -size +50M -type f -exec ls -lh {} \; | awk {'printf ("%0s -PATH: %s\n", $5, $9)'}
+
+# Zip
+% zip "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz"
+
+# Split Zip = 45 MB
+% zip "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" --out "Split openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" -s 45m
+
+# Merge Zip # Extract Split Archive
+% 7z x "Split openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip"
+
+# Size > 50 MB # Delete
+% find . -depth -size +50M -delete
+]
+
+# encrypt
+[
+# File 
+% zip -er "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip" "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz"
+% unzip "openjdk-20-jextract+1-2_macos-x64_bin.tar.gz.zip"
+# Folder
+% zip -er "OpenJDK Jextract.zip" "OpenJDK Jextract"
+% unzip "OpenJDK Jextract.zip"
+]
+###########################################################################################################################
+
+# File # Folder # copy # move # rename
+
+###########################################################################################################################
+# Copy File
+$ cp "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample.war" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"
+> copy "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample.war" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"
+
+# Copy Folder
+$ cp -r "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\SpringHibernateExample"
+> xcopy "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\SpringHibernateExample" /s /e /y /i
+
+# Move File
+$ mv "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample.war" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"
+> move "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample.war" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"
+
+# Move Folder
+$ mv "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\SpringHibernateExample"
+> move "E:\Working\Java\Spring\Samples\Spring4MVCHibernateExample\SpringHibernateExample\target\SpringHibernateExample" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\SpringHibernateExample"
+
+# Rename File
+$ mv oldfile.txt newfile.txt
+# Note that you cannot specify a new drive or path for your destination file
+> rename oldfile.txt newfile.txt
+> ren oldfile.txt newfile.txt
+
+# Rename Folder
+$ mv oldfolder newfolder
+> rename oldfolder newfolder 
+> ren oldfolder newfolder
+###########################################################################################################################
+# Rename files by replacing substring # <++> with <PP> # files # current directory
+[
+% mkdir -p "C++ A1/C++ A2/C++ A3"
+% mkdir -p "C++ B1/C++ B2/C++ B3"
+% touch "C++ TextA.txt"
+% touch "C++ TextB.txt"
+% touch "C++ A1/C++ TextA1.txt"
+% touch "C++ B1/C++ TextB1.txt"
+% touch "C++ A1/C++ A2/C++ A2.txt"
+% touch "C++ B1/C++ B2/C++ B2.txt"
+% touch "C++ A1/C++ A2/C++ A3/C++ A3.txt"
+% touch "C++ B1/C++ B2/C++ B3/C++ B3.txt"
+]
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── C++ TextA.txt
+└── C++ TextB.txt
+
+7 directories, 8 files
+]
+% find . -type f -maxdepth 1 -name '*++*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//++/PP}" ' _ {} \;
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── CPP TextA.txt
+└── CPP TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename files by replacing substring # <PP> with <++> # files # current directory # file extension
+% find . -type f -maxdepth 1 -name '*PP*'.txt -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//PP/++}" ' _ {} \;
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── C++ TextA.txt
+└── C++ TextB.txt
+
+7 directories, 8 files
+]
+# Or
+% for i in *++*.txt; do [[ -e ${i/++/PP} ]] || mv "$i" "${i/++/PP}"; done
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── CPP TextA.txt
+└── CPP TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename files and folders by replacing substring # replace <++> with <PP> # files & folders # current directory 
+% for i in *++*; do [[ -e ${i/++/PP} ]] || mv "$i" "${i/++/PP}"; done
+% tree
+[
+.
+├── CPP A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── CPP B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── CPP TextA.txt
+└── CPP TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename folders by replacing substring # <PP> with <++> # folders # current directory 
+% find . -type d -maxdepth 1 -name '*PP*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "${1//PP/++}" ' _ {} \;
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── CPP TextA.txt
+└── CPP TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename files by replacing substring # <++> with <PP> # recursively
+% find . -type f -depth -name '*++*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//++/PP}"' _ {} \;
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A3
+│   │   │   └── CPP A3.txt
+│   │   └── CPP A2.txt
+│   └── CPP TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B3
+│   │   │   └── CPP B3.txt
+│   │   └── CPP B2.txt
+│   └── CPP TextB1.txt
+├── CPP TextA.txt
+└── CPP TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename files by replacing substring # <PP> with <++> # recursively # file extension
+% find . -type f -depth -name '*PP*'.txt -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//PP/++}"' _ {} \;
+
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── C++ TextA.txt
+└── C++ TextB.txt
+
+7 directories, 8 file
+]
+
+# Rename folders by replacing substring # <++> with <PP> # recursively
+% find . -type d -depth -name '*++*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//++/PP}"' _ {} \;
+
+% tree
+[
+.
+├── C++ TextA.txt
+├── C++ TextB.txt
+├── CPP A1
+│   ├── C++ TextA1.txt
+│   └── CPP A2
+│       ├── C++ A2.txt
+│       └── CPP A3
+│           └── C++ A3.txt
+└── CPP B1
+    ├── C++ TextB1.txt
+    └── CPP B2
+        ├── C++ B2.txt
+        └── CPP B3
+            └── C++ B3.txt
+
+7 directories, 8 files
+]
+
+# Rename files & folders by replacing substring # <++> with <PP> # recursively
+% find . -depth -name '*++*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//++/PP}"' _ {} \;
+
+% tree
+[
+.
+├── CPP A1
+│   ├── CPP A2
+│   │   ├── CPP A2.txt
+│   │   └── CPP A3
+│   │       └── CPP A3.txt
+│   └── CPP TextA1.txt
+├── CPP B1
+│   ├── CPP B2
+│   │   ├── CPP B2.txt
+│   │   └── CPP B3
+│   │       └── CPP B3.txt
+│   └── CPP TextB1.txt
+├── CPP TextA.txt
+└── CPP TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename by removing substring # <PP> # recursively
+% find . -depth -name '*PP*' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f//PP/}"' _ {} \;
+
+% tree
+[
+.
+├── C A1
+│   ├── C A2
+│   │   ├── C A2.txt
+│   │   └── C A3
+│   │       └── C A3.txt
+│   └── C TextA1.txt
+├── C B1
+│   ├── C B2
+│   │   ├── C B2.txt
+│   │   └── C B3
+│   │       └── C B3.txt
+│   └── C TextB1.txt
+├── C TextA.txt
+└── C TextB.txt
+
+7 directories, 8 files
+]
+
+# Rename by replacing # <space> with substring <++> # recursively
+% find . -depth -name '* *' -exec bash -c \
+  'f=$(basename "$1"); d=$(dirname "$1"); \
+   mv "$1" "$d/${f// /++ }"' _ {} \;
+
+% tree
+[
+.
+├── C++ A1
+│   ├── C++ A2
+│   │   ├── C++ A2.txt
+│   │   └── C++ A3
+│   │       └── C++ A3.txt
+│   └── C++ TextA1.txt
+├── C++ B1
+│   ├── C++ B2
+│   │   ├── C++ B2.txt
+│   │   └── C++ B3
+│   │       └── C++ B3.txt
+│   └── C++ TextB1.txt
+├── C++ TextA.txt
+└── C++ TextB.txt
+
+7 directories, 8 files
+]
+###########################################################################################################################
+
+# List
+
+###########################################################################################################################
+# List files and directories excluding hidden (entries starting with .) with total (the current directory by default) # -a for all including hidden # -R for recursive
+# usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+% ls
+
+# List all files including hidden files (files with names beginning with a dot)
+% ls -a
+
+# Full listing, indicating what type files are by putting a slash after directories and a star after executable files (programs you can run)
+% ls -F
+
+# Long listing of all files
+% ls -l
+
+% ls -1a
+% ls -lh
+
+> dir
+> dir /A
+###########################################################################################################################
+
+# find
+
+###########################################################################################################################
+# find files with filename extension recursively
+% find . -name "*.zip" -type f -print
+% find . -empty -type f  | while read d; do printf "$d\n"; done
+> dir *.zip /s /p
+
+# find and print empty files (including file names with whitespace) recursively
+% find . -type f -empty -print
+% find . -empty -type f  | while read f; do printf "$f\n"; done
+> for /r %F in (*) do @if %~zF==0 echo "%F"
+
+# find and delete empty files (including file names with whitespace) recursively
+% find . -type f -empty -delete
+% find . -empty -type f  | while read f; do rm -rf "$f"; done
+> for /r %F in (*) do @if %~zF==0 del "%F"
+
+# find and list hidden (entries starting with .) files (including file names with whitespace) recursively
+% find . -type f -iname ".*" -ls
+> for /r %F in (.*) do @if %~zF==0 echo "%F"
+
+# find and delete hidden (entries starting with .) files (including file names with whitespace) recursively
+% find . -type f -iname ".*" -delete
+> for /r %F in (.*) do @if %~zF==0 del "%F"
+
+# find and print empty directories (including directory names with whitespace) recursively
+% find . -type d -empty -print
+> for /r /d %F in (.) do @dir /b "%F" | findstr "^" >nul || echo %~fF
+
+# find and delete empty directories (including directory names with whitespace) recursively
+% find . -type d -empty -delete
+> for /f "delims=" %d in ('dir /s /b /ad ^| sort /r') do rd "%d"
+
+# find and list hidden (entries starting with .) directories (including directory names with whitespace) recursively
+% find . -type d -iname ".*" -ls
+> dir ".*" /ad /b /s
+
+# find and delete hidden (entries starting with .) directories (including directory names with whitespace) recursively
+% find . -mindepth 1 -type d -iname ".*" | while read d; do rm -rf "$d"; done
+> for /d /r . %d in (.*) do @if exist "%d" rd /s/q "%d"
+
+# find and list unhidden (entries not starting with .) files (including file names with whitespace) recursively
+% find . -type f -not -iname ".*" -ls
+
+# find and delete unhidden (entries not starting with .) files (including file names with whitespace) recursively
+% find . -type f -not -iname ".*" -delete
+
+# find and list unhidden (entries not starting with .) directories (including directory names with whitespace) recursively
+% find . -type d -not -iname ".*" -ls
+
+# find and delete unhidden (entries not starting with .) directories (including directory names with whitespace) recursively
+$ find . -mindepth 1 -type d -not -iname ".*" | while read d; do rm -rf "$d"; done
+
+# find and print non-empty files (including file names with whitespace) recursively
+$ find . -type f -not -empty -print
+# while
+$ find . -type f -not -empty | while read d; do printf "$d\n"; done
+
+# find and delete non-empty files (including file names with whitespace) recursively
+$ find . -type f -not -empty -delete
+# while
+$ find . -type f -not -empty | while read f; do rm -rf "$f"; done
+
+# find and print empty directories (including directory names with whitespace) recursively
+$ find . -type d -empty -print
+# skipping '.'
+$ find . -mindepth 1 -type d -empty -print
+# find and print non-empty directories (including directory names with whitespace) recursively
+$ find . -type d -not -empty -print
+# skipping '.'
+$ find . -mindepth 1 -type d -not -empty -print
+# while
+$ find . -type d -not -empty | while read d; do printf "$d\n"; done
+# skipping '.'
+$ find . -mindepth 1 -type d -not -empty | while read d; do printf "$d\n"; done
+
+# Find file name extensions
+$ find . -name "*.zip" -type f -print
+
+# Find and delete named files (including file names with whitespace) recursively
+% find . -name "New Text Document.txt" -type f -delete
+# while
+$ find . -name "New Text Document.txt" -type f | while read f; do rm -rf "$f"; done
+
+# Find and rename files (including file names with whitespace) recursively
+$ find . -name "New Text Document.txt" -type f | while read NAME; do mv "${NAME}" "${NAME%.txt}s.txt"; done
+# Undo
+$ find . -name "New Text Documents.txt" -type f | while read NAME; do mv "${NAME}" "${NAME%s.txt}.txt"; done
+
+# Find and delete files with named (file name extensions) recursively
+% find . -name "*.zip" -type f -delete
+# while
+$ find . -name "*.zip" -type f | while read f; do rm -rf "$f"; done
+
+# Find and print named directories (including those with whitespace) recursively
+% find . -name "node_modules" -type d -print
+# while
+% find . -name "node_modules" -type d | while read d; do printf "$d\n"; done
+% find . -name "bin" -type d | while read d; do printf "$d\n"; done
+% find . -name "obj" -type d | while read d; do printf "$d\n"; done
+% find . -name "_UpgradeReport_Files" -type d | while read d; do printf "$d\n"; done
+
+# Directory names
+% find . -name "node_modules" -type d -print
+% find . -type d -empty -print
+
+# find and delete named directories (including directory names with whitespace) recursively
+% find . -name "node_modules" -type d -delete
+# find and delete named directories (including those with whitespace) recursively
+% find . -name "node_modules" -type d | while read d; do rm -rf "$d"; done
+
+# find and rename directories (including directory names with whitespace) recursively
+$ find . -name "*Download" -type d | while read NAME; do mv "${NAME}" "${NAME}s"; done
+# Undo
+$ find . -name "*Downloads" -type d | while read NAME; do mv "${NAME}" "${NAME%s}"; done
+
+% find . -depth -type d -name "C#" -execdir mv {} "CS" \;
+
+% find . -depth -type d -name "*C#*" -execdir mv {} "CS" \;
+
+# find and print file names and their directory (including directory names with whitespace) having specified file size recursively
+
+% find . -size +50M -print
+% find . -size +100M -print
+
+# find and print file names and their size, date modified, directory having specified file size recursively
+
+% find . -size +50M -type f -exec ls -lh {} \; | while read f; do printf "$f \n"; done
+
+% find . -size +50M -type f -exec ls -lh {} \; | awk '{ print $9 " -Size : " $5 }'
+
+% find . -size +50M -type f -exec ls -lh {} \; | awk {'printf ("%5s\t%s\n", $5, $9)'}
+
+% find . -size +50M -type f -exec ls -lh {} \; | awk {'printf ("%5s -PATH: %s\n", $5, $9)'}
+
+% find . -size +50M -type f -exec ls -lh {} \; | awk {'printf ("%0s -PATH: %s\n", $5, $9)'}
+
+# remove whitespace in files/directories
+$ find -name "*" -print0 | sort -rz | while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /}")"; done
+# replace whitespace with "_" in files and directories
+$ find -name "*" -print0 | sort -rz | while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /_}")"; done
+
+# remove whitespace in filenames recursively # include (file name extension) to avoid affecting folders with same name
+$ find -name "New Text Document.txt" -print0 | sort -rz | while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /}")"; done
+# replace whitespace with "_" in filenames recursively # include (file name extension) to avoid affecting folders with same name
+$ find -name "New Text Document.txt" -print0 | sort -rz | while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /_}")"; done
+[
+# remove whitespace # hidden # recursive # folders without whitespace
+$ find . -name "New Text Document.txt" -type f | while read NAME; do mv "${NAME}" "${NAME//[[:space:]]}"; done
+$ find . -name "New Text Document.txt" -type f | while read NAME; do mv "${NAME}" "${NAME// /}"; done
+# replace whitespace with "_" # hidden # folders without whitespace
+$ find . -name "New Text Document.txt" -type f| while read NAME; do mv "${NAME}" "${NAME// /_}"; done
+]
+
+# remove whitespace in folder names recursively # will affect files with same name
+$ find -name "*White Space*" -print0 | sort -rz | while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /}")"; done
+# replace whitespace with "_" in folder names recursively # will affect files with same name
+$ find -name "*White Space*" -print0 | sort -rz | while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /_}")"; done
+[
+# remove whitespace # hidden # nonrecursive folders without whitespace
+$ find . -name "*White Space*" -type d | while read NAME; do mv "${NAME}" "${NAME//[[:space:]]}"; done
+$ find . -name "*White Space*" -type d | while read NAME; do mv "${NAME}" "${NAME// /}"; done
+# replace whitespace with "_" # hidden # nonrecursive folders without whitespace
+$ find . -name "*White Space*" -type d | while read NAME; do mv "${NAME}" "${NAME// /_}"; done
+]
+
+# find and change (file name extensions) of files recursively
+# .sh to .sh.txt
+% find . -name "*.sh" -type f | while read NAME; do mv "${NAME}" "${NAME%.sh}.sh.txt"; done
+# .sh.txt to .sh
+% find . -name "*.sh.txt" -type f | while read NAME; do mv "${NAME}" "${NAME%.sh.txt}.sh"; done
+# .sh to .txt
+% find . -name "*.sh" -type f | while read NAME; do mv "${NAME}" "${NAME%.sh}.txt"; done
+# .txt to .sh
+% find . -name "*.txt" -type f | while read NAME; do mv "${NAME}" "${NAME%.txt}.sh"; done
+
+# find and change (file name extensions) of files recursively # uppercase to lowercase
+# .PDF to .pdf
+% find . -name "*.PDF" -type f | while read NAME; do mv "${NAME}" "${NAME%.PDF}.pdf"; done
+
+# find and change (file name extensions) of files recursively # lowercase to uppercase
+# .pdf to .PDF
+% find . -name "*.pdf" -type f | while read NAME; do mv "${NAME}" "${NAME%.pdf}.PDF"; done
+
+[
+# change (file name extensions) of files in current directory (non-recursively)
+$ for file in *.sh; do mv "$file" "`basename "$file" .sh`.txt"; done
+$ for file in *.txt; do mv "$file" "`basename "$file" .txt`.sh"; done
+$ for file in *.sh; do mv "$file" "`basename "$file" .sh`.sh.txt"; done
+$ for file in *.sh.txt; do mv "$file" "`basename "$file" .sh.txt`.sh"; done
+]
+
+[
+# append ".txt" (file name extension) to file
+$ find . -name "*.sh" -type f -exec mv "{}" "{}.txt" \;
+]
+
+[
+# append "s" to directory  name
+$ find . -name "*Download" -type d -exec mv "{}" "{}s" \;
+]
+###########################################################################################################################
+
+# tar
+
+###########################################################################################################################
+# -xf: .tar.bz2, .tar.xz
+# -xvzf: tar.gz, .tar.gx, .tgz
+
+# -xvzf # -xzvf # xzvf # xvfz # -xvzf # -xvf
+# default # extract to [current] directory
+# -C # extract to [existing] directory
+# -x Extract
+# -v, --verbose
+# -z, --gunzip, --gzip
+# -f --file [last option]
+
+# tar extract # rename # recursively
+# -C existing directory
+% mkdir -p swift-for-wasm-wat-example && tar -xvzf swift-for-wasm-examples-main.zip -C swift-for-wasm-wat-example --strip-components 1
+[
+# unzip # rename # recursively
+% unzip swift-for-wasm-examples-main.zip -d swift-for-wasm-wat-example
+]
+###########################################################################################################################
+
+# Git Bash # cmd
+
+###########################################################################################################################
+# zip
+# cd "C:\Users\Aspire\Downloads\wget\Windows binaries of GNU Wget\64-bit"
+zip "C:\Users\Aspire\Downloads\wget\Windows binaries of GNU Wget\64-bit\wget-1.19.1-win64.zip" "wget-1.19.1-win64\*.*"
+# unzip
+unzip archive.zip
+[
+mkdir -p "C:\Wget"
+]
+unzip "C:\Users\Aspire\Downloads\wget\Windows binaries of GNU Wget\64-bit\wget-1.19.1-win64.zip" -d "C:\Wget"
+unzip "C:\Users\Aspire\Downloads\Ruby\Ruby Gems Rails Installation\RubyGems\RubyGems-2.6.12\ZIP\rubygems-2.6.12.zip" -d "C:"
+unzip "C:\Users\Aspire\Downloads\Maven\Apache-Maven-3.5.0\apache-maven-3.5.0-bin.zip" -d "C:\Program Files\Apache Software Foundation"
+unzip "C:\Users\Aspire\Downloads\SQLite\Binaries\sqlite-tools-win32-x86-3180000.zip" -d "C:\SQLite"
+# unzip # only contents without the containing folder
+unzip -j "C:\Users\Aspire\Downloads\SQLite\Binaries\sqlite-tools-win32-x86-3180000.zip" -d "C:\SQLite"
+# unzip # rename # recursive
+% unzip swift-for-wasm-examples-main.zip -d swift-for-wasm-wat-example && mv swift-for-wasm-wat-example/swift-for-wasm-examples-main/* $(pwd)/swift-for-wasm-wat-example
+
+# rar [RAR, ZIP, 7-Zip, ACE, ARJ, BZ2, CAB, GZip, ISO, JAR, LZH, TAR, UUE, XZ, Z, 001]
+control.exe sysdm.cpl,System,3
+System Variable
+Variable name:
+Path
+Variable value:
+;C:\Program Files\WinRAR
+cd "C:\Users\Aspire\Downloads\wget\Windows binaries of GNU Wget\64-bit"
+rar a "C:\Users\Aspire\Downloads\wget\Windows binaries of GNU Wget\64-bit\wget-1.19.1-win64.rar" "wget-1.19.1-win64\*.*"
+# unrar
+mkdir -p "C:\Wget"
+unrar e "C:\Users\Aspire\Downloads\wget\Windows binaries of GNU Wget\64-bit\wget-1.19.1-win64.rar" "C:\Wget"
+
+# > To $
+> start "" "C:\Users\rajanis\AppData\Local\Programs\Git\git-bash.exe" -c "command dotnet --version && /usr/bin/bash"
+
+# $ To $
+"C:\Users\rajanis\AppData\Local\Programs\Git\git-bash.exe" -c "command dotnet --version && /usr/bin/bash"
+
+# > To >
+> start "Command Prompt: dotnet version" "C:\Windows\System32\cmd.exe" /k "dotnet --version"
+
+> start "" "C:\Windows\System32\cmd.exe" /k "dotnet --version"
+
+> start "Command Prompt: dotnet version" cmd /k "dotnet --version"
+
+> start cmd /k "dotnet --version"
+
+# $ To >
+$ cmd
+> start cmd /k "dotnet --version"
+
+$ sleep 10
+> timeout 10 
+> pause
+
+# wget
+[
+# chocolatey
+# https://community.chocolatey.org/install.ps1
+]
+
+# PowerShell $ pwsh --version $ pwsh
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/PowerShell/Binary/PowerShell-7.2.1-win-x64/"
+
+# PowerShell > pwsh --version > pwsh
+> set path=%path%;C:\Users\Rajani\Downloads\PowerShell\Binary\PowerShell-7.2.1-win-x64\
+
+pwsh --version
+
+pwsh
+
+PS> $PSVersionTable
+
+PS> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+PS> exit
+
+# Extracting C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip to C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall
+$ export PATH=$PATH:"/C/Users/Rajani/AppData/Local/Temp/chocolatey/chocoInstall/tools/chocolateyInstall/"
+> set path=%path%;C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\tools\chocolateyInstall\
+
+choco --version
+
+# Directory 'C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\tools\chocolateyInstall\lib' does not exist.
+$ mkdir -p "C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\tools\chocolateyInstall\lib"
+> mkdir "C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\tools\chocolateyInstall\lib"
+
+choco install wget
+
+# Software installed to 'C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\tools\chocolateyInstall\lib\Wget\tools'
+$ export PATH=$PATH:"/C/Users/Rajani/AppData/Local/Temp/chocolatey/chocoInstall/tools/chocolateyInstall/lib/Wget/tools/"
+> set path=%path%;C:\Users\Rajani\AppData\Local\Temp\chocolatey\chocoInstall\tools\chocolateyInstall\lib\Wget\tools\
+
+wget -V
+[
+wget -O install.ps1 https://community.chocolatey.org/install.ps1
+]
+
+# Scoop
+# https://get.scoop.sh
+
+# PowerShell $ pwsh --version $ pwsh
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/PowerShell/Binary/PowerShell-7.2.1-win-x64/"
+
+# PowerShell > pwsh --version > pwsh
+> set path=%path%;C:\Users\Rajani\Downloads\PowerShell\Binary\PowerShell-7.2.1-win-x64\
+
+pwsh --version
+
+pwsh
+
+PS> $PSVersionTable
+
+PS> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# Or shorter
+PS> iwr -useb get.scoop.sh | iex
+# Note: If you get an error you might need to change the execution policy (i.e. enable Powershell) with
+# PS> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+
+PS> exit
+
+$ export PATH=$PATH:"/C/Users/Rajani/scoop/shims/"
+> set path=%path%;C:\Users\Rajani\scoop\shims\
+
+scoop help
+
+scoop info wget
+
+scoop install wget
+
+wget -V
+[
+wget -O install.ps1 https://get.scoop.sh 
+]
+
+scoop uninstall wget
+
+# winget
+where winget
+[
+C:\Users\Rajani\AppData\Local\Microsoft\WindowsApps\winget.exe
+]
+
+winget --version
+
+winget --help
+
+# https://docs.microsoft.com/en-us/windows/powertoys/
+winget show powertoys
+
+winget install --id Microsoft.PowerToys
+
+winget uninstall powertoys
+###########################################################################################################################
+
+# grep
+
+###########################################################################################################################
+# find filenames with exact string - [Custom] - not case-sensitive
+$ grep -r -i -w '^[Custom]$'
+# find filenames with string - [Custom] - case-sensitive
+$ grep -r -w '^[custom]$'
+# findstr
+# find filenames with exact string - [Custom] - not case-sensitive
+> findstr /m /s /i /c:"[Custom]" *
+# find filenames with string - [Custom] - case-sensitive
+> findstr /m /s /c:"[Custom]" *
+###########################################################################################################################
+# Kill PID # http://localhost:8080/
+$ netstat -ano | findstr :8080
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       17740
+  TCP    [::]:8080              [::]:0                 LISTENING       17740
+> netstat -ano | findstr :8080
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       17740
+  TCP    [::]:8080              [::]:0                 LISTENING       17740
+
+$ taskkill -PID 17740 -F
+# SUCCESS: The process with PID 17740 has been terminated.
+> taskkill /PID 17740 /F
+# SUCCESS: The process with PID 17740 has been terminated.
+
+# ps
+$ ps ef
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+
+$ ps -ef
+     UID     PID    PPID  TTY        STIME COMMAND
+
+$ ps aux
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+
+$ tasklist
+> tasklist
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+###########################################################################################################################
+
+# CertUtil
+
+###########################################################################################################################
+[
+https://www.oracle.com/java/technologies/javase-jre8-downloads.html
+https://www.oracle.com/java/technologies/javase-jre8-downloads.html#license-lightbox
+https://www.oracle.com/webfolder/s/digest/8u261checksum.html
+jre-8u261-windows-x64.tar.gz
+sha256: edd4a4568582ff50fb9d575169f5a3ceab26e80f6ecb7b04d133fff061881a8f
+md5: 0c4f43e28ce3d0afbe9c7d9d693b3883
+]
+
+$ CertUtil -hashfile "C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz" MD5
+MD5 hash of C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz:
+0c4f43e28ce3d0afbe9c7d9d693b3883
+CertUtil: -hashfile command completed successfully.
+
+$ CertUtil -hashfile "C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz" sha256
+SHA256 hash of C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz:
+edd4a4568582ff50fb9d575169f5a3ceab26e80f6ecb7b04d133fff061881a8f
+CertUtil: -hashfile command completed successfully.
+
+> CertUtil -hashfile "C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz" MD5
+MD5 hash of C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz:
+0c4f43e28ce3d0afbe9c7d9d693b3883
+CertUtil: -hashfile command completed successfully.
+
+> CertUtil -hashfile "C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz" sha256
+SHA256 hash of C:\Users\rajanis\Downloads\Java\JRE\jre-8u261-windows-x64.tar.gz:
+edd4a4568582ff50fb9d575169f5a3ceab26e80f6ecb7b04d133fff061881a8f
+CertUtil: -hashfile command completed successfully.
+###########################################################################################################################
+
+
+// Credits
+/*
+https://zsh.sourceforge.io/
+https://gnu.org/software/bash/
+https://microsoft.com/powershell/
+https://microsoft.com/windows-server/
+*/

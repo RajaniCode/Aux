@@ -18,4 +18,4 @@ Credits/GNU-Bash-gnu.org.svg)](https://gnu.org/software/bash/)
 [![image](
 Credits/PowerShell-microsoft.com.svg)](https://microsoft.com/powershell/)  
 [![image](
-Credits/Windows-Server-microsoft.com.svg)](https://microsoft.com/windows-server/)
+Credits/Command-shell-learn.microsoft.com.svg)]([https://-server/](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands/)

@@ -8,6 +8,6 @@ Linux
 Credits
 -------
 [![image](
-Credits/linux.org.svg)](https://linux.org/)  
+Credits/linuxfoundation.org.svg)](https://linuxfoundation.org/)  
 [![image](
-Credits/linuxfoundation.org.svg)](https://linuxfoundation.org/)
+Credits/kernel.org.svg)](https://kernel.org/)

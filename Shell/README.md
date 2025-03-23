@@ -3,11 +3,11 @@ Shell
 
 - Z Shell
 
-- GNU Bash
+- Bash
 
 - PowerShell
 
-- Windows Commands
+- Command shell
 
 Credits
 -------

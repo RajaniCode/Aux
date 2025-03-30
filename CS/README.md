@@ -100,6 +100,9 @@ Credits/CS-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/csharp/)
 Credits/CS.NETlearn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/csharp/)-->  
 [![image](
 Credits/ASP.NET-learn.microsoft.com.svg)](https://learn.microsoft.com/aspnet/)  
+[![image](Credits/ASP.NET-Web-API-learn.microsoft.com.svg)](https://learn.microsoft.com/aspnet/web-api/)  
+[![image](
+Credits/ASP.NET-SignalR-learn.microsoft.com.svg)](https://learn.microsoft.com/aspnet/signalr/)  
 [![image](
 Credits/Windows-Communication-Foundation-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/framework/wcf/)  
 [![image](

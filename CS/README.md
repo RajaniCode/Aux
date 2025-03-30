@@ -109,7 +109,6 @@ Credits/Windows-Presentation-Foundation-learn.microsoft.com.svg)](https://learn.
 Credits/XAML-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/maui/xaml/)  
 [![image](
 Credits/Entity Framework-learn.microsoft.com.svg)](https://learn.microsoft.com/aspnet/entity-framework/)  
-[![image](
-Credits/ADO.NET-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/framework/data/adonet/)  
+[![image](Credits/ADO.NET-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/framework/data/adonet/)  
 [![image](
 Credits/aka.ms.svg)](https://aka.ms/msbuild/)

@@ -3,8 +3,8 @@ Git
 
 - Git
 
-Credit
-------
+Credits
+-------
 [![image](
 Credits/git-scm.com.svg)](https://git-scm.com/)  
 [![image](
